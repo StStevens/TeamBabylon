@@ -6,8 +6,8 @@ title:  Team
 # {{ page.title }}
 
 
-## USER 1
-***UCI Net ID***: ucinetid
+## Nick Prendergast
+***UCI Net ID***: prenderj
 
 ## USER 2
 ***UCI Net ID***: ucinetid
