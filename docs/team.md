@@ -10,7 +10,7 @@ title:  Team
 ***UCI Net ID***: prenderj
 
 ## USER 2
-***UCI Net ID***: ucinetid
+***UCI Net ID***: aithomps
 
 ## USER 3
-***UCI Net ID***: ucinetid
+***UCI Net ID***: jthorpe
