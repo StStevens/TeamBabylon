@@ -89,7 +89,7 @@ def create_mission(trackw, trackb, trackh, entity, timelimit):
               <ServerSection>
                 <ServerInitialConditions>
                     <Time>
-                        <StartTime>1000</StartTime>
+                        <StartTime>18000</StartTime>
                            <AllowPassageOfTime>false</AllowPassageOfTime>
                         </Time>
                     <AllowSpawning>false</AllowSpawning>

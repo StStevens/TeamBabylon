@@ -88,7 +88,7 @@ class MurderBot:
         deltaYaw /= 180.0
         #-- calculate deltaPitch
         h_dist = math.sqrt(dx**2 + dz**2)
-        pitch = 180*math.atan2(y, h_dist) / math.pi
+        pitch = -180*math.atan2(dy, h_dist) / math.pi
         deltaPitch = pitch - selfpitch
         while deltaPitch < -180:
             deltaPitch += 360
@@ -105,7 +105,6 @@ class MurderBot:
 def malmoName(minecraftName):
     '''returns the malmo-appropriate name of a given entity'''
     if minecraftName not in NAME_MAPPING.keys():
-        print("minecraftName = " + minecraftName)
         return minecraftName
     return NAME_MAPPING[minecraftName]
 
@@ -134,7 +133,7 @@ def main():
         print 'Mission %d of %d: %s' % (i + 1, encounters, malmoName(ENTITY_LIST[i]))
 
         # Create the mission using the preset XML function from arena_gen
-        missxml = arena_gen.create_mission(TRACK_WIDTH, TRACK_BREADTH, TRACK_HEIGHT, ENTITY_LIST[i], TIMELIMIT)
+        missxml = arena_gen.create_mission(TRACK_WIDTH, TRACK_BREADTH, TRACK_HEIGHT, malmoName(ENTITY_LIST[i]), TIMELIMIT)
         my_mission = MalmoPython.MissionSpec(missxml, True)
         my_mission.forceWorldReset() # RESET THE WORLD IN BETWEEN ENCOUNTERS
 
