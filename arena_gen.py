@@ -8,11 +8,11 @@ import sys
 import time
 import json
 
-sys.stdout = os.fdopen(sys.stdout.fileno(), 'w', 0)  # flush print output immediately
-def arena_mission():
+def run_arena():
     '''Runs the multiple-encounter Arena mission, with the Agent doing nothing each time.'''
     TRACK_WIDTH = 20
     TRACK_BREADTH = 20
+    TIMELIMIT = 20000
     ENTITY_LIST = ["Zombie","Creeper","Spider","Ghast"]
     agent_host = MalmoPython.AgentHost()
     try:
@@ -33,7 +33,7 @@ def arena_mission():
         print
         print 'Mission %d of %d' % (i + 1, encounters)
 
-        missxml = create_mission(TRACK_WIDTH, TRACK_BREADTH, ENTITY_LIST[i], 15000)
+        missxml = create_mission(TRACK_WIDTH, TRACK_BREADTH, ENTITY_LIST[i], TIMELIMIT)
         my_mission = MalmoPython.MissionSpec(missxml, True)
         my_mission.forceWorldReset()
         max_retries = 3
@@ -73,7 +73,7 @@ def arena_mission():
 
     print "Done."
 
-def create_mission(trackw, trackb, entity, timelimit):
+def create_mission(trackw, trackb, trackh, entity, timelimit):
     '''Creates the xml for a given encounter:
     arguments:
         - trackw: the width of observation grid
@@ -100,14 +100,14 @@ def create_mission(trackw, trackb, entity, timelimit):
                     <DrawCuboid type="bedrock" x1="0" y1="4" z1="0" x2="50" y2="14" z2="50"/>
                     <DrawCuboid type="air" x1="1" y1="4" z1="1" x2="49" y2="14" z2="49"/>
                     <DrawCuboid type="glowstone" x1="0" y1="14" z1="0" x2="50" y2="14" z2="50"/>
-                    <DrawEntity x="25.0" y="4.0" z="35" type="@@@"/>
+                    <DrawEntity x="25.0" y="4.0" z="25" type="@@@"/>
                   </DrawingDecorator>
                 </ServerHandlers>
               </ServerSection>
               <AgentSection mode="Survival">
                 <Name>MurderBot</Name>
                 <AgentStart>
-                  <Placement x="25" y="4.0" z="25" pitch="0" yaw="0"/>
+                  <Placement x="25" y="4.0" z="35" pitch="0" yaw="-180"/>
                   <Inventory>
                     <InventoryObject slot="0" type="wooden_sword" quantity="1"/>
                     <InventoryObject slot="1" type="bow" quantity="1"/>
@@ -121,9 +121,9 @@ def create_mission(trackw, trackb, entity, timelimit):
                     <Reward description="out_of_time" reward="-1000" />
                   </RewardForMissionEnd>
                   <AgentQuitFromTimeUp timeLimitMs="'''+str(timelimit)+'''" description="out_of_time"/>
-                  <ContinuousMovementCommands turnSpeedDegs="180"/>
+                  <ContinuousMovementCommands turnSpeedDegs="1080"/>
                   <ObservationFromNearbyEntities>
-                    <Range name="entities" xrange="'''+str(trackw)+'''" yrange="2" zrange="'''+str(trackb)+'''" />
+                    <Range name="entities" xrange="'''+str(trackw)+'''" yrange="'''+str(trackh)+'''" zrange="'''+str(trackb)+'''" />
                   </ObservationFromNearbyEntities>
                 </AgentHandlers>
               </AgentSection>
@@ -132,4 +132,4 @@ def create_mission(trackw, trackb, entity, timelimit):
     return missionXML
 
 if __name__ == "__main__":
-    arena_mission()
+    run_arena()
