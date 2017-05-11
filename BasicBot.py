@@ -10,37 +10,16 @@ import time
 import json
 import math
 
-import arena_gen
+import Arena
 
-HEIGHT_CHART = {
-    "Creeper":1.7, "Skeleton":1.95, "Spider":1, "Zombie":1.95,
-    "Slime":1, "Ghast":4, "Zombie Pigman":1.95, "Enderman":2.9, "Cave Spider":1, "Silverfish":0.3,
-    "Blaze":2, "Magma Cube":1, "Bat":0.9, "Witch":1.95, "Endermite":0.3,
-    "Pig":0.875, "Wolf":0.85
-}
-
-NAME_MAPPING = {
-    "Zombie Pigman" : "PigZombie",
-    "Cave Spider" : "CaveSpider",
-    "Magma Cube" : "LavaSlime"
-}
-
-TRACK_WIDTH = 20
-TRACK_BREADTH = 20
-TRACK_HEIGHT = 20
-TIMELIMIT = 10000
-ENTITY_LIST = HEIGHT_CHART.keys()
-PLAYER_NAME= "MurderBot"
-
-class MurderBot:
-    """MurderBot will be given an AgentHost in its run method and a file to log learned behavior,
-    and will use tabular q-learning to train itself on tracking down & attacking various enemies"""
+class BasicBot:
+    """BasicBot will be given an AgentHost in its run method and just track down & attack various enemies"""
     def __init__(self):
         return
 
     def run(self, agent_host):
         """ Run the Agent on the world """
-        agent_host.sendCommand("move 0.75")
+        agent_host.sendCommand("move 0.25")
         world_state = agent_host.getWorldState()
         while world_state.is_mission_running:
             #sys.stdout.write("*")
@@ -49,13 +28,21 @@ class MurderBot:
             if world_state.number_of_observations_since_last_state > 0:
                 msg = world_state.observations[-1].text
                 ob = json.loads(msg)
+                '''Obs has the following keys:
+                ['PlayersKilled', 'TotalTime', 'Life', 'ZPos', 'IsAlive',
+                'Name', 'entities', 'DamageTaken', 'Food', 'Yaw', 'TimeAlive',
+                'XPos', 'WorldTime', 'Air', 'DistanceTravelled', 'Score', 'YPos',
+                'Pitch', 'MobsKilled', 'XP']
+                '''
+                print ob.keys()
+
                 xPos = ob['XPos']
                 yPos = ob['YPos']
                 zPos = ob['ZPos']
                 yaw = ob['Yaw']
                 pitch = ob['Pitch']
                 target = self.getNextTarget(ob['entities'])
-                if target == None or target['name'] not in HEIGHT_CHART.keys(): # No enemies nearby
+                if target == None or target['name'] not in Arena.HEIGHT_CHART.keys(): # No enemies nearby
                     if target != None:
                         sys.stdout.write("Not found: "+target['name'] + "\n")
                     agent_host.sendCommand("move 0") # stop moving
@@ -63,7 +50,7 @@ class MurderBot:
                     agent_host.sendCommand("turn 0") # stop turning
                     agent_host.sendCommand("pitch 0") # stop looking up/down
                 else:# enemy nearby, kill kill kill
-                    deltaYaw, deltaPitch = self.calcYawPitch(target, yaw, pitch, xPos, yPos, zPos)
+                    deltaYaw, deltaPitch = Arena.calcYawPitch(target['name'], target['x'], target['y'], target['z'], yaw, pitch, xPos, yPos, zPos)
                     # And turn:
                     agent_host.sendCommand("turn " + str(deltaYaw))
                     agent_host.sendCommand("pitch " + str(deltaPitch))
@@ -72,46 +59,24 @@ class MurderBot:
             for error in world_state.errors:
                 print "Error:", error.text
 
-    def calcYawPitch(self, entity, selfyaw, selfpitch, x, y, z): #Adapted from cart_test.py
-        ''' Find the mob we are following, and calculate the yaw we need in order to face it '''
-        dx = entity['x'] - x
-        dz = entity['z'] - z
-        dy = (entity['y']+HEIGHT_CHART[entity['name']]/2) - (y+1.8) #calculate height difference between our eye level and center of mass for entity
-        # print 'Dx %f \nDy %f \nDz %f\n' % (dx, dy, dz)
-        #-- calculate deltaYaw
-        yaw = -180 * math.atan2(dx, dz) / math.pi
-        deltaYaw = yaw - selfyaw
-        while deltaYaw < -180:
-            deltaYaw += 360
-        while deltaYaw > 180:
-            deltaYaw -= 360
-        deltaYaw /= 180.0
-        #-- calculate deltaPitch
-        h_dist = math.sqrt(dx**2 + dz**2)
-        pitch = -180*math.atan2(dy, h_dist) / math.pi
-        deltaPitch = pitch - selfpitch
-        while deltaPitch < -180:
-            deltaPitch += 360
-        while deltaPitch > 180:
-            deltaPitch -= 360
-        deltaPitch /= 180.0
-        return deltaYaw, deltaPitch
-
     def getNextTarget(self, entities):
         for entity in entities:
-            if entity['name'] != PLAYER_NAME:
+            if entity['name'] != "MurderBot":
                 return entity
 
-def malmoName(minecraftName):
-    '''returns the malmo-appropriate name of a given entity'''
-    if minecraftName not in NAME_MAPPING.keys():
-        return minecraftName
-    return NAME_MAPPING[minecraftName]
+    '''
+    To Be Done:
+        Discretize distance, player health, and current_weapon into states:
+            Distance (melee, close, far), Health (<10%, 10-60%, 60-100%), current_weapon (sword, bow)
+        Add a state for EnemyType in the Specialist
+    '''
+
+
 
 def main():
     sys.stdout = os.fdopen(sys.stdout.fileno(), 'w', 0)  # flush print output immediately
 
-    MB = MurderBot()
+    BB = BasicBot()
     agent_host = MalmoPython.AgentHost()
 
     try:
@@ -126,16 +91,15 @@ def main():
 
     my_mission_record = MalmoPython.MissionRecordSpec()
 
-
-    encounters = len(ENTITY_LIST)
-    for i in range(encounters):
+    encounters = len(Arena.ENTITY_LIST)
+    for i in range(1): ###########################################################################################
         print
-        print 'Mission %d of %d: %s' % (i + 1, encounters, malmoName(ENTITY_LIST[i]))
+        print 'Mission %d of %d: %s' % (i + 1, encounters, Arena.malmoName(Arena.ENTITY_LIST[i]))
 
         # Create the mission using the preset XML function from arena_gen
-        missxml = arena_gen.create_mission(TRACK_WIDTH, TRACK_BREADTH, TRACK_HEIGHT, malmoName(ENTITY_LIST[i]), TIMELIMIT)
+        missxml = Arena.create_mission(Arena.malmoName(Arena.ENTITY_LIST[i]))
         my_mission = MalmoPython.MissionSpec(missxml, True)
-        my_mission.forceWorldReset() # RESET THE WORLD IN BETWEEN ENCOUNTERS
+        # my_mission.forceWorldReset() # RESET THE WORLD IN BETWEEN ENCOUNTERS
 
         max_retries = 3
         for retry in range(max_retries):
@@ -160,7 +124,7 @@ def main():
         print
 
         # -- run the agent in the world -- #
-        MB.run(agent_host)
+        BB.run(agent_host)
         print "Mission has stopped.\n"
         # -- clean up -- #
         time.sleep(2)  # (let the Mod reset)

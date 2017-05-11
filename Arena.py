@@ -1,79 +1,38 @@
-# Arena Generation Python Sample
+# Arena Methods Python
 # Used Tutorial 2 and 6 for sampling
-# Usage: Generate the XML schema for a given
+# Usage:
+#   Generate the XML schema for a given entity encounter
+#   Contains the definitions for enemy heights and the Minecraft/Malmo name-mapping function
+#   calculates the delta yaw and delta pitch from an entity to our player
+#
+import math
 
-import MalmoPython
-import os
-import sys
-import time
-import json
+HEIGHT_CHART = {
+    "Creeper":1.7, "Skeleton":1.95, "Spider":1, "Zombie":1.95,
+    "Slime":1, "Ghast":4, "Zombie Pigman":1.95, "Enderman":2.9, "Cave Spider":1, "Silverfish":0.3,
+    "Blaze":2, "Magma Cube":1, "Bat":0.9, "Witch":1.95, "Endermite":0.3,
+    "Pig":0.875, "Wolf":0.85
+}
 
-def run_arena():
-    '''Runs the multiple-encounter Arena mission, with the Agent doing nothing each time.'''
-    TRACK_WIDTH = 20
-    TRACK_BREADTH = 20
-    TIMELIMIT = 20000
-    ENTITY_LIST = ["Zombie","Creeper","Spider","Ghast"]
-    agent_host = MalmoPython.AgentHost()
-    try:
-        agent_host.parse(sys.argv)
-    except RuntimeError as e:
-        print 'ERROR:', e
-        print agent_host.getUsage()
-        exit(1)
-    if agent_host.receivedArgument("help"):
-        print agent_host.getUsage()
-        exit(0)
+NAME_MAPPING = {
+    "Zombie Pigman" : "PigZombie",
+    "Cave Spider" : "CaveSpider",
+    "Magma Cube" : "LavaSlime"
+}
 
+TRACK_WIDTH = 20
+TRACK_BREADTH = 20
+TRACK_HEIGHT = 20
+TIMELIMIT = 3000
+ENTITY_LIST = ["Zombie", "Zombie"]#HEIGHT_CHART.keys()
 
-    my_mission_record = MalmoPython.MissionRecordSpec()
-    encounters = len(ENTITY_LIST)
+def malmoName(minecraftName):
+    '''returns the malmo-appropriate name of a given entity'''
+    if minecraftName not in NAME_MAPPING.keys():
+        return minecraftName
+    return NAME_MAPPING[minecraftName]
 
-    for i in range(encounters):
-        print
-        print 'Mission %d of %d' % (i + 1, encounters)
-
-        missxml = create_mission(TRACK_WIDTH, TRACK_BREADTH, ENTITY_LIST[i], TIMELIMIT)
-        my_mission = MalmoPython.MissionSpec(missxml, True)
-        my_mission.forceWorldReset()
-        max_retries = 3
-        for retry in range(max_retries):
-            try:
-                agent_host.startMission(my_mission, my_mission_record)
-                break
-            except RuntimeError as e:
-                if retry == max_retries - 1:
-                    print "Error starting mission:", e
-                    exit(1)
-                else:
-                    time.sleep(2)
-
-        print "Waiting for the mission to start",
-        world_state = agent_host.getWorldState()
-        while not world_state.has_mission_begun:
-            sys.stdout.write(".")
-            time.sleep(0.3)
-            world_state = agent_host.getWorldState()
-            for error in world_state.errors:
-                print "Error:", error.text
-        print
-
-        # -- AGENT ACTIONS BELONG HERE -- #
-        while world_state.is_mission_running:
-            sys.stdout.write("*")
-            time.sleep(0.5)
-            world_state = agent_host.getWorldState()
-            for error in world_state.errors:
-                print "Error:", error.text
-        print "Mission has stopped."
-        print("")
-        # -- END AGENT ACTIONS -- #
-
-        time.sleep(3)  # (let the Mod reset)
-
-    print "Done."
-
-def create_mission(trackw, trackb, trackh, entity, timelimit):
+def create_mission(entity, trackw=TRACK_WIDTH, trackb=TRACK_BREADTH, trackh=TRACK_HEIGHT, timelimit=TIMELIMIT):
     '''Creates the xml for a given encounter:
     arguments:
         - trackw: the width of observation grid
@@ -112,13 +71,12 @@ def create_mission(trackw, trackb, trackh, entity, timelimit):
                     <InventoryObject slot="0" type="wooden_sword" quantity="1"/>
                     <InventoryObject slot="1" type="bow" quantity="1"/>
                     <InventoryObject slot="2" type="arrow" quantity="64"/>
-                    <InventoryObject slot="3" type="arrow" quantity="64"/>
                   </Inventory>
                 </AgentStart>
                 <AgentHandlers>
                   <ObservationFromFullStats/>
-                  <RewardForMissionEnd rewardForDeath="-10000">
-                    <Reward description="out_of_time" reward="-1000" />
+                  <RewardForMissionEnd rewardForDeath="-100">
+                    <Reward description="out_of_time" reward="-10" />
                   </RewardForMissionEnd>
                   <AgentQuitFromTimeUp timeLimitMs="'''+str(timelimit)+'''" description="out_of_time"/>
                   <ContinuousMovementCommands turnSpeedDegs="1080"/>
@@ -131,5 +89,26 @@ def create_mission(trackw, trackb, trackh, entity, timelimit):
     missionXML = missionXML.replace("@@@", entity)
     return missionXML
 
-if __name__ == "__main__":
-    run_arena()
+def calcYawPitch(name, ex, ey, ez, selfyaw, selfpitch, x, y, z): #Adapted from cart_test.py
+    ''' Find the mob we are following, and calculate the yaw we need in order to face it '''
+    dx = ex - x
+    dz = ez - z
+    dy = (ey+HEIGHT_CHART[name]/2) - (y+1.8) #calculate height difference between our eye level and center of mass for entity
+    #-- calculate deltaYaw
+    yaw = -180 * math.atan2(dx, dz) / math.pi
+    deltaYaw = yaw - selfyaw
+    while deltaYaw < -180:
+        deltaYaw += 360
+    while deltaYaw > 180:
+        deltaYaw -= 360
+    deltaYaw /= 180.0
+    #-- calculate deltaPitch
+    h_dist = math.sqrt(dx**2 + dz**2)
+    pitch = -180*math.atan2(dy, h_dist) / math.pi
+    deltaPitch = pitch - selfpitch
+    while deltaPitch < -180:
+        deltaPitch += 360
+    while deltaPitch > 180:
+        deltaPitch -= 360
+    deltaPitch /= 180.0
+    return deltaYaw, deltaPitch
