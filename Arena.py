@@ -23,8 +23,10 @@ NAME_MAPPING = {
 TRACK_WIDTH = 20
 TRACK_BREADTH = 20
 TRACK_HEIGHT = 20
-TIMELIMIT = 3000
+TIMELIMIT = 10000
 ENTITY_LIST = ["Zombie", "Zombie"]#HEIGHT_CHART.keys()
+
+AGENT_NAME = "MurderBot"
 
 def malmoName(minecraftName):
     '''returns the malmo-appropriate name of a given entity'''
@@ -32,7 +34,7 @@ def malmoName(minecraftName):
         return minecraftName
     return NAME_MAPPING[minecraftName]
 
-def create_mission(entity, trackw=TRACK_WIDTH, trackb=TRACK_BREADTH, trackh=TRACK_HEIGHT, timelimit=TIMELIMIT):
+def create_mission(entity, agent_name=AGENT_NAME, trackw=TRACK_WIDTH, trackb=TRACK_BREADTH, trackh=TRACK_HEIGHT, timelimit=TIMELIMIT):
     '''Creates the xml for a given encounter:
     arguments:
         - trackw: the width of observation grid
@@ -64,7 +66,7 @@ def create_mission(entity, trackw=TRACK_WIDTH, trackb=TRACK_BREADTH, trackh=TRAC
                 </ServerHandlers>
               </ServerSection>
               <AgentSection mode="Survival">
-                <Name>MurderBot</Name>
+                <Name>''' + agent_name + '''</Name>
                 <AgentStart>
                   <Placement x="25" y="4.0" z="35" pitch="0" yaw="-180"/>
                   <Inventory>
