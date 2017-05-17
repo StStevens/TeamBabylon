@@ -143,20 +143,26 @@ class GeneralBot:
     def run(self, agent_host):
         """Run the agent_host on the world, acting according to the epilon-greedy policy"""
         self.agent = agent_host
+        S, A, R = deque(), deque(), deque()
         world_state = self.agent.getWorldState()
         while world_state.is_mission_running:
             time.sleep(0.1)
             world_state = self.agent.getWorldState()
             if world_state.number_of_observations_since_last_state > 0:
                 obs = json.loads(world_state.observations[-1].text)
+                R.append(self.score(obs))
                 state =  self.get_curr_state(obs)
+                S.append(state)
                 action = self.choose_action(state, possible_actions, self.epsilon)
                 self.act(action)
+                A.append(action)
                 print action
 
         return
 
-
+    def score(self, obs):
+        score = obs["Life"]*5
+        return score
 
     def log_results():
         return

@@ -90,27 +90,3 @@ def create_mission(entity, agent_name=AGENT_NAME, trackw=TRACK_WIDTH, trackb=TRA
             </Mission>'''
     missionXML = missionXML.replace("@@@", entity)
     return missionXML
-
-def calcYawPitch(name, ex, ey, ez, selfyaw, selfpitch, x, y, z): #Adapted from cart_test.py
-    ''' Find the mob we are following, and calculate the yaw we need in order to face it '''
-    dx = ex - x
-    dz = ez - z
-    dy = (ey+HEIGHT_CHART[name]/2) - (y+1.8) #calculate height difference between our eye level and center of mass for entity
-    #-- calculate deltaYaw
-    yaw = -180 * math.atan2(dx, dz) / math.pi
-    deltaYaw = yaw - selfyaw
-    while deltaYaw < -180:
-        deltaYaw += 360
-    while deltaYaw > 180:
-        deltaYaw -= 360
-    deltaYaw /= 180.0
-    #-- calculate deltaPitch
-    h_dist = math.sqrt(dx**2 + dz**2)
-    pitch = -180*math.atan2(dy, h_dist) / math.pi
-    deltaPitch = pitch - selfpitch
-    while deltaPitch < -180:
-        deltaPitch += 360
-    while deltaPitch > 180:
-        deltaPitch -= 360
-    deltaPitch /= 180.0
-    return deltaYaw, deltaPitch
