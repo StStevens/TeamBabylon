@@ -12,6 +12,7 @@ general_states = set()
 spec_states = set()
 possible_actions = ["move 0.75", "move 0", "move -0.75", "strafe 0.75", "strafe 0", "strafe -0.75", "attack 1", "switch"]
 
+
 class GeneralBot:
     """GeneralBot will be given an AgentHost in its run method and use QTabular learning to attack enemies,
     ignoring enemy type for strategy"""
@@ -69,6 +70,14 @@ class GeneralBot:
         self.agent.sendCommand(action)
         return
 
+    def calc_reward(time_taken, health, died, killed):
+        reward = -100 if died else 1
+        if killed:
+            reward += 100
+        reward += (health * (1 - time/30))      # health left discounted
+                                                # by time taken
+        return reward
+
     def update_q_table(self, tau, S, A, R, T):
         """Performs relevant updates for state tau.
         Args
@@ -103,9 +112,9 @@ class GeneralBot:
             deltaYaw, deltaPitch = self.calcYawPitch(name, ex, ey, ez, selfyaw, selfpitch, x, y, z)
             self.agent.sendCommand("turn " + str(deltaYaw))
             self.agent.sendCommand("pitch " + str(deltaPitch))
-        except(KeyError e):
+        except KeyError as e:
             print "Unidentified entity!", e
-        
+
     def calcYawPitch(self, name, ex, ey, ez, selfyaw, selfpitch, x, y, z): #Adapted from cart_test.py
         ''' Find the mob we are following, and calculate the yaw we need in order to face it '''
         dx = ex - x
@@ -144,7 +153,10 @@ class GeneralBot:
                 action = self.choose_action(state, possible_actions, self.epsilon)
                 self.act(action)
                 print action
+
         return
+
+
 
     def log_results():
         return
