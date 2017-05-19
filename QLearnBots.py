@@ -16,7 +16,7 @@ possible_actions = ["move 0.75", "move 0", "move -0.75", "strafe 0.75", "strafe 
 class GeneralBot:
     """GeneralBot will be given an AgentHost in its run method and use QTabular learning to attack enemies,
     ignoring enemy type for strategy"""
-    def __init__(self, alpha=0.3, gamma=1, n=1):
+    def __init__(self, alpha=0.3, gamma=1, n=2):
         """Constructing an RL agent.
 
         Args
@@ -70,12 +70,10 @@ class GeneralBot:
         self.agent.sendCommand(action)
         return
 
-    def calc_reward(time_taken, health, died, killed):
-        reward = -100 if died else 1
-        if killed:
-            reward += 100
-        reward += (health * (1 - time/30))      # health left discounted
-                                                # by time taken
+    def calc_reward(self, time_taken, health, delta):
+        reward = 0
+        reward += delta * 5
+        reward += health
         return reward
 
     def update_q_table(self, tau, S, A, R, T):
@@ -145,24 +143,37 @@ class GeneralBot:
         self.agent = agent_host
         S, A, R = deque(), deque(), deque()
         world_state = self.agent.getWorldState()
+        t = 0
+        enemyHealth = -1
         while world_state.is_mission_running:
             time.sleep(0.1)
             world_state = self.agent.getWorldState()
             if world_state.number_of_observations_since_last_state > 0:
                 obs = json.loads(world_state.observations[-1].text)
-                R.append(self.score(obs))
                 state =  self.get_curr_state(obs)
-                S.append(state)
                 action = self.choose_action(state, possible_actions, self.epsilon)
                 self.act(action)
+                for e in obs['entities']:
+                        if e['name'] != obs['Name']:
+                            enemy = e
+                            break
+                delta = 0
+                if enemyHealth == -1:
+                    enemyHealth = enemy['life']
+                elif enemy['life'] < enemyHealth:
+                    delta = enemyHealth - enemy['life']
+                    enemyHealth = enemy['life']
+
+                score = self.calc_reward(30, obs['Life'], delta)
+                R.append(score)                
+                S.append(state)
                 A.append(action)
-                print action
-
+                T = t - self.n + 1
+                if T >= 0:
+                    self.update_q_table(t, S, A, R, T)
+                t += 1
+        print self.q_table 
         return
-
-    def score(self, obs):
-        score = obs["Life"]*5
-        return score
 
     def log_results():
         return
@@ -201,10 +212,11 @@ def main():
 
     my_mission_record = MalmoPython.MissionRecordSpec()
 
-    encounters = len(Arena.ENTITY_LIST)
-    for i in range(encounters):
+    encounters = 50#len(Arena.ENTITY_LIST)
+    for n in range(encounters):
+        i = 0
         print
-        print 'Mission %d of %d: %s' % (i + 1, encounters, Arena.malmoName(Arena.ENTITY_LIST[i]))
+        print 'Mission %d of %d: %s' % (n+1, encounters, Arena.malmoName(Arena.ENTITY_LIST[i]))
 
         # Create the mission using the preset XML function from arena_gen
         missxml = Arena.create_mission(Arena.malmoName(Arena.ENTITY_LIST[i]))
