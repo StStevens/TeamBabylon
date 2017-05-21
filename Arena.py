@@ -23,7 +23,7 @@ NAME_MAPPING = {
 TRACK_WIDTH = 20
 TRACK_BREADTH = 20
 TRACK_HEIGHT = 20
-TIMELIMIT = 5000
+TIMELIMIT = 30000
 ENTITY_LIST = ["Zombie", "Zombie"]#HEIGHT_CHART.keys()
 
 AGENT_NAME = "MurderBot"
@@ -63,6 +63,7 @@ def create_mission(entity, agent_name=AGENT_NAME, trackw=TRACK_WIDTH, trackb=TRA
                     <DrawCuboid type="glowstone" x1="0" y1="14" z1="0" x2="50" y2="14" z2="50"/>
                     <DrawEntity x="25.0" y="4.0" z="25" type="@@@"/>
                   </DrawingDecorator>
+                  <ServerQuitWhenAnyAgentFinishes description="server sees murder happen"/>
                 </ServerHandlers>
               </ServerSection>
               <AgentSection mode="Survival">
@@ -76,12 +77,19 @@ def create_mission(entity, agent_name=AGENT_NAME, trackw=TRACK_WIDTH, trackb=TRA
                   </Inventory>
                 </AgentStart>
                 <AgentHandlers>
+                  <MissionQuitCommands
+                    quitDescription="finished murdering">
+                      <ModifierList
+                        type='allow-list'>
+                          <command>quit</command>
+                      </ModifierList>
+                  </MissionQuitCommands>
                   <ObservationFromFullStats/>
                   <RewardForMissionEnd rewardForDeath="-100">
                     <Reward description="out_of_time" reward="-10" />
                   </RewardForMissionEnd>
                   <AgentQuitFromTimeUp timeLimitMs="'''+str(timelimit)+'''" description="out_of_time"/>
-                  <ContinuousMovementCommands turnSpeedDegs="1080"/>
+                  <ContinuousMovementCommands turnSpeedDegs="900"/>
                   <ObservationFromNearbyEntities>
                     <Range name="entities" xrange="'''+str(trackw)+'''" yrange="'''+str(trackh)+'''" zrange="'''+str(trackb)+'''" />
                   </ObservationFromNearbyEntities>

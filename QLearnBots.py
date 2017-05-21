@@ -5,6 +5,7 @@ import MalmoPython
 import math
 import time
 import json
+import pickle
 import os, sys, random
 from collections import defaultdict, deque
 
@@ -16,17 +17,24 @@ possible_actions = ["move 0.75", "move 0", "move -0.75", "strafe 0.75", "strafe 
 class GeneralBot:
     """GeneralBot will be given an AgentHost in its run method and use QTabular learning to attack enemies,
     ignoring enemy type for strategy"""
-    def __init__(self, alpha=0.3, gamma=1, n=2):
+    def __init__(self, alpha=0.3, gamma=1, n=2, fname=None):
         """Constructing an RL agent.
 
         Args
             alpha:  <float>  learning rate      (default = 0.3)
             gamma:  <float>  value decay rate   (default = 1)
             n:      <int>    number of back steps to update (default = 1)
+            fname:  <string> filename to store resulting q-table in
         """
+        self.fname = fname
         self.agent = None
         self.epsilon = 0.2  # chance of taking a random action instead of the best
-        self.q_table = defaultdict(lambda : {action: 0 for action in possible_actions}) #Did I mention how much I love comprehenions?
+        if fname:
+            f = open(fname, "r")
+            self.q_table = defaultdict(lambda : {action: 0 for action in possible_actions}, pickle.load(f))
+        else:
+            self.fname = "gb_qtable.p"
+            self.q_table = defaultdict(lambda : {action: 0 for action in possible_actions}) #Did I mention how much I love comprehenions?
         self.n, self.gamma, self.alpha = n, alpha, gamma
 
     def get_curr_state(self, obs): # Not sure if
@@ -40,14 +48,17 @@ class GeneralBot:
             if mob['name'] != obs['Name']:
                 ent = mob
                 break
+        if ent == None:
+            return None
         self.track_target(obs, mob)
-        dist = self.calcDist(ent['x'], ent['y'], ent['z'], obs['XPos'], obs['YPos'], obs['ZPos'], mob['name'])
-        dist = 0 if dist <= 2 else 1 if dist <= 10 else 2 # Discretize the distance
-        health = obs['Life']
-        health = "L" if health <= 2 else "M" if health <= 12 else "H"
-        weap = None #de
-        pass
-        return (dist, health)
+        if ent['name'] in Arena.HEIGHT_CHART.keys():
+            dist = self.calcDist(ent['x'], ent['y'], ent['z'], obs['XPos'], obs['YPos'], obs['ZPos'], mob['name'])
+            dist = "Melee" if dist <= 2 else "Near" if dist <= 10 else "Far" # Discretize the distance
+            health = obs['Life']
+            health = "Low" if health <= 2 else "Med" if health <= 12 else "Hi"
+            weap = None #de
+            return (dist, health)
+        return ("Finished",)
 
     def choose_action(self, curr_state, possible_actions, eps):
         """Chooses an action according to eps-greedy policy. """
@@ -103,15 +114,19 @@ class GeneralBot:
         if self.agent == None:
             return
         name = entity['name']
-        ex, ey, ez = entity['x'], entity['y'], entity['z']
-        x, y, z = obs['XPos'], obs['YPos'], obs['ZPos']
-        selfyaw, selfpitch = obs['Yaw'], obs['Pitch']
-        try:
+        if entity['name'] in Arena.HEIGHT_CHART.keys():
+            ex, ey, ez = entity['x'], entity['y'], entity['z']
+            x, y, z = obs['XPos'], obs['YPos'], obs['ZPos']
+            selfyaw, selfpitch = obs['Yaw'], obs['Pitch']
             deltaYaw, deltaPitch = self.calcYawPitch(name, ex, ey, ez, selfyaw, selfpitch, x, y, z)
             self.agent.sendCommand("turn " + str(deltaYaw))
             self.agent.sendCommand("pitch " + str(deltaPitch))
-        except KeyError as e:
-            print "Unidentified entity!", e
+        else:
+            self.agent.sendCommand("turn 0")
+            self.agent.sendCommand("pitch 0")
+            self.agent.sendCommand("move 0")
+            self.agent.sendCommand("attack 0")
+            return
 
     def calcYawPitch(self, name, ex, ey, ez, selfyaw, selfpitch, x, y, z): #Adapted from cart_test.py
         ''' Find the mob we are following, and calculate the yaw we need in order to face it '''
@@ -141,11 +156,13 @@ class GeneralBot:
     def run(self, agent_host):
         """Run the agent_host on the world, acting according to the epilon-greedy policy"""
         self.agent = agent_host
+        max_score = 0
         S, A, R = deque(), deque(), deque()
         world_state = self.agent.getWorldState()
         t = 0
         enemyHealth = -1
-        while world_state.is_mission_running:
+        state = ("",)
+        while world_state.is_mission_running and state != ("Finished",):
             time.sleep(0.1)
             world_state = self.agent.getWorldState()
             if world_state.number_of_observations_since_last_state > 0:
@@ -157,6 +174,11 @@ class GeneralBot:
                         if e['name'] != obs['Name']:
                             enemy = e
                             break
+                if state == None:
+                    continue
+                if state == ("Finished",):
+                    self.agent.sendCommand("quit")
+                    continue
                 delta = 0
                 if enemyHealth == -1:
                     enemyHealth = enemy['life']
@@ -165,39 +187,48 @@ class GeneralBot:
                     enemyHealth = enemy['life']
 
                 score = self.calc_reward(30, obs['Life'], delta)
-                R.append(score)                
+                if score > max_score:
+                    max_score = score
+                R.append(score)
                 S.append(state)
                 A.append(action)
                 T = t - self.n + 1
                 if T >= 0:
                     self.update_q_table(t, S, A, R, T)
                 t += 1
-        print self.q_table 
+
+        print "max_score=", max_score
+        #print self.q_table
         return
 
-    def log_results():
-        return
+    def log_results(self):
+        try:
+            f = open(self.fname, 'w')
+            pickle.dump(dict(self.q_table), f)
+            f.close()
+        except Exception as e:
+            print e
 
-class SpecialistBot(GeneralBot):
-    """SpecialistBot will be given an AgentHost in its run method and use QTabular learning to attack enemies,
-    caring about enemy type for strategy"""
-    def __init__(self, alpha=0.3, gamma=1, n=1):
-        super().__init__(alpha, gamma, n)
-
-    def get_curr_state(self, obs, ent): # Not sure if
-        '''
-            Discretize distance, player health, and current_weapon into states:
-                Distance (melee, close, far), Health (<10%, 10-60%, 60-100%), current_weapon (sword, bow)
-            Add a state for EnemyType in the Specialist
-        '''
-
-        dist = calcDist(ent['x'], ent['x'], ent['x'], obs['x'], obs['x'], obs['x'])
-        dist = 0 if dist <= 2 else 1 if dist <= 10 else 2
-        return
+# class SpecialistBot(GeneralBot):
+#     """SpecialistBot will be given an AgentHost in its run method and use QTabular learning to attack enemies,
+#     caring about enemy type for strategy"""
+#     def __init__(self, alpha=0.3, gamma=1, n=1):
+#         super().__init__(alpha, gamma, n)
+#
+#     def get_curr_state(self, obs, ent): # Not sure if
+#         '''
+#             Discretize distance, player health, and current_weapon into states:
+#                 Distance (melee, close, far), Health (<10%, 10-60%, 60-100%), current_weapon (sword, bow)
+#             Add a state for EnemyType in the Specialist
+#         '''
+#
+#         dist = calcDist(ent['x'], ent['x'], ent['x'], obs['x'], obs['x'], obs['x'])
+#         dist = 0 if dist <= 2 else 1 if dist <= 10 else 2
+#         return
 
 def main():
     sys.stdout = os.fdopen(sys.stdout.fileno(), 'w', 0)  # flush print output immediately
-    GB = GeneralBot()
+    GB = GeneralBot(fname="gb_qtable.p")
     agent_host = MalmoPython.AgentHost()
 
     try:
@@ -212,7 +243,7 @@ def main():
 
     my_mission_record = MalmoPython.MissionRecordSpec()
 
-    encounters = 50#len(Arena.ENTITY_LIST)
+    encounters = 200 #len(Arena.ENTITY_LIST)
     for n in range(encounters):
         i = 0
         print
@@ -251,6 +282,7 @@ def main():
         # -- clean up -- #
         time.sleep(2)  # (let the Mod reset)
     print "Done."
+    GB.log_results()
 
 if __name__ == '__main__':
     main()
