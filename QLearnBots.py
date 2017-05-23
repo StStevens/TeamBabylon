@@ -37,7 +37,7 @@ class GeneralBot:
             self.q_table = defaultdict(lambda : {action: 0 for action in possible_actions}) #Did I mention how much I love comprehenions?
         self.n, self.gamma, self.alpha = n, alpha, gamma
 
-    def get_curr_state(self, obs): # Not sure if
+    def get_curr_state(self, obs):
         '''
             Discretize distance, player health, and current_weapon into states:
                 Distance (melee, close, far), Health (<10%, 10-60%, 60-100%), current_weapon (sword, bow)
@@ -45,15 +45,15 @@ class GeneralBot:
         '''
         ent = None
         for mob in obs['entities']:
-            if mob['name'] != obs['Name']:
+            if mob['name'] != obs['Name'] and 'life' in mob:
                 ent = mob
                 break
         if ent == None:
-            return None
+            return ("Finished",)
         self.track_target(obs, mob)
         if ent['name'] in Arena.HEIGHT_CHART.keys():
             dist = self.calcDist(ent['x'], ent['y'], ent['z'], obs['XPos'], obs['YPos'], obs['ZPos'], mob['name'])
-            dist = "Melee" if dist <= 2 else "Near" if dist <= 10 else "Far" # Discretize the distance
+            dist = "Melee" if dist <= 3 else "Near" if dist <= 10 else "Far" # Discretize the distance
             health = obs['Life']
             health = "Low" if health <= 2 else "Med" if health <= 12 else "Hi"
             weap = None #de
@@ -168,17 +168,14 @@ class GeneralBot:
             if world_state.number_of_observations_since_last_state > 0:
                 obs = json.loads(world_state.observations[-1].text)
                 state =  self.get_curr_state(obs)
+                if state == ("Finished",):
+                    break
                 action = self.choose_action(state, possible_actions, self.epsilon)
                 self.act(action)
                 for e in obs['entities']:
-                        if e['name'] != obs['Name']:
+                        if e['name'] != obs['Name'] and 'life' in e:
                             enemy = e
                             break
-                if state == None:
-                    continue
-                if state == ("Finished",):
-                    self.agent.sendCommand("quit")
-                    continue
                 delta = 0
                 if enemyHealth == -1:
                     enemyHealth = enemy['life']
@@ -196,7 +193,8 @@ class GeneralBot:
                 if T >= 0:
                     self.update_q_table(t, S, A, R, T)
                 t += 1
-
+        if state == ("Finished",):
+            self.agent.sendCommand("quit")
         print "max_score=", max_score
         #print self.q_table
         return
@@ -228,7 +226,7 @@ class GeneralBot:
 
 def main():
     sys.stdout = os.fdopen(sys.stdout.fileno(), 'w', 0)  # flush print output immediately
-    GB = GeneralBot(fname="gb_qtable.p")
+    GB = GeneralBot()
     agent_host = MalmoPython.AgentHost()
 
     try:

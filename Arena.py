@@ -93,6 +93,7 @@ def create_mission(entity, agent_name=AGENT_NAME, trackw=TRACK_WIDTH, trackb=TRA
                   <ObservationFromNearbyEntities>
                     <Range name="entities" xrange="'''+str(trackw)+'''" yrange="'''+str(trackh)+'''" zrange="'''+str(trackb)+'''" />
                   </ObservationFromNearbyEntities>
+                  <ObservationFromHotBar/>
                 </AgentHandlers>
               </AgentSection>
             </Mission>'''
