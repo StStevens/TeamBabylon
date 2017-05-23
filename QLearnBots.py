@@ -11,7 +11,7 @@ from collections import defaultdict, deque
 
 general_states = set()
 spec_states = set()
-possible_actions = ["move 0.75", "move 0", "move -0.75", "strafe 0.75", "strafe 0", "strafe -0.75", "attack 1", "switch"]
+possible_actions = ["move 1", "move 0", "move 1", "strafe 1", "strafe 0", "strafe -1", "attack 1"] #, "switch"] Remove switch since it's not implemented
 
 
 class GeneralBot:
@@ -80,6 +80,15 @@ class GeneralBot:
         """"Sends a command to the agent to take the chosen course of action"""
         self.agent.sendCommand(action)
         return
+
+    def clearAction(self, action):
+        """Send a command to negate the given action"""
+        if "attack" in action:
+            self.agent.sendCommand("attack 0")
+        elif "strafe" in action:
+            self.agent.sendCommand("strafe 0")
+        elif "move" in action:
+            self.agent.sendCommand("move 0")
 
     def calc_reward(self, time_taken, health, delta):
         reward = 0
@@ -162,37 +171,48 @@ class GeneralBot:
         t = 0
         enemyHealth = -1
         state = ("",)
+        action = ""
+        lastActionTime = 0
         while world_state.is_mission_running and state != ("Finished",):
-            time.sleep(0.1)
+            time.sleep(0.01)
+            currentTime = time.time()
             world_state = self.agent.getWorldState()
             if world_state.number_of_observations_since_last_state > 0:
                 obs = json.loads(world_state.observations[-1].text)
-                state =  self.get_curr_state(obs)
-                if state == ("Finished",):
-                    break
-                action = self.choose_action(state, possible_actions, self.epsilon)
-                self.act(action)
+                if "Name" not in obs: #Edge case where we observe before load.
+                    continue
+                enemy = None
                 for e in obs['entities']:
-                        if e['name'] != obs['Name'] and 'life' in e:
-                            enemy = e
-                            break
-                delta = 0
-                if enemyHealth == -1:
-                    enemyHealth = enemy['life']
-                elif enemy['life'] < enemyHealth:
-                    delta = enemyHealth - enemy['life']
-                    enemyHealth = enemy['life']
-
-                score = self.calc_reward(30, obs['Life'], delta)
-                if score > max_score:
-                    max_score = score
-                R.append(score)
-                S.append(state)
-                A.append(action)
-                T = t - self.n + 1
-                if T >= 0:
-                    self.update_q_table(t, S, A, R, T)
-                t += 1
+                    if e['name'] != obs['Name'] and 'life' in e:
+                        enemy = e
+                        break
+                if enemy == None:
+                    state = ("Finished",)
+                    break
+                self.track_target(obs, enemy)
+                if currentTime - lastActionTime >= 200:
+                    state =  self.get_curr_state(obs)
+                    self.clearAction(action)
+                    action = self.choose_action(state, possible_actions, self.epsilon)
+                    delta = 0
+                    if enemyHealth == -1:
+                        enemyHealth = enemy['life']
+                    elif enemy['life'] < enemyHealth:
+                        delta = enemyHealth - enemy['life']
+                        enemyHealth = enemy['life']
+                    score = self.calc_reward(30, obs['Life'], delta)
+                    if score > max_score:
+                        max_score = score
+                    R.append(score)
+                    T = t - self.n + 1
+                    if T >= 0:
+                        self.update_q_table(t, S, A, R, T)
+                    S.append(state)
+                    A.append(action)
+                    t += 1
+                    self.act(action)
+                if state == ("Finished",):
+                    break 
         if state == ("Finished",):
             self.agent.sendCommand("quit")
         print "max_score=", max_score
