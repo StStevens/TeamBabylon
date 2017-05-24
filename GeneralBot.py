@@ -86,10 +86,10 @@ class GeneralBot:
         elif "move" in action:
             self.agent.sendCommand("move 0")
 
-    def calc_reward(self, time_taken, health, delta):
+    def calc_reward(self, time_taken, healthDelta, damageDelta):
         reward = 0
-        reward += delta * 5
-        reward += health
+        reward += damageDelta * 5
+        reward += healthDelta * 5
         return reward
 
     def update_q_table(self, tau, S, A, R, T):
@@ -165,6 +165,7 @@ class GeneralBot:
         world_state = self.agent.getWorldState()
         t = 0
         enemyHealth = -1
+        agentHealth = -1
         state = ("",)
         action = ""
         lastActionTime = 0
@@ -189,13 +190,19 @@ class GeneralBot:
                     state =  self.get_curr_state(obs)
                     self.clearAction(action)
                     action = self.choose_action(state, possible_actions, self.epsilon)
-                    delta = 0
+                    damageDelta = 0
+                    healthDelta = 0
                     if enemyHealth == -1:
                         enemyHealth = enemy['life']
                     elif enemy['life'] < enemyHealth:
-                        delta = enemyHealth - enemy['life']
+                        damageDelta = enemyHealth - enemy['life']
                         enemyHealth = enemy['life']
-                    score = self.calc_reward(30, obs['Life'], delta)
+                    if agentHealth == -1:
+                        agentHealth = obs['Life']
+                    elif obs['Life'] != agentHealth:
+                        healthDelta = agentHealth - obs['Life']
+                        agentHealth = obs['Life']
+                    score = self.calc_reward(30, healthDelta, damageDelta)
                     if score > max_score:
                         max_score = score
                     R.append(score)
