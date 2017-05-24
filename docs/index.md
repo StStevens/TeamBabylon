@@ -10,7 +10,8 @@ Our team created a bot that targets and attempts to kill nearby living entities 
 
 [embeded video]
 
-##Source Code
+## Source Code
+
 Our repository is located [here](https://github.com/StStevens/TeamBabylon)
 
 Microsoft's Project Malmo [here](https://github.com/Microsoft/malmo)
