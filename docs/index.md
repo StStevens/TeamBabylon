@@ -3,32 +3,11 @@ layout: default
 title:  Home
 ---
 
-_Add your text here_
+Our team created a bot that targets and attempts to kill nearby living entities in Minecraft. Our bot uses a Q-learning reinforcement algorithm to decide between attacking, advancing, or retreating. We make use of Microsoft's Project Malmo to interact with Minecraft.
 
+_Source Code
 
-What's Markdown (`.md`)?
+Our repository is located at https://github.com/StStevens/TeamBabylon
 
-Markdown is markup that lets you write hypertext (HTML) documents
-in easy-to-read and easy-to-write plain text.
-No angle brackets `<></>` required for
-paragraphs, lists, blockquotes, tables, etc.
+Microsoft's Project Malmo - https://github.com/Microsoft/malmo
 
-
-This is a paragraph (in Markdown). Some more
-text here.
-
-This is another paragraph.
-
-This is a list:
-
-- Orange
-- Apple
-- Blueberry
-
-
-
-Just getting started with Markdown?
-See the [HTML <-> Markdown Quick Reference (Cheat Sheet)][quickref].
-
-
-[quickref]: https://github.com/mundimark/quickrefs/blob/master/HTML.md
