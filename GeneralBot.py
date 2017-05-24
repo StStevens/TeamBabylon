@@ -212,7 +212,7 @@ class GeneralBot:
                     t += 1
                     self.act(action)
                 if state == ("Finished",):
-                    break 
+                    break
         if state == ("Finished",):
             self.agent.sendCommand("quit")
         print "max_score=", max_score
@@ -226,23 +226,6 @@ class GeneralBot:
             f.close()
         except Exception as e:
             print e
-
-# class SpecialistBot(GeneralBot):
-#     """SpecialistBot will be given an AgentHost in its run method and use QTabular learning to attack enemies,
-#     caring about enemy type for strategy"""
-#     def __init__(self, alpha=0.3, gamma=1, n=1):
-#         super().__init__(alpha, gamma, n)
-#
-#     def get_curr_state(self, obs, ent): # Not sure if
-#         '''
-#             Discretize distance, player health, and current_weapon into states:
-#                 Distance (melee, close, far), Health (<10%, 10-60%, 60-100%), current_weapon (sword, bow)
-#             Add a state for EnemyType in the Specialist
-#         '''
-#
-#         dist = calcDist(ent['x'], ent['x'], ent['x'], obs['x'], obs['x'], obs['x'])
-#         dist = 0 if dist <= 2 else 1 if dist <= 10 else 2
-#         return
 
 def main():
     sys.stdout = os.fdopen(sys.stdout.fileno(), 'w', 0)  # flush print output immediately
