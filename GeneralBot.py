@@ -1,5 +1,4 @@
 # Basic Structure of Q Learning Agents adapted from Assignment2.py
-
 import Arena
 import MalmoPython
 import math
@@ -9,10 +8,7 @@ import pickle
 import os, sys, random
 from collections import defaultdict, deque
 
-general_states = set()
-spec_states = set()
-possible_actions = ["move 1", "move 0", "move 1", "strafe 1", "strafe 0", "strafe -1", "attack 1"] #, "switch"] Remove switch since it's not implemented
-
+possible_actions = ["move 1", "move 0", "move 1", "strafe 1", "strafe 0", "strafe -1", "attack 1"] #Remove switch since it's not implemented
 
 class GeneralBot:
     """GeneralBot will be given an AgentHost in its run method and use QTabular learning to attack enemies,
@@ -56,7 +52,7 @@ class GeneralBot:
             dist = "Melee" if dist <= 3 else "Near" if dist <= 10 else "Far" # Discretize the distance
             health = obs['Life']
             health = "Low" if health <= 2 else "Med" if health <= 12 else "Hi"
-            weap = None #de
+            weap = None
             return (dist, health)
         return ("Finished",)
 
@@ -161,7 +157,6 @@ class GeneralBot:
         deltaPitch /= 180.0
         return deltaYaw, deltaPitch
 
-
     def run(self, agent_host):
         """Run the agent_host on the world, acting according to the epilon-greedy policy"""
         self.agent = agent_host
@@ -216,7 +211,6 @@ class GeneralBot:
         if state == ("Finished",):
             self.agent.sendCommand("quit")
         print "max_score=", max_score
-        #print self.q_table
         return
 
     def log_results(self):
@@ -244,14 +238,15 @@ def main():
 
     my_mission_record = MalmoPython.MissionRecordSpec()
 
-    encounters = 200 #len(Arena.ENTITY_LIST)
+    encounters = len(Arena.ENTITY_LIST)
     for n in range(encounters):
-        i = 0
+        i = n%len(Arena.ENTITY_LIST)
+        enemy = Arena.malmoName(Arena.ENTITY_LIST[i]) # "Zombie"
         print
-        print 'Mission %d of %d: %s' % (n+1, encounters, Arena.malmoName(Arena.ENTITY_LIST[i]))
+        print 'Mission %d of %d: %s' % (n+1, encounters, enemy)
 
         # Create the mission using the preset XML function from arena_gen
-        missxml = Arena.create_mission(Arena.malmoName(Arena.ENTITY_LIST[i]))
+        missxml = Arena.create_mission(enemy)
         my_mission = MalmoPython.MissionSpec(missxml, True)
         # my_mission.forceWorldReset() # RESET THE WORLD IN BETWEEN ENCOUNTERS
 

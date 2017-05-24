@@ -9,23 +9,20 @@ import math
 
 HEIGHT_CHART = {
     "Creeper":1.7, "Skeleton":1.95, "Spider":1, "Zombie":1.95,
-    "Slime":1, "Ghast":4, "Zombie Pigman":1.95, "Enderman":2.9, "Cave Spider":1, "Silverfish":0.3,
-    "Blaze":2, "Magma Cube":1, "Bat":0.9, "Witch":1.95, "Endermite":0.3,
-    "Pig":0.875, "Wolf":0.85
+    "Ghast":4, "Zombie Pigman":1.95, "Cave Spider":1, "Silverfish":0.3,
+    "Blaze":2, "Witch":1.95, "Endermite":0.3
 }
 
 NAME_MAPPING = {
     "Zombie Pigman" : "PigZombie",
     "Cave Spider" : "CaveSpider",
-    "Magma Cube" : "LavaSlime"
 }
 
 TRACK_WIDTH = 20
 TRACK_BREADTH = 20
 TRACK_HEIGHT = 20
 TIMELIMIT = 30000
-ENTITY_LIST = ["Zombie", "Zombie"]#HEIGHT_CHART.keys()
-
+ENTITY_LIST = HEIGHT_CHART.keys()
 AGENT_NAME = "MurderBot"
 
 def malmoName(minecraftName):

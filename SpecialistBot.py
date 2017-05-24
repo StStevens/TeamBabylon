@@ -8,9 +8,8 @@ import json
 import pickle
 import os, sys, random
 from collections import defaultdict, deque
+from GeneralBot import GeneralBot
 
-general_states = set()
-spec_states = set()
 possible_actions = ["move 1", "move 0", "move 1", "strafe 1", "strafe 0", "strafe -1", "attack 1"] #, "switch"] Remove switch since it's not implemented
 
 class SpecialistBot(GeneralBot):
@@ -36,7 +35,7 @@ class SpecialistBot(GeneralBot):
             self.q_table = defaultdict(lambda : {action: 0 for action in possible_actions})
         self.n, self.gamma, self.alpha = n, alpha, gamma
 
-    def get_curr_state(self, obs, ent): # Not sure if
+    def get_curr_state(self, obs):
         '''
             Discretize distance, player health, and current_weapon into states:
                 Distance (melee, close, far), Health (<10%, 10-60%, 60-100%), current_weapon (sword, bow)
@@ -55,9 +54,10 @@ class SpecialistBot(GeneralBot):
             dist = "Melee" if dist <= 3 else "Near" if dist <= 10 else "Far" # Discretize the distance
             health = obs['Life']
             health = "Low" if health <= 2 else "Med" if health <= 12 else "Hi"
-            weap = None
-            return (dist, health)
+            weap = None #de
+            return (dist, health, ent['name'])
         return ("Finished",)
+
 
 def main():
     sys.stdout = os.fdopen(sys.stdout.fileno(), 'w', 0)  # flush print output immediately
@@ -76,14 +76,15 @@ def main():
 
     my_mission_record = MalmoPython.MissionRecordSpec()
 
-    encounters = 200 #len(Arena.ENTITY_LIST)
+    encounters = len(Arena.ENTITY_LIST)&15
     for n in range(encounters):
-        i = 0
+        i = n%len(Arena.ENTITY_LIST)
+        enemy = Arena.malmoName(Arena.ENTITY_LIST[i]) # "Zombie"
         print
-        print 'Mission %d of %d: %s' % (n+1, encounters, Arena.malmoName(Arena.ENTITY_LIST[i]))
+        print 'Mission %d of %d: %s' % (n+1, encounters, enemy)
 
         # Create the mission using the preset XML function from arena_gen
-        missxml = Arena.create_mission(Arena.malmoName(Arena.ENTITY_LIST[i]))
+        missxml = Arena.create_mission(enemy)
         my_mission = MalmoPython.MissionSpec(missxml, True)
         # my_mission.forceWorldReset() # RESET THE WORLD IN BETWEEN ENCOUNTERS
 
