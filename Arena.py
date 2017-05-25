@@ -10,7 +10,7 @@ import math
 HEIGHT_CHART = {
     "Creeper":1.7, "Skeleton":1.95, "Spider":1, "Zombie":1.95,
     "Ghast":4, "Zombie Pigman":1.95, "Cave Spider":1, "Silverfish":0.3,
-    "Blaze":2, "Witch":1.95, "Endermite":0.3
+    "Blaze":2, "Witch":1.95, "Endermite":0.3, "Wolf": 0.85
 }
 
 NAME_MAPPING = {
@@ -82,9 +82,6 @@ def create_mission(entity, agent_name=AGENT_NAME, trackw=TRACK_WIDTH, trackb=TRA
                       </ModifierList>
                   </MissionQuitCommands>
                   <ObservationFromFullStats/>
-                  <RewardForMissionEnd rewardForDeath="-100">
-                    <Reward description="out_of_time" reward="-10" />
-                  </RewardForMissionEnd>
                   <AgentQuitFromTimeUp timeLimitMs="'''+str(timelimit)+'''" description="out_of_time"/>
                   <ContinuousMovementCommands turnSpeedDegs="900"/>
                   <ObservationFromNearbyEntities>

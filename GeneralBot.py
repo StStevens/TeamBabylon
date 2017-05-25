@@ -9,7 +9,6 @@ import os, sys, random
 from collections import defaultdict, deque
 
 possible_actions = ["move 1", "move 0", "move 1", "strafe 1", "strafe 0", "strafe -1", "attack 1"] #Remove switch since it's not implemented
-
 class GeneralBot:
     """GeneralBot will be given an AgentHost in its run method and use QTabular learning to attack enemies,
     ignoring enemy type for strategy"""
@@ -32,6 +31,7 @@ class GeneralBot:
             self.fname = "gb_qtable.p"
             self.q_table = defaultdict(lambda : {action: 0 for action in possible_actions}) #Did I mention how much I love comprehenions?
         self.n, self.gamma, self.alpha = n, alpha, gamma
+        self.history = []
 
     def get_curr_state(self, obs):
         '''
@@ -88,8 +88,8 @@ class GeneralBot:
 
     def calc_reward(self, time_taken, healthDelta, damageDelta):
         reward = 0
-        reward += damageDelta * 5
-        reward += healthDelta * 5
+        reward += damageDelta * 10
+        reward += healthDelta * 10
         return reward
 
     def update_q_table(self, tau, S, A, R, T):
@@ -159,8 +159,13 @@ class GeneralBot:
 
     def run(self, agent_host):
         """Run the agent_host on the world, acting according to the epilon-greedy policy"""
+        roundTimeStart = time.time()
+        failed_missions = 0
+        kill = 0
+        round_enemy = None
         self.agent = agent_host
         max_score = 0
+        min_score = 100
         S, A, R = deque(), deque(), deque()
         world_state = self.agent.getWorldState()
         t = 0
@@ -175,19 +180,24 @@ class GeneralBot:
             world_state = self.agent.getWorldState()
             if world_state.number_of_observations_since_last_state > 0:
                 obs = json.loads(world_state.observations[-1].text)
+                if state == ("last check",):
+                    state = ("Finished",)
+                    agentHealth = obs['Life']
+                    break
                 if "Name" not in obs: #Edge case where we observe before load.
                     continue
                 enemy = None
                 for e in obs['entities']:
                     if e['name'] != obs['Name'] and 'life' in e:
+                        round_enemy = e['name']
                         enemy = e
                         break
                 if enemy == None:
-                    state = ("Finished",)
-                    break
+                    state = ("last check",)
+                    continue
                 self.track_target(obs, enemy)
                 if currentTime - lastActionTime >= 200:
-                    state =  self.get_curr_state(obs)
+                    state = self.get_curr_state(obs)
                     self.clearAction(action)
                     action = self.choose_action(state, possible_actions, self.epsilon)
                     damageDelta = 0
@@ -205,6 +215,8 @@ class GeneralBot:
                     score = self.calc_reward(30, healthDelta, damageDelta)
                     if score > max_score:
                         max_score = score
+                    if score < min_score:
+                        min_score = score
                     R.append(score)
                     T = t - self.n + 1
                     if T >= 0:
@@ -215,15 +227,37 @@ class GeneralBot:
                     self.act(action)
                 if state == ("Finished",):
                     break
-        if state == ("Finished",):
+        if state == ("Finished",) and agentHealth != 0:
+            kill = 1
             self.agent.sendCommand("quit")
-        print "max_score=", max_score
+        else:
+            kill = 0
+            agentHealth = 0
+
+        timeInRound = time.time() - roundTimeStart
+        print ('max_score = {}, min_score = {}'.format(max_score, min_score))
+        print('enemy={}, agentHealth={}, timeInRound={}, kill={}'.format(round_enemy, agentHealth, timeInRound, kill))
+        if round_enemy != None:
+            self.history.append((round_enemy, agentHealth, timeInRound, kill))
         return
 
-    def log_results(self):
+    def log_Q(self):
         try:
             f = open(self.fname, 'w')
             pickle.dump(dict(self.q_table), f)
+            f.close()
+        except Exception as e:
+            print e
+
+    def log_results(self, filename):
+        try:
+            f = open(filename, 'w')
+            for result in self.history:
+                f.write(str(result[0])+',')
+                f.write(str(result[1])+',')
+                f.write('{},'.format(result[2]))
+                f.write('{:.4f}'.format(result[3]))
+                f.write('\n')
             f.close()
         except Exception as e:
             print e
@@ -245,17 +279,22 @@ def main():
 
     my_mission_record = MalmoPython.MissionRecordSpec()
 
-    encounters = len(Arena.ENTITY_LIST)
+
+    ##########################################################
+    ## Modify the below code in order to change the encounters
+    ##########################################################
+    encounters = len(Arena.ENTITY_LIST)*10
     for n in range(encounters):
         i = n%len(Arena.ENTITY_LIST)
-        enemy = Arena.malmoName(Arena.ENTITY_LIST[i]) # "Zombie"
+        enemy = Arena.malmoName(Arena.ENTITY_LIST[i]) #"Zombie" if you want to run it exclusively
+                                                    # against Zombies
         print
         print 'Mission %d of %d: %s' % (n+1, encounters, enemy)
 
-        # Create the mission using the preset XML function from arena_gen
+        # Create the mission using the preset XML function fromarena_gen
         missxml = Arena.create_mission(enemy)
         my_mission = MalmoPython.MissionSpec(missxml, True)
-        # my_mission.forceWorldReset() # RESET THE WORLD IN BETWEEN ENCOUNTERS
+        my_mission.forceWorldReset() # RESET THE WORLD IN BETWEEN ENCOUNTERS
 
         max_retries = 3
         for retry in range(max_retries):
@@ -285,7 +324,8 @@ def main():
         # -- clean up -- #
         time.sleep(2)  # (let the Mod reset)
     print "Done."
-    GB.log_results()
+    GB.log_Q()
+    GB.log_results('gb_results_base.txt')
 
 if __name__ == '__main__':
     main()

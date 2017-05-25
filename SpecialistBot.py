@@ -10,7 +10,7 @@ import os, sys, random
 from collections import defaultdict, deque
 from GeneralBot import GeneralBot
 
-possible_actions = ["move 1", "move 0", "move 1", "strafe 1", "strafe 0", "strafe -1", "attack 1"] #, "switch"] Remove switch since it's not implemented
+possible_actions = ["move 1", "move 0", "move 1", "strafe 1", "strafe 0", "strafe -1", "attack 1"] # Remove switch since it's not implemented
 
 class SpecialistBot(GeneralBot):
     """SpecialistBot will be given an AgentHost in its run method and use QTabular learning to attack enemies,
@@ -34,6 +34,7 @@ class SpecialistBot(GeneralBot):
             self.fname = "sb_qtable.p"
             self.q_table = defaultdict(lambda : {action: 0 for action in possible_actions})
         self.n, self.gamma, self.alpha = n, alpha, gamma
+        self.history = []
 
     def get_curr_state(self, obs):
         '''
@@ -76,7 +77,7 @@ def main():
 
     my_mission_record = MalmoPython.MissionRecordSpec()
 
-    encounters = len(Arena.ENTITY_LIST)&15
+    encounters = len(Arena.ENTITY_LIST)*10
     for n in range(encounters):
         i = n%len(Arena.ENTITY_LIST)
         enemy = Arena.malmoName(Arena.ENTITY_LIST[i]) # "Zombie"
@@ -86,7 +87,7 @@ def main():
         # Create the mission using the preset XML function from arena_gen
         missxml = Arena.create_mission(enemy)
         my_mission = MalmoPython.MissionSpec(missxml, True)
-        # my_mission.forceWorldReset() # RESET THE WORLD IN BETWEEN ENCOUNTERS
+        my_mission.forceWorldReset() # RESET THE WORLD IN BETWEEN ENCOUNTERS
 
         max_retries = 3
         for retry in range(max_retries):
@@ -116,7 +117,8 @@ def main():
         # -- clean up -- #
         time.sleep(2)  # (let the Mod reset)
     print "Done."
-    GB.log_results()
+    SB.log_Q()
+    SB.log_results('sb_results_base.txt')
 
 if __name__ == '__main__':
     main()
