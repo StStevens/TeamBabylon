@@ -15,7 +15,7 @@ possible_actions = ["move 1", "move 0", "move 1", "strafe 1", "strafe 0", "straf
 class SpecialistBot(GeneralBot):
     """SpecialistBot will be given an AgentHost in its run method and use QTabular learning to attack enemies,
     caring about enemy type for strategy"""
-    def __init__(self, alpha=0.3, gamma=1, n=1, fname=None):
+    def __init__(self, alpha=0.3, gamma=1, n=2, fname=None):
         """Constructing an RL agent.
 
         Args
@@ -59,7 +59,6 @@ class SpecialistBot(GeneralBot):
             return (dist, health, ent['name'])
         return ("Finished",)
 
-
 def main():
     sys.stdout = os.fdopen(sys.stdout.fileno(), 'w', 0)  # flush print output immediately
     SB = SpecialistBot()
@@ -77,14 +76,19 @@ def main():
 
     my_mission_record = MalmoPython.MissionRecordSpec()
 
+
+    ##########################################################
+    ## Modify the below code in order to change the encounters
+    ##########################################################
     encounters = len(Arena.ENTITY_LIST)*10
     for n in range(encounters):
         i = n%len(Arena.ENTITY_LIST)
-        enemy = Arena.malmoName(Arena.ENTITY_LIST[i]) # "Zombie"
+        enemy = Arena.malmoName(Arena.ENTITY_LIST[i]) #"Zombie" if you want to run it exclusively
+                                                    # against Zombies
         print
         print 'Mission %d of %d: %s' % (n+1, encounters, enemy)
 
-        # Create the mission using the preset XML function from arena_gen
+        # Create the mission using the preset XML function fromarena_gen
         missxml = Arena.create_mission(enemy)
         my_mission = MalmoPython.MissionSpec(missxml, True)
         my_mission.forceWorldReset() # RESET THE WORLD IN BETWEEN ENCOUNTERS

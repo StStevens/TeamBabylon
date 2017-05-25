@@ -101,7 +101,9 @@ class GeneralBot:
             R:   <dequqe>   rewards queue
             T:   <int>      terminating state index
         """
-        curr_s, curr_a, curr_r = S.popleft(), A.popleft(), R.popleft()
+        curr_s = S.popleft()
+        curr_a = A.popleft()
+        curr_r = R.popleft()
         G = sum([self.gamma ** i * R[i] for i in range(len(S))])
         if tau + self.n < T:
             G += self.gamma ** self.n * self.q_table[S[-1]][A[-1]]
