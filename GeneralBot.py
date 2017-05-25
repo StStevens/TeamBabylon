@@ -255,8 +255,8 @@ class GeneralBot:
             for result in self.history:
                 f.write(str(result[0])+',')
                 f.write(str(result[1])+',')
-                f.write('{},'.format(result[2]))
-                f.write('{:.4f}'.format(result[3]))
+                f.write('{:5.3f},'.format(result[2]))
+                f.write('{}'.format(result[3]))
                 f.write('\n')
             f.close()
         except Exception as e:

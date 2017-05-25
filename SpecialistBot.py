@@ -62,7 +62,7 @@ class SpecialistBot(GeneralBot):
 
 def main():
     sys.stdout = os.fdopen(sys.stdout.fileno(), 'w', 0)  # flush print output immediately
-    GB = GeneralBot()
+    SB = SpecialistBot()
     agent_host = MalmoPython.AgentHost()
 
     try:
@@ -112,7 +112,7 @@ def main():
         print
 
         # -- run the agent in the world -- #
-        GB.run(agent_host)
+        SB.run(agent_host)
         print "Mission has stopped.\n"
         # -- clean up -- #
         time.sleep(2)  # (let the Mod reset)
