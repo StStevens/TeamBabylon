@@ -6,7 +6,7 @@ title:  Home
 
 Our team created a bot that targets and attempts to kill nearby living entities in Minecraft. Our bot uses a Q-learning reinforcement algorithm to decide between attacking, advancing, or retreating. We make use of Microsoft's Project Malmo to interact with Minecraft.
 
-[Fighting a mob.jpg]
+[arenaview]: https://github.com/StStevens/TeamBabylon/blob/master/docs/Arena.png
 
 [embeded video]
 
