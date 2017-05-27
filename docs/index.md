@@ -2,7 +2,7 @@
 layout: default
 title:  Home
 ---
-[Main Graphic]
+![alt text](https://github.com/StStevens/TeamBabylon/blob/master/docs/babylon.png "Training terminators since 2017!")
 
 Our team created a bot that targets and attempts to kill nearby living entities in Minecraft. Our bot uses a Q-learning reinforcement algorithm to decide between attacking, advancing, or retreating. We make use of Microsoft's Project Malmo to interact with Minecraft.
 
