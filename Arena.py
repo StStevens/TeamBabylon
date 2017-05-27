@@ -18,6 +18,13 @@ NAME_MAPPING = {
     "Cave Spider" : "CaveSpider",
 }
 
+
+def malmoName(minecraftName):
+    '''returns the malmo-appropriate name of a given entity'''
+    if minecraftName not in NAME_MAPPING.keys():
+        return minecraftName
+    return NAME_MAPPING[minecraftName]
+
 TRACK_WIDTH = 20
 TRACK_BREADTH = 20
 TRACK_HEIGHT = 20
