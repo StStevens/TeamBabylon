@@ -8,7 +8,7 @@ Our team created a bot that targets and attempts to kill nearby living entities 
 
 ![alt text](https://github.com/StStevens/TeamBabylon/raw/master/docs/Arena.png "our combat arena")
 
-[embeded video]
+<iframe width="560" height="315" src="https://www.youtube.com/embed/Nyg_-K4BSPY" frameborder="0" allowfullscreen></iframe>
 
 ## Source Code
 
