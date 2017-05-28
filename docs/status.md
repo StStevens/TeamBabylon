@@ -8,7 +8,7 @@ The goal of our project is to create and compare two Malmo agents that learn to 
 
 **APPROACH:**
 
-*Update equation:*
+*Update Equation:*
 
 	r is the reward for the current action.
 
@@ -22,7 +22,7 @@ The goal of our project is to create and compare two Malmo agents that learn to 
 Our bot currently begins in an arena with a single enemy. As its q-table is initially empty, it begins selecting actions at random, but remains facing the enemy at all times. From any given state, the same possible actions are available which include move forward or backward, stop, strafe left or right, and attack. While the aim of the bot is updated every 10ms for accuracy, a new action is chosen every 200ms, clearing the old action to ensure that decisions from previous world states do not interfere with the current one.
 
 *States of MDP:*
-In order to use q-learning, our program separates the world into several different states. Our main two observations used in determining the current world state are our distance from the enemy and our current health. As distance is a continuous variable, and therefore results in an unreasonably large number of world states to make learning practical, we separate the distances into three discrete categories. In a similar manner, having many different possible levels of health is not productive when trying to learn, as it makes the agent unlikely to land in the same world state twice with a very large state space. Therefore, we discretize health into three categories as well. This reduces our state space significantly and therefore allows the agent to learn more quickly. Our categories are as follows:
+In order to use Q-learning, our program separates the world into several different states. Our main two observations used in determining the current world state are our distance from the enemy and our current health. As distance is a continuous variable, and therefore results in an unreasonably large number of world states to make learning practical, we separate the distances into three discrete categories. In a similar manner, having many different possible levels of health is not productive when trying to learn, as it makes the agent unlikely to land in the same world state twice with a very large state space. Therefore, we discretize health into three categories as well. This reduces our state space significantly and therefore allows the agent to learn more quickly. Our categories are as follows:
 
       Distance:	{ d <= 3: ‘Melee’,   3 < d <= 10: ‘Near’,   d > 10: ‘Far’ }
 
@@ -31,7 +31,7 @@ In order to use q-learning, our program separates the world into several differe
 
 Given that we are using the specialist bot, we add an extra state to the world: enemy type. The purpose of this extra state is to allow the bot to make more informed decisions about whether to attack, or move forward or backward based on the enemy that it is fighting. Ideally, this bot should eventually noticeably outperform the generalist bot, by applying a strategy specific to the type of enemy it is fighting.
 
-*Reward function:*
+*Reward Function:*
 Our current reward function remains simple as we are still experimenting with metrics that may improve its effectiveness at teaching our agent combat. In its current iteration, the agent learns on two metrics, our change in health since the last action, and the damage dealt since the last action. These are meant to encourage the bot to find a balance between maintaining health and dealing damage to the enemy. While the agent health is easily obtained by getting the world state and searching through the observations, the damage dealt is not available within the world observations. In order to access enemy health, one of our team members became a contributor to the Malmo repository and made modifications to generate the enemy health observations, and therefore enabled our team and other Malmo users to access the enemy's health.
 
 
