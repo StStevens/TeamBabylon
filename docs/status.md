@@ -17,6 +17,17 @@ The graphs show the total amount of health remaining after the fight in red and 
 The performance of the generalist bot (‘GB’) and the specialist bot (‘SB’) are displayed side-by-side for comparison.
 
 ![alt text](https://raw.githubusercontent.com/StStevens/TeamBabylon/master/docs/blaze.png)
+![alt text](https://raw.githubusercontent.com/StStevens/TeamBabylon/master/docs/cave-spider.png)
+![alt text](https://raw.githubusercontent.com/StStevens/TeamBabylon/master/docs/creeper.png)
+![alt text](https://raw.githubusercontent.com/StStevens/TeamBabylon/master/docs/endermite.png)
+![alt text](https://raw.githubusercontent.com/StStevens/TeamBabylon/master/docs/ghast.png)
+![alt text](https://raw.githubusercontent.com/StStevens/TeamBabylon/master/docs/silverfish.png)
+![alt text](https://raw.githubusercontent.com/StStevens/TeamBabylon/master/docs/skeleton.png)
+![alt text](https://raw.githubusercontent.com/StStevens/TeamBabylon/master/docs/spider.png)
+![alt text](https://raw.githubusercontent.com/StStevens/TeamBabylon/master/docs/witch.png)
+![alt text](https://raw.githubusercontent.com/StStevens/TeamBabylon/master/docs/wolf.png)
+![alt text](https://raw.githubusercontent.com/StStevens/TeamBabylon/master/docs/zombie.png)
+![alt text](https://raw.githubusercontent.com/StStevens/TeamBabylon/master/docs/zombie-pigman.png)
 
 
 

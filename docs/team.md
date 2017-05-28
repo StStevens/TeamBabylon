@@ -9,8 +9,8 @@ title:  Team
 ## Nick Prendergast
 ***UCI Net ID***: prenderj
 
-## USER 2
+## Alexander Thompson
 ***UCI Net ID***: aithomps
 
-## USER 3
+## John Thorpe
 ***UCI Net ID***: jthorpe
