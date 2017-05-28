@@ -89,7 +89,7 @@ class GeneralBot:
     def calc_reward(self, time_taken, healthDelta, damageDelta):
         reward = 0
         reward += damageDelta * 10
-        reward += healthDelta * 10
+        reward += healthDelta * 3
         return reward
 
     def update_q_table(self, tau, S, A, R, T):

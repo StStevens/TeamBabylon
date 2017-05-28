@@ -61,7 +61,7 @@ class SpecialistBot(GeneralBot):
 
 def main():
     sys.stdout = os.fdopen(sys.stdout.fileno(), 'w', 0)  # flush print output immediately
-    SB = SpecialistBot()
+    SB = SpecialistBot("sb_qtable.p")
     agent_host = MalmoPython.AgentHost()
 
     try:
