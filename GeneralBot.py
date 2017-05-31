@@ -12,7 +12,7 @@ possible_actions = ["move 1", "move 0", "move 1", "strafe 1", "strafe 0", "straf
 class GeneralBot:
     """GeneralBot will be given an AgentHost in its run method and use QTabular learning to attack enemies,
     ignoring enemy type for strategy"""
-    def __init__(self, alpha=0.3, gamma=1, n=2, fname=None):
+    def __init__(self, alpha=0.3, gamma=1, n=3, fname=None):
         """Constructing an RL agent.
 
         Args
@@ -49,7 +49,7 @@ class GeneralBot:
         self.track_target(obs, mob)
         if ent['name'] in Arena.HEIGHT_CHART.keys():
             dist = self.calcDist(ent['x'], ent['y'], ent['z'], obs['XPos'], obs['YPos'], obs['ZPos'], mob['name'])
-            dist = "Melee" if dist <= 3 else "Near" if dist <= 10 else "Far" # Discretize the distance
+            dist = "Melee" if dist <= 3 else "Near" if dist <= 5 else "Far" # Discretize the distance
             health = obs['Life']
             health = "Low" if health <= 2 else "Med" if health <= 12 else "Hi"
             weap = None
@@ -89,7 +89,7 @@ class GeneralBot:
     def calc_reward(self, time_taken, healthDelta, damageDelta):
         reward = 0
         reward += damageDelta * 10
-        reward += healthDelta * 3
+        reward += healthDelta * 10
         return reward
 
     def update_q_table(self, tau, S, A, R, T):
@@ -159,6 +159,47 @@ class GeneralBot:
         deltaPitch /= 180.0
         return deltaYaw, deltaPitch
 
+    def runOptimal(self, agent_host):
+        self.agent = agent_host
+        world_state = self.agent.getWorldState()
+        enemyHealth = -1
+        agentHealth = -1
+        state = ("",)
+        action = ""
+        lastActionTime = 0
+        while world_state.is_mission_running and state != ("Finished",):
+            time.sleep(0.01)
+            currentTime = time.time()
+            world_state = self.agent.getWorldState()
+            if world_state.number_of_observations_since_last_state > 0:
+                obs = json.loads(world_state.observations[-1].text)
+                if state == ("last check",):
+                    state = ("Finished",)
+                    agentHealth = obs['Life']
+                    break
+                if "Name" not in obs: #Edge case where we observe before load.
+                    continue
+                enemy = None
+                for e in obs['entities']:
+                    if e['name'] != obs['Name'] and 'life' in e:
+                        round_enemy = e['name']
+                        enemy = e
+                        break
+                if enemy == None:
+                    state = ("last check",)
+                    continue
+                self.track_target(obs, enemy)
+                if currentTime - lastActionTime >= 200:
+                    state = self.get_curr_state(obs)
+                    self.clearAction(action)
+                    action = self.choose_action(state, possible_actions, 0)
+                    self.act(action)
+                if state == ("Finished",):
+                    break
+        if state == ("Finished",) and agentHealth != 0:
+            self.agent.sendCommand("quit")
+        return
+
     def run(self, agent_host):
         """Run the agent_host on the world, acting according to the epilon-greedy policy"""
         roundTimeStart = time.time()
@@ -170,6 +211,9 @@ class GeneralBot:
         min_score = 100
         S, A, R = deque(), deque(), deque()
         world_state = self.agent.getWorldState()
+        if world_state.number_of_observations_since_last_state > 0:
+            obs = json.loads(word_state.observations[-1].text)
+        
         t = 0
         enemyHealth = -1
         agentHealth = -1
@@ -288,7 +332,7 @@ def main():
     encounters = len(Arena.ENTITY_LIST)*10
     for n in range(encounters):
         i = n%len(Arena.ENTITY_LIST)
-        enemy = Arena.malmoName(Arena.ENTITY_LIST[i]) #"Zombie" if you want to run it exclusively
+        enemy = "Blaze" #Arena.malmoName(Arena.ENTITY_LIST[i]) #"Zombie" if you want to run it exclusively
                                                     # against Zombies
         print
         print 'Mission %d of %d: %s' % (n+1, encounters, enemy)
@@ -321,7 +365,11 @@ def main():
         print
 
         # -- run the agent in the world -- #
-        GB.run(agent_host)
+        if n % 5 == 0:
+            print "Optimal Stratedgy so far..."
+            GB.runOptimal(agent_host)
+        else:
+            GB.run(agent_host)
         print "Mission has stopped.\n"
         # -- clean up -- #
         time.sleep(2)  # (let the Mod reset)
