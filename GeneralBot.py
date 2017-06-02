@@ -193,7 +193,7 @@ class GeneralBot:
         return
 
     def run(self, agent_host):
-        """Run the agent_host on the world, acting according to the epilon-greedy policy"""
+        """Run the agent_host on the world, acting according to the epsilon-greedy policy"""
         roundTimeStart = time.time()
         failed_missions = 0
         kill = 0
@@ -242,13 +242,13 @@ class GeneralBot:
                     healthDelta = 0
                     if enemyHealth == -1:
                         enemyHealth = enemy['life']
-                    elif enemy['life'] < enemyHealth:
+                    elif enemy['life'] != enemyHealth:
                         damageDelta = enemyHealth - enemy['life']
                         enemyHealth = enemy['life']
                     if agentHealth == -1:
                         agentHealth = obs['Life']
                     elif obs['Life'] != agentHealth:
-                        healthDelta = agentHealth - obs['Life']
+                        healthDelta = obs['Life'] - agentHealth
                         agentHealth = obs['Life']
                     score = self.calc_reward(30, healthDelta, damageDelta)
                     if score > max_score:
