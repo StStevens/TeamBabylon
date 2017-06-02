@@ -36,28 +36,14 @@ class SpecialistBot(GeneralBot):
         self.n, self.gamma, self.alpha = n, alpha, gamma
         self.history = []
 
-    def get_curr_state(self, obs):
+    def get_curr_state(self, obs, ent):
         '''
             Discretize distance, player health, and current_weapon into states:
                 Distance (melee, close, far), Health (<10%, 10-60%, 60-100%), current_weapon (sword, bow)
             Add a state for EnemyType in the Specialist
         '''
-        ent = None
-        for mob in obs['entities']:
-            if mob['name'] != obs['Name'] and 'life' in mob:
-                ent = mob
-                break
-        if ent == None:
-            return ("Finished",)
-        self.track_target(obs, mob)
-        if ent['name'] in Arena.HEIGHT_CHART.keys():
-            dist = self.calcDist(ent['x'], ent['y'], ent['z'], obs['XPos'], obs['YPos'], obs['ZPos'], mob['name'])
-            dist = "Melee" if dist <= 3 else "Near" if dist <= 10 else "Far" # Discretize the distance
-            health = obs['Life']
-            health = "Low" if health <= 2 else "Med" if health <= 12 else "Hi"
-            weap = None #de
-            return (dist, health, ent['name'])
-        return ("Finished",)
+        state = GeneralBot.get_curr_state(self, obs, ent)
+        return state if state == ("Finished",) else state + (ent['name'],)
 
 def main():
     sys.stdout = os.fdopen(sys.stdout.fileno(), 'w', 0)  # flush print output immediately

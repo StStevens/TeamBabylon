@@ -33,25 +33,17 @@ class GeneralBot:
         self.n, self.gamma, self.alpha = n, alpha, gamma
         self.history = []
 
-    def get_curr_state(self, obs):
+    def get_curr_state(self, obs, ent):
         '''
             Discretize distance, player health, and current_weapon into states:
                 Distance (melee, close, far), Health (<10%, 10-60%, 60-100%), current_weapon (sword, bow)
             Add a state for EnemyType in the Specialist
         '''
-        ent = None
-        for mob in obs['entities']:
-            if mob['name'] != obs['Name'] and 'life' in mob:
-                ent = mob
-                break
-        if ent == None:
-            return ("Finished",)
-        self.track_target(obs, mob)
         if ent['name'] in Arena.HEIGHT_CHART.keys():
-            dist = self.calcDist(ent['x'], ent['y'], ent['z'], obs['XPos'], obs['YPos'], obs['ZPos'], mob['name'])
-            dist = "Melee" if dist <= 3 else "Near" if dist <= 5 else "Far" # Discretize the distance
+            dist = self.calcDist(ent['x'], ent['y'], ent['z'], obs['XPos'], obs['YPos'], obs['ZPos'], ent['name'])
+            dist = "Close" if dist <= 2 else "Melee" if dist <= 4 else "Far" # Discretize the distance
             health = obs['Life']
-            health = "Low" if health <= 2 else "Med" if health <= 12 else "Hi"
+            health = "Low" if health <= 5 else "Med" if health <= 12 else "Hi"
             weap = None
             return (dist, health)
         return ("Finished",)
@@ -88,7 +80,7 @@ class GeneralBot:
 
     def calc_reward(self, time_taken, healthDelta, damageDelta):
         reward = 0
-        reward += damageDelta * 10
+        reward += damageDelta * 15
         reward += healthDelta * 10
         return reward
 
@@ -190,7 +182,7 @@ class GeneralBot:
                     continue
                 self.track_target(obs, enemy)
                 if currentTime - lastActionTime >= 200:
-                    state = self.get_curr_state(obs)
+                    state = self.get_curr_state(obs, enemy)
                     self.clearAction(action)
                     action = self.choose_action(state, possible_actions, 0)
                     self.act(action)
@@ -243,7 +235,7 @@ class GeneralBot:
                     continue
                 self.track_target(obs, enemy)
                 if currentTime - lastActionTime >= 200:
-                    state = self.get_curr_state(obs)
+                    state = self.get_curr_state(obs, enemy)
                     self.clearAction(action)
                     action = self.choose_action(state, possible_actions, self.epsilon)
                     damageDelta = 0
@@ -365,7 +357,7 @@ def main():
         print
 
         # -- run the agent in the world -- #
-        if n % 5 == 0:
+        if n % 5 == 0 and n != 0:
             print "Optimal Stratedgy so far..."
             GB.runOptimal(agent_host)
         else:
