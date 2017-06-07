@@ -10,7 +10,7 @@ import os, sys, random
 from collections import defaultdict, deque
 from GeneralBot import GeneralBot
 
-possible_actions = ["move 1", "move 0", "move 1", "strafe 1", "strafe 0", "strafe -1", "attack 1"] # Remove switch since it's not implemented
+possible_actions = ["move 1", "move 0", "move 1", "strafe 1", "strafe 0", "strafe -1", "attack 1", "use 1", "use 0", "switch"] # Remove switch since it's not implemented
 
 class SpecialistBot(GeneralBot):
     """SpecialistBot will be given an AgentHost in its run method and use QTabular learning to attack enemies,
@@ -24,6 +24,8 @@ class SpecialistBot(GeneralBot):
             n:      <int>    number of back steps to update (default = 1)
             fname:  <string> filename to store resulting q-table in
         """
+        self.bow_charge = 0 #ATTEMPT TO CAPTURE CHARGE ON BOW AS A CLASS VARIABLE
+        self.weapon = "sword" #or "bow"
         self.fname = fname
         self.agent = None
         self.epsilon = 0.2  # chance of taking a random action instead of the best
@@ -35,6 +37,13 @@ class SpecialistBot(GeneralBot):
             self.q_table = defaultdict(lambda : {action: 0 for action in possible_actions})
         self.n, self.gamma, self.alpha = n, alpha, gamma
         self.history = []
+
+    def get_possible_actions(self):
+        '''Returns a list of possible actions based on weapon type'''
+        if self.weapon == "bow":
+            return ["move 1", "move 0", "move 1", "strafe 1", "strafe 0", "strafe -1", "use 1", "use 0", "switch"]
+        else #using sword
+            return ["move 1", "move 0", "move 1", "strafe 1", "strafe 0", "strafe -1", "attack 1", "switch"]
 
     def get_curr_state(self, obs, ent):
         '''

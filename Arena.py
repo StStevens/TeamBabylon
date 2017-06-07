@@ -28,7 +28,7 @@ def malmoName(minecraftName):
 TRACK_WIDTH = 20
 TRACK_BREADTH = 20
 TRACK_HEIGHT = 20
-TIMELIMIT = 30000
+TIMELIMIT = 8000
 ENTITY_LIST = HEIGHT_CHART.keys()
 AGENT_NAME = "MurderBot"
 
@@ -91,6 +91,11 @@ def create_mission(entity, agent_name=AGENT_NAME, trackw=TRACK_WIDTH, trackb=TRA
                   <ObservationFromFullStats/>
                   <AgentQuitFromTimeUp timeLimitMs="'''+str(timelimit)+'''" description="out_of_time"/>
                   <ContinuousMovementCommands turnSpeedDegs="900"/>
+                  <InventoryCommands>
+                    <ModifierList type = "deny-list">
+                        <command>discardCurrentItem</command>
+                    </ModifierList>
+                  </InventoryCommands>
                   <ObservationFromNearbyEntities>
                     <Range name="entities" xrange="'''+str(trackw)+'''" yrange="'''+str(trackh)+'''" zrange="'''+str(trackb)+'''" />
                   </ObservationFromNearbyEntities>
