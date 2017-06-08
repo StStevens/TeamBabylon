@@ -328,7 +328,7 @@ class GeneralBot:
 
 def main():
     sys.stdout = os.fdopen(sys.stdout.fileno(), 'w', 0)  # flush print output immediately
-    GB = GeneralBot()
+    GB = GeneralBot(fname='gb_qtable_start.p')
     agent_host = MalmoPython.AgentHost()
 
     try:
@@ -347,10 +347,10 @@ def main():
     ##########################################################
     ## Modify the below code in order to change the encounters
     ##########################################################
-    encounters = len(Arena.ENTITY_LIST)*8
+    encounters = len(Arena.ENTITY_LIST)*10
     for n in range(encounters):
         i = n%len(Arena.ENTITY_LIST)
-        enemy = "Zombie" #Arena.malmoName(Arena.ENTITY_LIST[i]) #"Zombie" if you want to run it exclusively
+        enemy = Arena.malmoName(Arena.ENTITY_LIST[i]) #"Zombie" if you want to run it exclusively
                                                     # against Zombies
         print
         print 'Mission %d of %d: %s' % (n+1, encounters, enemy)
@@ -393,7 +393,7 @@ def main():
         time.sleep(2)  # (let the Mod reset)
     print "Done."
     GB.log_Q()
-    GB.log_results('gb_results_base.txt')
+    GB.log_results('gb_results_base2.txt')
 
 if __name__ == '__main__':
     main()
