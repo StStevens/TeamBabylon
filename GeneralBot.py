@@ -8,11 +8,10 @@ import pickle
 import os, sys, random
 from collections import defaultdict, deque
 
-possible_actions = ["move 1", "move 0", "move 1", "strafe 1", "strafe 0", "strafe -1", "attack 1"] #Remove switch since it's not implemented
 class GeneralBot:
     """GeneralBot will be given an AgentHost in its run method and use QTabular learning to attack enemies,
     ignoring enemy type for strategy"""
-    def __init__(self, alpha=0.3, gamma=1, n=3, fname=None):
+    def __init__(self, alpha=0.3, gamma=1, n=5, fname=None):
         """Constructing an RL agent.
 
         Args
@@ -23,13 +22,18 @@ class GeneralBot:
         """
         self.fname = fname
         self.agent = None
+        self.weapon = "sword"
         self.epsilon = 0.2  # chance of taking a random action instead of the best
         if fname:
             f = open(fname, "r")
-            self.q_table = defaultdict(lambda : {action: 0 for action in possible_actions}, pickle.load(f))
+            self.q_table = pickle.load(f)
         else:
             self.fname = "gb_qtable.p"
-            self.q_table = defaultdict(lambda : {action: 0 for action in possible_actions}) #Did I mention how much I love comprehenions?
+            self.q_table = dict() # Create the Q-Table
+            for dist in ["Close", "Melee", "Far"]:
+                for health in ["Low", "Med", "Hi"]:
+                    for weap in ["sword", "bow"]:
+                        self.q_table[(dist,health,weap)] = {action : 0 for action in self.get_possible_actions(weap)}
         self.n, self.gamma, self.alpha = n, alpha, gamma
         self.history = []
 
@@ -44,8 +48,8 @@ class GeneralBot:
             dist = "Close" if dist <= 2 else "Melee" if dist <= 4 else "Far" # Discretize the distance
             health = obs['Life']
             health = "Low" if health <= 5 else "Med" if health <= 12 else "Hi"
-            weap = None
-            return (dist, health)
+            weap = self.weapon
+            return (dist, health, weap)
         return ("Finished",)
 
     def choose_action(self, curr_state, possible_actions, eps):
@@ -66,12 +70,22 @@ class GeneralBot:
 
     def act(self, action):
         """"Sends a command to the agent to take the chosen course of action"""
+        if action == "switch":
+            switchCommand = "hotbar.2 1" if self.weapon == "sword" else "hotbar.1 1"
+            self.agent.sendCommand(switchCommand)
+            switchCommand = switchCommand[:-1]+"0"
+            self.agent.sendCommand(switchCommand)
+            self.weapon = "bow" if self.weapon == "sword" else "sword"
+            self.agent.sendCommand("use 0")
+            return
         self.agent.sendCommand(action)
         return
 
     def clearAction(self, action):
         """Send a command to negate the given action"""
         if "attack" in action:
+            self.agent.sendCommand("attack 0")
+        if "switch" in action:
             self.agent.sendCommand("attack 0")
         elif "strafe" in action:
             self.agent.sendCommand("strafe 0")
@@ -184,13 +198,21 @@ class GeneralBot:
                 if currentTime - lastActionTime >= 200:
                     state = self.get_curr_state(obs, enemy)
                     self.clearAction(action)
-                    action = self.choose_action(state, possible_actions, 0)
+                    p_actions = self.get_possible_actions(self.weapon)
+                    action = self.choose_action(state, p_actions, 0)
                     self.act(action)
                 if state == ("Finished",):
                     break
         if state == ("Finished",) and agentHealth != 0:
             self.agent.sendCommand("quit")
         return
+
+    def get_possible_actions(self, weap):
+        '''Returns a list of possible actions based on weapon type'''
+        if weap == "bow":
+            return ["move 1", "move 0", "move 1", "strafe 1", "strafe 0", "strafe -1", "use 1", "use 0", "switch"]
+        else: #using sword
+            return ["move 1", "move 0", "move 1", "strafe 1", "strafe 0", "strafe -1", "attack 1", "switch"]
 
     def run(self, agent_host):
         """Run the agent_host on the world, acting according to the epsilon-greedy policy"""
@@ -205,7 +227,7 @@ class GeneralBot:
         world_state = self.agent.getWorldState()
         if world_state.number_of_observations_since_last_state > 0:
             obs = json.loads(word_state.observations[-1].text)
-        
+
         t = 0
         enemyHealth = -1
         agentHealth = -1
@@ -237,7 +259,8 @@ class GeneralBot:
                 if currentTime - lastActionTime >= 200:
                     state = self.get_curr_state(obs, enemy)
                     self.clearAction(action)
-                    action = self.choose_action(state, possible_actions, self.epsilon)
+                    p_actions = self.get_possible_actions(self.weapon)
+                    action = self.choose_action(state, p_actions, self.epsilon)
                     damageDelta = 0
                     healthDelta = 0
                     if enemyHealth == -1:
@@ -265,14 +288,17 @@ class GeneralBot:
                     self.act(action)
                 if state == ("Finished",):
                     break
+
+
+        timeInRound = time.time() - roundTimeStart
         if state == ("Finished",) and agentHealth != 0:
             kill = 1
             self.agent.sendCommand("quit")
         else:
             kill = 0
-            agentHealth = 0
+            if abs(Arena.TIMELIMIT-timeInRound) > 1:
+                agentHealth = 0
 
-        timeInRound = time.time() - roundTimeStart
         print ('max_score = {}, min_score = {}'.format(max_score, min_score))
         print('enemy={}, agentHealth={}, timeInRound={}, kill={}'.format(round_enemy, agentHealth, timeInRound, kill))
         if round_enemy != None:
@@ -321,10 +347,10 @@ def main():
     ##########################################################
     ## Modify the below code in order to change the encounters
     ##########################################################
-    encounters = len(Arena.ENTITY_LIST)*10
+    encounters = len(Arena.ENTITY_LIST)*8
     for n in range(encounters):
         i = n%len(Arena.ENTITY_LIST)
-        enemy = "Blaze" #Arena.malmoName(Arena.ENTITY_LIST[i]) #"Zombie" if you want to run it exclusively
+        enemy = "Zombie" #Arena.malmoName(Arena.ENTITY_LIST[i]) #"Zombie" if you want to run it exclusively
                                                     # against Zombies
         print
         print 'Mission %d of %d: %s' % (n+1, encounters, enemy)
@@ -358,7 +384,7 @@ def main():
 
         # -- run the agent in the world -- #
         if n % 5 == 0 and n != 0:
-            print "Optimal Stratedgy so far..."
+            print "Optimal Strategy so far..."
             GB.runOptimal(agent_host)
         else:
             GB.run(agent_host)

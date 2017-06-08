@@ -10,12 +10,10 @@ import os, sys, random
 from collections import defaultdict, deque
 from GeneralBot import GeneralBot
 
-possible_actions = ["move 1", "move 0", "move 1", "strafe 1", "strafe 0", "strafe -1", "attack 1", "use 1", "use 0", "switch"] # Remove switch since it's not implemented
-
 class SpecialistBot(GeneralBot):
     """SpecialistBot will be given an AgentHost in its run method and use QTabular learning to attack enemies,
     caring about enemy type for strategy"""
-    def __init__(self, alpha=0.3, gamma=1, n=2, fname=None):
+    def __init__(self, alpha=0.3, gamma=1, n=5, fname=None):
         """Constructing an RL agent.
 
         Args
@@ -24,26 +22,22 @@ class SpecialistBot(GeneralBot):
             n:      <int>    number of back steps to update (default = 1)
             fname:  <string> filename to store resulting q-table in
         """
-        self.bow_charge = 0 #ATTEMPT TO CAPTURE CHARGE ON BOW AS A CLASS VARIABLE
         self.weapon = "sword" #or "bow"
         self.fname = fname
         self.agent = None
         self.epsilon = 0.2  # chance of taking a random action instead of the best
         if fname:
             f = open(fname, "r")
-            self.q_table = defaultdict(lambda : {action: 0 for action in possible_actions}, pickle.load(f))
+            self.q_table = pickle.load(f)
         else:
             self.fname = "sb_qtable.p"
-            self.q_table = defaultdict(lambda : {action: 0 for action in possible_actions})
+            self.q_table = dict() # Create the Q-Table
+            for dist in ["Close", "Melee", "Far"]:
+                for health in ["Low", "Med", "Hi"]:
+                    for weap in ["sword", "bow"]:
+                        self.q_table[(dist,health,weap)] = {action : 0 for action in self.get_possible_actions(weap)}
         self.n, self.gamma, self.alpha = n, alpha, gamma
         self.history = []
-
-    def get_possible_actions(self):
-        '''Returns a list of possible actions based on weapon type'''
-        if self.weapon == "bow":
-            return ["move 1", "move 0", "move 1", "strafe 1", "strafe 0", "strafe -1", "use 1", "use 0", "switch"]
-        else #using sword
-            return ["move 1", "move 0", "move 1", "strafe 1", "strafe 0", "strafe -1", "attack 1", "switch"]
 
     def get_curr_state(self, obs, ent):
         '''
@@ -75,7 +69,7 @@ def main():
     ##########################################################
     ## Modify the below code in order to change the encounters
     ##########################################################
-    encounters = len(Arena.ENTITY_LIST)*10
+    encounters = len(Arena.ENTITY_LIST)*5
     for n in range(encounters):
         i = n%len(Arena.ENTITY_LIST)
         enemy = Arena.malmoName(Arena.ENTITY_LIST[i]) #"Zombie" if you want to run it exclusively
