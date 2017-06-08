@@ -35,7 +35,8 @@ class SpecialistBot(GeneralBot):
             for dist in ["Close", "Melee", "Far"]:
                 for health in ["Low", "Med", "Hi"]:
                     for weap in ["sword", "bow"]:
-                        self.q_table[(dist,health,weap)] = {action : 0 for action in self.get_possible_actions(weap)}
+                        for enemy in Arena.ENTITY_LIST:
+                            self.q_table[(dist,health,weap,str(enemy))] = {action : 0 for action in self.get_possible_actions(weap)}
         self.n, self.gamma, self.alpha = n, alpha, gamma
         self.history = []
 
@@ -46,11 +47,13 @@ class SpecialistBot(GeneralBot):
             Add a state for EnemyType in the Specialist
         '''
         state = GeneralBot.get_curr_state(self, obs, ent)
-        return state if state == ("Finished",) else state + (ent['name'],)
+        state = state if state == ("Finished",) else state + (str(ent['name']),)
+        #print state
+        return state
 
 def main():
     sys.stdout = os.fdopen(sys.stdout.fileno(), 'w', 0)  # flush print output immediately
-    SB = SpecialistBot("sb_qtable.p")
+    SB = SpecialistBot(fname="sb_qtable.p")
     agent_host = MalmoPython.AgentHost()
 
     try:
@@ -69,7 +72,7 @@ def main():
     ##########################################################
     ## Modify the below code in order to change the encounters
     ##########################################################
-    encounters = len(Arena.ENTITY_LIST)*5
+    encounters = len(Arena.ENTITY_LIST)*40
     for n in range(encounters):
         i = n%len(Arena.ENTITY_LIST)
         enemy = Arena.malmoName(Arena.ENTITY_LIST[i]) #"Zombie" if you want to run it exclusively

@@ -145,7 +145,10 @@ class GeneralBot:
         ''' Find the mob we are following, and calculate the yaw we need in order to face it '''
         dx = ex - x
         dz = ez - z
-        dy = (ey+Arena.HEIGHT_CHART[name]/2) - (y+1.8) #calculate height difference between our eye level and center of mass for entity
+        if self.weapon == "sword":
+            dy = (ey+Arena.HEIGHT_CHART[name]/2) - (y+1.8) #calculate height difference between our eye level and center of mass for entity
+        else:
+            dy = (ey+Arena.HEIGHT_CHART[name]) - (y+1.8) #Aim a little upwards with the bow
         #-- calculate deltaYaw
         yaw = -180 * math.atan2(dx, dz) / math.pi
         deltaYaw = yaw - selfyaw
