@@ -25,9 +25,9 @@ def malmoName(minecraftName):
         return minecraftName
     return NAME_MAPPING[minecraftName]
 
-TRACK_WIDTH = 20
-TRACK_BREADTH = 20
-TRACK_HEIGHT = 20
+TRACK_WIDTH = 30
+TRACK_BREADTH = 30
+TRACK_HEIGHT = 30
 TIMELIMIT = 25000
 ENTITY_LIST = HEIGHT_CHART.keys()
 AGENT_NAME = "MurderBot"
@@ -62,10 +62,12 @@ def create_mission(entity, agent_name=AGENT_NAME, trackw=TRACK_WIDTH, trackb=TRA
                 <ServerHandlers>
                   <FlatWorldGenerator generatorString="3;1*minecraft:bedrock,3*minecraft:obsidian;1;"/>
                   <DrawingDecorator>
-                    <DrawCuboid type="bedrock" x1="0" y1="4" z1="0" x2="50" y2="14" z2="50"/>
-                    <DrawCuboid type="air" x1="1" y1="4" z1="1" x2="49" y2="14" z2="49"/>
-                    <DrawCuboid type="glowstone" x1="0" y1="14" z1="0" x2="50" y2="14" z2="50"/>
-                    <DrawEntity x="25.0" y="4.0" z="25" type="@@@"/>
+                    <DrawCuboid type="bedrock" x1="0" y1="4" z1="0" x2="0" y2="12" z2="30"/>
+                    <DrawCuboid type="bedrock" x1="0" y1="4" z1="0" x2="30" y2="12" z2="0"/>
+                    <DrawCuboid type="bedrock" x1="30" y1="4" z1="30" x2="0" y2="12" z2="30"/>
+                    <DrawCuboid type="bedrock" x1="30" y1="4" z1="30" x2="30" y2="12" z2="0"/>
+                    <DrawCuboid type="glowstone" x1="0" y1="14" z1="0" x2="30" y2="12" z2="30"/>
+                    <DrawEntity x="15.0" y="4.0" z="10" type="@@@"/>
                   </DrawingDecorator>
                   <ServerQuitWhenAnyAgentFinishes description="server sees murder happen"/>
                 </ServerHandlers>
@@ -73,7 +75,7 @@ def create_mission(entity, agent_name=AGENT_NAME, trackw=TRACK_WIDTH, trackb=TRA
               <AgentSection mode="Survival">
                 <Name>''' + agent_name + '''</Name>
                 <AgentStart>
-                  <Placement x="25" y="4.0" z="35" pitch="0" yaw="-180"/>
+                  <Placement x="15" y="4.0" z="20" pitch="0" yaw="-180"/>
                   <Inventory>
                     <InventoryObject slot="0" type="wooden_sword" quantity="1"/>
                     <InventoryObject slot="1" type="bow" quantity="1"/>

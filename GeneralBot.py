@@ -171,6 +171,8 @@ class GeneralBot:
     def runOptimal(self, agent_host):
         self.agent = agent_host
         world_state = self.agent.getWorldState()
+        kill = 0
+        round_enemy = None
         enemyHealth = -1
         agentHealth = -1
         state = ("",)
@@ -207,7 +209,13 @@ class GeneralBot:
                 if state == ("Finished",):
                     break
         if state == ("Finished",) and agentHealth != 0:
+            kill = 1
             self.agent.sendCommand("quit")
+        else:
+            kill = 0
+            if abs((Arena.TIMELIMIT/1000)-timeInRound) > 1:
+                agentHealth = 0
+        self.update_history(round_enemy, agentHealth, timeInRound, kill)
         return
 
     def get_possible_actions(self, weap):
@@ -229,7 +237,7 @@ class GeneralBot:
         S, A, R = deque(), deque(), deque()
         world_state = self.agent.getWorldState()
         if world_state.number_of_observations_since_last_state > 0:
-            obs = json.loads(word_state.observations[-1].text)
+            obs = json.loads(world_state.observations[-1].text)
 
         t = 0
         enemyHealth = -1
@@ -292,21 +300,22 @@ class GeneralBot:
                 if state == ("Finished",):
                     break
 
-
         timeInRound = time.time() - roundTimeStart
         if state == ("Finished",) and agentHealth != 0:
             kill = 1
             self.agent.sendCommand("quit")
         else:
             kill = 0
-            if abs(Arena.TIMELIMIT-timeInRound) > 1:
+            if abs((Arena.TIMELIMIT/1000)-timeInRound) > 1:
                 agentHealth = 0
-
         print ('max_score = {}, min_score = {}'.format(max_score, min_score))
+        self.update_history(round_enemy, agentHealth, timeInRound, kill)
+        return
+
+    def update_history(self, enemy, health, time, kill):
         print('enemy={}, agentHealth={}, timeInRound={}, kill={}'.format(round_enemy, agentHealth, timeInRound, kill))
         if round_enemy != None:
             self.history.append((round_enemy, agentHealth, timeInRound, kill))
-        return
 
     def log_Q(self):
         try:
@@ -316,9 +325,9 @@ class GeneralBot:
         except Exception as e:
             print e
 
-    def log_results(self, filename):
+    def log_results(self, filename, app=False):
         try:
-            f = open(filename, 'w')
+            f = open(filename, 'a' if app else 'w')
             for result in self.history:
                 f.write(str(result[0])+',')
                 f.write(str(result[1])+',')

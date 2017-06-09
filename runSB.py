@@ -1,57 +1,31 @@
-# Basic Structure of Q Learning Agents adapted from Assignment2.py
-
+from SpecialistBot import SpecialistBot
 import Arena
+import sys, os
+import os.path
 import MalmoPython
-import math
 import time
-import json
-import pickle
-import os, sys, random
-from collections import defaultdict, deque
-from GeneralBot import GeneralBot
-
-class SpecialistBot(GeneralBot):
-    """SpecialistBot will be given an AgentHost in its run method and use QTabular learning to attack enemies,
-    caring about enemy type for strategy"""
-    def __init__(self, alpha=0.3, gamma=1, n=5, fname=None):
-        """Constructing an RL agent.
-
-        Args
-            alpha:  <float>  learning rate      (default = 0.3)
-            gamma:  <float>  value decay rate   (default = 1)
-            n:      <int>    number of back steps to update (default = 1)
-            fname:  <string> filename to store resulting q-table in
-        """
-        self.weapon = "sword" #or "bow"
-        self.fname = fname
-        self.agent = None
-        self.epsilon = 0.2  # chance of taking a random action instead of the best
-        if fname:
-            f = open(fname, "r")
-            self.q_table = pickle.load(f)
-        else:
-            self.fname = "sb_qtable.p"
-            self.q_table = dict() # Create the Q-Table
-            for dist in ["Close", "Melee", "Far"]:
-                for health in ["Low", "Med", "Hi"]:
-                    for weap in ["sword", "bow"]:
-                        for enemy in Arena.ENTITY_LIST:
-                            self.q_table[(dist,health,weap,str(enemy))] = {action : 0 for action in self.get_possible_actions(weap)}
-        self.n, self.gamma, self.alpha = n, alpha, gamma
-        self.history = []
-
-    def get_curr_state(self, obs, ent):
-        '''
-            Discretize distance, player health, and current_weapon into states:
-                Distance (melee, close, far), Health (<10%, 10-60%, 60-100%), current_weapon (sword, bow)
-            Add a state for EnemyType in the Specialist
-        '''
-        state = GeneralBot.get_curr_state(self, obs, ent)
-        state = state if state == ("Finished",) else state + (str(ent['name']),)
-        #print state
-        return state
+from datetime import timedelta
 
 def main():
+    flag = len(sys.argv) > 1
+    mode = None
+    if flag:
+        try:
+            if sys.argv[1] == 'L':
+                mode = 'LEARN'
+            else:
+                mode = 'OPTIMAL'
+            rounds = int(sys.argv[2])
+        except:
+            print('terminal arg must be a number')
+            flag = 0
+    if flag == 0:
+        try:
+            rounds = int(input('number of rounds = '))
+        except:
+            print('needs to be a number')
+            return
+
     sys.stdout = os.fdopen(sys.stdout.fileno(), 'w', 0)  # flush print output immediately
     SB = SpecialistBot(fname="sb_qtable.p")
     agent_host = MalmoPython.AgentHost()
@@ -72,7 +46,7 @@ def main():
     ##########################################################
     ## Modify the below code in order to change the encounters
     ##########################################################
-    encounters = len(Arena.ENTITY_LIST)*3
+    encounters = len(Arena.ENTITY_LIST)*rounds
     for n in range(encounters):
         i = n%len(Arena.ENTITY_LIST)
         enemy = Arena.malmoName(Arena.ENTITY_LIST[i]) #"Zombie" if you want to run it exclusively
@@ -108,13 +82,32 @@ def main():
         print
 
         # -- run the agent in the world -- #
-        SB.run(agent_host)
+        if mode == "LEARN":
+            SB.run(agent_host)
+        else:
+            SB.runOptimal(agent_host)
         print "Mission has stopped.\n"
+        if  ((n+1)%len(Arena.ENTITY_LIST) == 0):
+            print "Saving {}...\n".format("Q-Table & Results" if mode == "LEARN" else "Results")
+            if mode == "LEARN":
+                SB.log_Q()
+            SB.log_results("temp_sb_results.txt", app=True)
         # -- clean up -- #
         time.sleep(2)  # (let the Mod reset)
     print "Done."
-    SB.log_Q()
-    SB.log_results('sb_results_base.txt')
+    if mode == "LEARN":
+        SB.log_Q()
+    f_str = 'sb_results_base@.txt'
+    count = 1
+    new_f = f_str.replace('@',str(count))
+    while os.path.isfile(new_f):
+        count += 1
+        new_f = f_str.replace('@',str(count))
+    SB.log_results(new_f)
+
 
 if __name__ == '__main__':
+    startingtime = time.time()
     main()
+    elapsed = timedelta(seconds=time.time()-startingtime)
+    print "Total time taken: ",str(elapsed)
