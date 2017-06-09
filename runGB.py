@@ -97,7 +97,7 @@ def main():
     print "Done."
     if mode == "LEARN":
         GB.log_Q()
-    f_str = 'gb_results_base@.txt'
+    f_str = 'results_gb@.txt'
     count = 1
     new_f = f_str.replace('@',str(count))
     while os.path.isfile(new_f):

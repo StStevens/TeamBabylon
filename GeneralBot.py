@@ -169,6 +169,7 @@ class GeneralBot:
         return deltaYaw, deltaPitch
 
     def runOptimal(self, agent_host):
+        roundTimeStart = time.time()
         self.agent = agent_host
         world_state = self.agent.getWorldState()
         kill = 0
@@ -208,6 +209,7 @@ class GeneralBot:
                     self.act(action)
                 if state == ("Finished",):
                     break
+        timeInRound = time.time() - roundTimeStart
         if state == ("Finished",) and agentHealth != 0:
             kill = 1
             self.agent.sendCommand("quit")
@@ -228,7 +230,6 @@ class GeneralBot:
     def run(self, agent_host):
         """Run the agent_host on the world, acting according to the epsilon-greedy policy"""
         roundTimeStart = time.time()
-        failed_missions = 0
         kill = 0
         round_enemy = None
         self.agent = agent_host
@@ -313,9 +314,9 @@ class GeneralBot:
         return
 
     def update_history(self, enemy, health, time, kill):
-        print('enemy={}, agentHealth={}, timeInRound={}, kill={}'.format(round_enemy, agentHealth, timeInRound, kill))
-        if round_enemy != None:
-            self.history.append((round_enemy, agentHealth, timeInRound, kill))
+        print('enemy={}, agentHealth={}, timeInRound={}, kill={}'.format(enemy, health, time, kill))
+        if enemy != None:
+            self.history.append((enemy, health, time, kill))
 
     def log_Q(self):
         try:
