@@ -13,14 +13,15 @@ from GeneralBot import GeneralBot
 class SpecialistBot(GeneralBot):
     """SpecialistBot will be given an AgentHost in its run method and use QTabular learning to attack enemies,
     caring about enemy type for strategy"""
-    def __init__(self, alpha=0.3, gamma=1, n=5, fname=None):
+    def __init__(self, alpha=0.3, gamma=1, n=5, epsilon=0.3 fname=None):
         """Constructing an RL agent.
 
         Args
-            alpha:  <float>  learning rate      (default = 0.3)
-            gamma:  <float>  value decay rate   (default = 1)
-            n:      <int>    number of back steps to update (default = 1)
-            fname:  <string> filename to store resulting q-table in
+            alpha:   <float>  learning rate      (default = 0.3)
+            gamma:   <float>  value decay rate   (default = 1)
+            epsilon: <float>  random chance rate (default = 0.3)
+            n:       <int>    number of back steps to update (default = 1)
+            fname:   <string> filename to store resulting q-table in
         """
         self.weapon = "sword" #or "bow"
         self.fname = fname
@@ -30,14 +31,14 @@ class SpecialistBot(GeneralBot):
             f = open(fname, "r")
             self.q_table = pickle.load(f)
         else:
-            self.fname = "sb_qtable.p"
+            self.fname = "sb_qtable.p" if epsilon != 1 else "db_qtable.p"
             self.q_table = dict() # Create the Q-Table
             for dist in ["Close", "Melee", "Far"]:
                 for health in ["Low", "Med", "Hi"]:
                     for weap in ["sword", "bow"]:
                         for enemy in Arena.ENTITY_LIST:
                             self.q_table[(dist,health,weap,str(enemy))] = {action : 0 for action in self.get_possible_actions(weap)}
-        self.n, self.gamma, self.alpha = n, alpha, gamma
+        self.n, self.gamma, self.alpha, self.epsilon = n, gamma, alpha, epsilon
         self.history = []
 
     def get_curr_state(self, obs, ent):
@@ -48,7 +49,6 @@ class SpecialistBot(GeneralBot):
         '''
         state = GeneralBot.get_curr_state(self, obs, ent)
         state = state if state == ("Finished",) else state + (str(ent['name']),)
-        #print state
         return state
 
 def main():

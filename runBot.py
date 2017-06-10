@@ -1,4 +1,5 @@
 from SpecialistBot import SpecialistBot
+from GeneralBot import GeneralBot
 import Arena
 import sys, os
 import os.path
@@ -7,27 +8,32 @@ import time
 from datetime import timedelta
 
 def main():
-    flag = len(sys.argv) > 1
+    flag = (len(sys.argv) == 4)
     mode = None
+    Bot = None
     if flag:
         try:
-            if sys.argv[1] == 'L':
-                mode = 'LEARN'
-            else:
+            #Determine run type
+            if sys.argv[2] == 'O':
                 mode = 'OPTIMAL'
-            rounds = int(sys.argv[2])
-        except:
-            print('terminal arg must be a number')
-            flag = 0
-    if flag == 0:
-        try:
-            rounds = int(input('number of rounds = '))
-        except:
-            print('needs to be a number')
+            else:
+                mode = 'LEARN'
+            #Determine Bot type
+            if sys.argv[1] == 'GB':
+                Bot = GeneralBot(fname="gb_qtable.p" if mode != "LEARN" else None)
+            elif sys.argv[1] == 'SB':
+                Bot = SpecialistBot(fname="sb_qtable.p" if mode != "LEARN" else None)
+            else:
+                Bot = GeneralBot(epsilon=1)
+            #Determine Round number
+            rounds = int(sys.argv[3])
+        except Exception e:
+            print 'something went wrong:', e
             return
+    else:
+        raise TypeError("Not enough args: ['SB'/'GB'/'DB'] ['L'/'O'/] [int numRounds]")
 
     sys.stdout = os.fdopen(sys.stdout.fileno(), 'w', 0)  # flush print output immediately
-    GB = SpecialistBot()
     agent_host = MalmoPython.AgentHost()
 
     try:
@@ -41,8 +47,6 @@ def main():
         exit(0)
 
     my_mission_record = MalmoPython.MissionRecordSpec()
-
-
     ##########################################################
     ## Modify the below code in order to change the encounters
     ##########################################################
@@ -83,28 +87,27 @@ def main():
 
         # -- run the agent in the world -- #
         if mode == "LEARN":
-            GB.run(agent_host)
+            Bot.run(agent_host)
         else:
-            GB.runOptimal(agent_host)
+            Bot.runOptimal(agent_host)
         print "Mission has stopped.\n"
         if  ((n+1)%len(Arena.ENTITY_LIST) == 0):
             print "Saving {}...\n".format("Q-Table & Results" if mode == "LEARN" else "Results")
             if mode == "LEARN":
-                GB.log_Q()
-            GB.log_results("temp_gb_results.txt", app=True)
+                Bot.log_Q()
+            Bot.log_results("temp_"+sys.argv[1]+"_results.txt")
         # -- clean up -- #
         time.sleep(2)  # (let the Mod reset)
     print "Done."
     if mode == "LEARN":
-        GB.log_Q()
-    f_str = 'results_gb@.txt'
+        Bot.log_Q()
+    f_str = 'results_'+sys.argv[1]+"_optimal@.txt'
     count = 1
     new_f = f_str.replace('@',str(count))
     while os.path.isfile(new_f):
         count += 1
         new_f = f_str.replace('@',str(count))
-    GB.log_results(new_f)
-
+    Bot.log_results(new_f)
 
 if __name__ == '__main__':
     startingtime = time.time()

@@ -11,30 +11,30 @@ from collections import defaultdict, deque
 class GeneralBot:
     """GeneralBot will be given an AgentHost in its run method and use QTabular learning to attack enemies,
     ignoring enemy type for strategy"""
-    def __init__(self, alpha=0.3, gamma=1, n=5, fname=None):
+    def __init__(self, alpha=0.3, gamma=1, n=5, epsilon=0.3 fname=None):
         """Constructing an RL agent.
 
         Args
-            alpha:  <float>  learning rate      (default = 0.3)
-            gamma:  <float>  value decay rate   (default = 1)
-            n:      <int>    number of back steps to update (default = 1)
-            fname:  <string> filename to store resulting q-table in
+            alpha:   <float>  learning rate      (default = 0.3)
+            gamma:   <float>  value decay rate   (default = 1)
+            epsilon: <float>  random chance rate (default = 0.3)
+            n:       <int>    number of back steps to update (default = 1)
+            fname:   <string> filename to store resulting q-table in
         """
         self.fname = fname
         self.agent = None
         self.weapon = "sword"
-        self.epsilon = 0.2  # chance of taking a random action instead of the best
         if fname:
             f = open(fname, "r")
             self.q_table = pickle.load(f)
         else:
-            self.fname = "gb_qtable.p"
+            self.fname = "gb_qtable.p" if epsilon != 1 else "db_qtable.p"
             self.q_table = dict() # Create the Q-Table
             for dist in ["Close", "Melee", "Far"]:
                 for health in ["Low", "Med", "Hi"]:
                     for weap in ["sword", "bow"]:
                         self.q_table[(dist,health,weap)] = {action : 0 for action in self.get_possible_actions(weap)}
-        self.n, self.gamma, self.alpha = n, alpha, gamma
+        self.n, self.gamma, self.alpha, self.epsilon = n, gamma, alpha, epsilon
         self.history = []
 
     def get_curr_state(self, obs, ent):
@@ -202,6 +202,7 @@ class GeneralBot:
                     continue
                 self.track_target(obs, enemy)
                 if currentTime - lastActionTime >= 200:
+                    agentHealth = obs['Life']
                     state = self.get_curr_state(obs, enemy)
                     self.clearAction(action)
                     p_actions = self.get_possible_actions(self.weapon)
@@ -223,9 +224,9 @@ class GeneralBot:
     def get_possible_actions(self, weap):
         '''Returns a list of possible actions based on weapon type'''
         if weap == "bow":
-            return ["move 1", "move 0", "move 1", "strafe 1", "strafe 0", "strafe -1", "use 1", "use 0", "switch"]
+            return ["move 1", "move -1", "strafe 1", "strafe -1", "use 1", "use 0", "switch"]
         else: #using sword
-            return ["move 1", "move 0", "move 1", "strafe 1", "strafe 0", "strafe -1", "attack 1", "switch"]
+            return ["move 1", "move -1", "strafe 1", "strafe -1", "attack 1", "switch"]
 
     def run(self, agent_host):
         """Run the agent_host on the world, acting according to the epsilon-greedy policy"""
@@ -317,6 +318,9 @@ class GeneralBot:
         print('enemy={}, agentHealth={}, timeInRound={}, kill={}'.format(enemy, health, time, kill))
         if enemy != None:
             self.history.append((enemy, health, time, kill))
+            return
+        if health == -1:
+            raise ValueError('Health is -1')
 
     def log_Q(self):
         try:
