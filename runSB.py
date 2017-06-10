@@ -27,7 +27,7 @@ def main():
             return
 
     sys.stdout = os.fdopen(sys.stdout.fileno(), 'w', 0)  # flush print output immediately
-    SB = SpecialistBot(fname="sb_qtable.p")
+    SB = SpecialistBot(fname="FINALsb_qtable.p")
     agent_host = MalmoPython.AgentHost()
 
     try:

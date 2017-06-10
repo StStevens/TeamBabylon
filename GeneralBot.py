@@ -202,6 +202,7 @@ class GeneralBot:
                     continue
                 self.track_target(obs, enemy)
                 if currentTime - lastActionTime >= 200:
+                    agentHealth = obs['Life']
                     state = self.get_curr_state(obs, enemy)
                     self.clearAction(action)
                     p_actions = self.get_possible_actions(self.weapon)
