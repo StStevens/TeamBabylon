@@ -20,21 +20,27 @@ class GeneralBot:
             n:      <int>    number of back steps to update (default = 1)
             fname:  <string> filename to store resulting q-table in
         """
+        self.Movement = ["move 1", "move 0", "move -1", "strafe 1", "strafe -1"]
+        self.actionDelay = 200
         self.fname = fname
         self.agent = None
         self.weapon = "sword"
         self.epsilon = 0.2  # chance of taking a random action instead of the best
         if fname:
             f = open(fname, "r")
-            self.q_table = pickle.load(f)
+            q_tables = pickle.load(f)
+            self.q_table = q_tables['action']
+            self.qMovement = q_tables['movement']
         else:
             self.fname = "gb_qtable.p"
             self.q_table = dict() # Create the Q-Table
+            self.qMovement = dict()
             for dist in ["Close", "Melee", "Far"]:
                 for health in ["Low", "Med", "Hi"]:
                     for weap in ["sword", "bow"]:
                         self.q_table[(dist,health,weap)] = {action : 0 for action in self.get_possible_actions(weap)}
-        self.n, self.gamma, self.alpha = n, alpha, gamma
+                        self.qMovement[(dist,health, weap)] = {action : 0 for action in self.Movement}
+        self.n, self.gamma, self.alpha = n, gamma, alpha
         self.history = []
 
     def get_curr_state(self, obs, ent):
@@ -61,6 +67,22 @@ class GeneralBot:
         score = None
         for action in possible_actions:
             possible = self.q_table[curr_state][action]
+            if possible > score:
+                choice = [ action ]
+                score = possible
+            elif possible == score:
+                choice.append(action)
+        return random.choice(choice)
+
+    def choose_movement(self, curr_state, eps):
+        """ Chooses a movement accordning to eps-greedy policy. """
+        renegade = random.random()
+        if renegade <eps:
+            return random.choice(self.Movement)
+        choice = []
+        score = None
+        for action in self.Movement:
+            possible = self.qMovement[curr_state][action]
             if possible > score:
                 choice = [ action ]
                 score = possible
@@ -98,7 +120,7 @@ class GeneralBot:
         reward += healthDelta * 10
         return reward
 
-    def update_q_table(self, tau, S, A, R, T):
+    def update_q_table(self, tau, S, A, M, R, T):
         """Performs relevant updates for state tau.
         Args
             tau: <int>  state index to update
@@ -110,12 +132,18 @@ class GeneralBot:
         curr_s = S.popleft()
         curr_a = A.popleft()
         curr_r = R.popleft()
+        curr_m = M.popleft()
         G = sum([self.gamma ** i * R[i] for i in range(len(S))])
+        action_G = G
+        move_G = G
         if tau + self.n < T:
-            G += self.gamma ** self.n * self.q_table[S[-1]][A[-1]]
+            action_G += self.gamma ** self.n * self.q_table[S[-1]][A[-1]]
+            move_G += self.gamma ** self.n * self.qMovement[S[-1]][M[-1]]
 
-        old_q = self.q_table[curr_s][curr_a]
-        self.q_table[curr_s][curr_a] = old_q + self.alpha * (G - old_q)
+        old_action = self.q_table[curr_s][curr_a]
+        old_move = self.qMovement[curr_s][curr_m]
+        self.q_table[curr_s][curr_a] = old_action + self.alpha * (action_G - old_action)
+        self.qMovement[curr_s][curr_m] = old_move + self.alpha * (move_G - old_move)
 
     def calcDist(self, ex, ey, ez, x, y, z, mob):
         dx = ex - x
@@ -169,66 +197,16 @@ class GeneralBot:
         return deltaYaw, deltaPitch
 
     def runOptimal(self, agent_host):
-        roundTimeStart = time.time()
-        self.agent = agent_host
-        world_state = self.agent.getWorldState()
-        kill = 0
-        round_enemy = None
-        enemyHealth = -1
-        agentHealth = -1
-        state = ("",)
-        action = ""
-        lastActionTime = 0
-        while world_state.is_mission_running and state != ("Finished",):
-            time.sleep(0.01)
-            currentTime = time.time()
-            world_state = self.agent.getWorldState()
-            if world_state.number_of_observations_since_last_state > 0:
-                obs = json.loads(world_state.observations[-1].text)
-                if state == ("last check",):
-                    state = ("Finished",)
-                    agentHealth = obs['Life']
-                    break
-                if "Name" not in obs: #Edge case where we observe before load.
-                    continue
-                enemy = None
-                for e in obs['entities']:
-                    if e['name'] != obs['Name'] and 'life' in e:
-                        round_enemy = e['name']
-                        enemy = e
-                        break
-                if enemy == None:
-                    state = ("last check",)
-                    continue
-                self.track_target(obs, enemy)
-                if currentTime - lastActionTime >= 200:
-                    agentHealth = obs['Life']
-                    state = self.get_curr_state(obs, enemy)
-                    self.clearAction(action)
-                    p_actions = self.get_possible_actions(self.weapon)
-                    action = self.choose_action(state, p_actions, 0)
-                    self.act(action)
-                if state == ("Finished",):
-                    break
-        timeInRound = time.time() - roundTimeStart
-        if state == ("Finished",) and agentHealth != 0:
-            kill = 1
-            self.agent.sendCommand("quit")
-        else:
-            kill = 0
-            if abs((Arena.TIMELIMIT/1000)-timeInRound) > 1:
-                agentHealth = 0
-        self.update_history(round_enemy, agentHealth, timeInRound, kill)
-        return
+        return self.run(agent_host, optimal=True)
 
     def get_possible_actions(self, weap):
         '''Returns a list of possible actions based on weapon type'''
         if weap == "bow":
-            return ["move 1", "move 0", "move 1", "strafe 1", "strafe 0", "strafe -1", "use 1", "use 0", "switch"]
+            return [ "use 1", "use 0", "switch"]
         else: #using sword
-            return ["move 1", "move 0", "move 1", "strafe 1", "strafe 0", "strafe -1", "attack 1", "switch"]
+            return ["attack 1", "switch"]
 
-    def run(self, agent_host):
+    def run(self, agent_host, optimal=False):
         """Run the agent_host on the world, acting according to the epsilon-greedy policy"""
         roundTimeStart = time.time()
         kill = 0
@@ -236,7 +214,7 @@ class GeneralBot:
         self.agent = agent_host
         max_score = 0
         min_score = 100
-        S, A, R = deque(), deque(), deque()
+        S, A, M, R = deque(), deque(), deque(), deque()
         world_state = self.agent.getWorldState()
         if world_state.number_of_observations_since_last_state > 0:
             obs = json.loads(world_state.observations[-1].text)
@@ -246,6 +224,7 @@ class GeneralBot:
         agentHealth = -1
         state = ("",)
         action = ""
+        movement = ""
         lastActionTime = 0
         while world_state.is_mission_running and state != ("Finished",):
             time.sleep(0.01)
@@ -269,11 +248,16 @@ class GeneralBot:
                     state = ("last check",)
                     continue
                 self.track_target(obs, enemy)
-                if currentTime - lastActionTime >= 200:
+                if currentTime - lastActionTime >= self.actionDelay:
                     state = self.get_curr_state(obs, enemy)
                     self.clearAction(action)
                     p_actions = self.get_possible_actions(self.weapon)
-                    action = self.choose_action(state, p_actions, self.epsilon)
+                    if optimal:
+                        action = self.choose_action(state, p_actions, 0)
+                        movement = self.choose_movement(state, 0)
+                    else:
+                        action = self.choose_action(state, p_actions, self.epsilon)
+                        movement = self.choose_movement(state, self.epsilon)
                     damageDelta = 0
                     healthDelta = 0
                     if enemyHealth == -1:
@@ -293,12 +277,14 @@ class GeneralBot:
                         min_score = score
                     R.append(score)
                     T = t - self.n + 1
-                    if T >= 0:
-                        self.update_q_table(t, S, A, R, T)
+                    if T >= 0 and not optimal:
+                        self.update_q_table(t, S, A, M, R, T)
                     S.append(state)
                     A.append(action)
+                    M.append(movement)
                     t += 1
                     self.act(action)
+                    self.act(movement)
                 if state == ("Finished",):
                     break
 
@@ -321,8 +307,11 @@ class GeneralBot:
 
     def log_Q(self):
         try:
+            q_tables = {}
+            q_tables['action'] = self.q_table
+            q_tables['movement'] = self.qMovement
             f = open(self.fname, 'w')
-            pickle.dump(dict(self.q_table), f)
+            pickle.dump(q_tables, f)
             f.close()
         except Exception as e:
             print e

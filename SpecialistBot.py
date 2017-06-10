@@ -22,22 +22,28 @@ class SpecialistBot(GeneralBot):
             n:      <int>    number of back steps to update (default = 1)
             fname:  <string> filename to store resulting q-table in
         """
+        self.Movement = ["move 1", "move 0", "move -1", "strafe 1", "strafe -1"]
+        self.actionDelay = 200
         self.weapon = "sword" #or "bow"
         self.fname = fname
         self.agent = None
         self.epsilon = 0.2  # chance of taking a random action instead of the best
         if fname:
             f = open(fname, "r")
-            self.q_table = pickle.load(f)
+            q_tables = pickle.load(f)
+            self.q_table = q_tables['action']
+            self.qMovement = q_tables['movement']
         else:
             self.fname = "sb_qtable.p"
             self.q_table = dict() # Create the Q-Table
+            self.qMovement = dict()
             for dist in ["Close", "Melee", "Far"]:
                 for health in ["Low", "Med", "Hi"]:
                     for weap in ["sword", "bow"]:
                         for enemy in Arena.ENTITY_LIST:
                             self.q_table[(dist,health,weap,str(enemy))] = {action : 0 for action in self.get_possible_actions(weap)}
-        self.n, self.gamma, self.alpha = n, alpha, gamma
+                            self.qMovement[(dist,health,weap,str(enemy))] = {action : 0 for action in self.Movement}
+        self.n, self.gamma, self.alpha = n, gamma, alpha
         self.history = []
 
     def get_curr_state(self, obs, ent):
