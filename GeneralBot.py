@@ -185,7 +185,6 @@ class GeneralBot:
             world_state = self.agent.getWorldState()
             if world_state.number_of_observations_since_last_state > 0:
                 obs = json.loads(world_state.observations[-1].text)
-                agentHealth = obs['Life']
                 if state == ("last check",):
                     state = ("Finished",)
                     agentHealth = obs['Life']
@@ -203,6 +202,7 @@ class GeneralBot:
                     continue
                 self.track_target(obs, enemy)
                 if currentTime - lastActionTime >= 200:
+                    agentHealth = obs['Life']
                     state = self.get_curr_state(obs, enemy)
                     self.clearAction(action)
                     p_actions = self.get_possible_actions(self.weapon)
@@ -318,6 +318,9 @@ class GeneralBot:
         print('enemy={}, agentHealth={}, timeInRound={}, kill={}'.format(enemy, health, time, kill))
         if enemy != None:
             self.history.append((enemy, health, time, kill))
+            return
+        if health == -1:
+            raise ValueError('Health is -1')
 
     def log_Q(self):
         try:
