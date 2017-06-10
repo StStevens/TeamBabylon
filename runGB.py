@@ -1,4 +1,4 @@
-from SpecialistBot import SpecialistBot
+from GeneralBot import GeneralBot
 import Arena
 import sys, os
 import os.path
@@ -27,7 +27,7 @@ def main():
             return
 
     sys.stdout = os.fdopen(sys.stdout.fileno(), 'w', 0)  # flush print output immediately
-    GB = SpecialistBot()
+    GB = GeneralBot(fname="gb_qtable.p")
     agent_host = MalmoPython.AgentHost()
 
     try:
@@ -91,7 +91,7 @@ def main():
             print "Saving {}...\n".format("Q-Table & Results" if mode == "LEARN" else "Results")
             if mode == "LEARN":
                 GB.log_Q()
-            GB.log_results("temp_gb_results.txt", app=True)
+            GB.log_results("FINALresults_gb_optimal1.txt", app=True)
         # -- clean up -- #
         time.sleep(2)  # (let the Mod reset)
     print "Done."
