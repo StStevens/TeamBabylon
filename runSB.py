@@ -42,7 +42,6 @@ def main():
 
     my_mission_record = MalmoPython.MissionRecordSpec()
 
-
     ##########################################################
     ## Modify the below code in order to change the encounters
     ##########################################################

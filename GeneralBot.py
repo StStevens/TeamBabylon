@@ -201,8 +201,8 @@ class GeneralBot:
                     state = ("last check",)
                     continue
                 self.track_target(obs, enemy)
+                agentHealth = obs['Life']
                 if currentTime - lastActionTime >= 200:
-                    agentHealth = obs['Life']
                     state = self.get_curr_state(obs, enemy)
                     self.clearAction(action)
                     p_actions = self.get_possible_actions(self.weapon)
@@ -224,9 +224,9 @@ class GeneralBot:
     def get_possible_actions(self, weap):
         '''Returns a list of possible actions based on weapon type'''
         if weap == "bow":
-            return ["move 1", "move 0", "move 1", "strafe 1", "strafe 0", "strafe -1", "use 1", "use 0", "switch"]
+            return ["move 1", "move -1", "strafe 1", "strafe -1", "use 1", "use 0", "switch"]
         else: #using sword
-            return ["move 1", "move 0", "move 1", "strafe 1", "strafe 0", "strafe -1", "attack 1", "switch"]
+            return ["move 1", "move -1", "strafe 1", "strafe -1", "attack 1", "switch"]
 
     def run(self, agent_host):
         """Run the agent_host on the world, acting according to the epsilon-greedy policy"""

@@ -3839,3 +3839,27 @@ Endermite,20.0,13.190,1
 Spider,20.0,11.764,1
 Zombie,17.0,17.243,1
 Witch,0,44.633,0
+Silverfish,19.0,8.428,1
+Creeper,3.0,8.244,1
+Wolf,20.0,8.136,1
+Blaze,0,14.977,0
+Zombie Pigman,20.0,18.517,1
+Cave Spider,13.0,7.515,1
+Ghast,0,8.481,0
+Skeleton,12.0,12.633,1
+Endermite,18.0,7.774,1
+Spider,17.0,11.042,1
+Zombie,15.0,14.089,1
+Witch,0,13.647,0
+Silverfish,20.0,6.841,1
+Creeper,7.0,4.222,1
+Wolf,20.0,10.552,1
+Blaze,0.0,25.091,0
+Zombie Pigman,0,15.308,0
+Cave Spider,13.0,7.196,1
+Ghast,7.0,25.164,0
+Skeleton,12.0,14.585,1
+Endermite,19.0,8.984,1
+Spider,18.0,6.816,1
+Zombie,15.0,11.517,1
+Witch,6.0,25.099,0
