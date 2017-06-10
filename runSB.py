@@ -41,7 +41,7 @@ def main():
         exit(0)
 
     my_mission_record = MalmoPython.MissionRecordSpec()
-
+    SB.clear_results("temp_osb_results.txt")
     ##########################################################
     ## Modify the below code in order to change the encounters
     ##########################################################

@@ -185,6 +185,7 @@ class GeneralBot:
             world_state = self.agent.getWorldState()
             if world_state.number_of_observations_since_last_state > 0:
                 obs = json.loads(world_state.observations[-1].text)
+                agentHealth = obs['Life']
                 if state == ("last check",):
                     state = ("Finished",)
                     agentHealth = obs['Life']
@@ -201,7 +202,6 @@ class GeneralBot:
                     state = ("last check",)
                     continue
                 self.track_target(obs, enemy)
-                agentHealth = obs['Life']
                 if currentTime - lastActionTime >= 200:
                     state = self.get_curr_state(obs, enemy)
                     self.clearAction(action)
@@ -323,6 +323,13 @@ class GeneralBot:
         try:
             f = open(self.fname, 'w')
             pickle.dump(dict(self.q_table), f)
+            f.close()
+        except Exception as e:
+            print e
+
+    def clear_results(self, filename):
+        try:
+            f = open(filename, 'w')
             f.close()
         except Exception as e:
             print e
