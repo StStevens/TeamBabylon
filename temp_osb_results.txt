@@ -1,0 +1,3841 @@
+Silverfish,20.0,9.989,1
+Creeper,0,11.693,0
+Wolf,20.0,9.930,1
+Blaze,0,22.005,0
+Zombie Pigman,15.0,17.540,1
+Cave Spider,20.0,16.884,1
+Ghast,9.0,6.818,1
+Skeleton,11.0,30.958,1
+Spider,19.0,11.795,1
+Zombie,19.0,21.754,1
+Witch,9.0,56.322,1
+Silverfish,20.0,9.989,1
+Creeper,0,11.693,0
+Wolf,20.0,9.930,1
+Blaze,0,22.005,0
+Zombie Pigman,15.0,17.540,1
+Cave Spider,20.0,16.884,1
+Ghast,9.0,6.818,1
+Skeleton,11.0,30.958,1
+Spider,19.0,11.795,1
+Zombie,19.0,21.754,1
+Witch,9.0,56.322,1
+Silverfish,20.0,20.917,1
+Creeper,4.0,16.021,1
+Wolf,16.0,17.863,1
+Blaze,14.0,45.160,1
+Zombie Pigman,9.0,34.144,1
+Cave Spider,16.0,10.552,1
+Ghast,0,12.952,0
+Skeleton,14.0,20.874,1
+Endermite,17.0,17.252,1
+Spider,20.0,15.258,1
+Zombie,15.0,19.897,1
+Witch,0,48.099,0
+Silverfish,20.0,9.989,1
+Creeper,0,11.693,0
+Wolf,20.0,9.930,1
+Blaze,0,22.005,0
+Zombie Pigman,15.0,17.540,1
+Cave Spider,20.0,16.884,1
+Ghast,9.0,6.818,1
+Skeleton,11.0,30.958,1
+Spider,19.0,11.795,1
+Zombie,19.0,21.754,1
+Witch,9.0,56.322,1
+Silverfish,20.0,20.917,1
+Creeper,4.0,16.021,1
+Wolf,16.0,17.863,1
+Blaze,14.0,45.160,1
+Zombie Pigman,9.0,34.144,1
+Cave Spider,16.0,10.552,1
+Ghast,0,12.952,0
+Skeleton,14.0,20.874,1
+Endermite,17.0,17.252,1
+Spider,20.0,15.258,1
+Zombie,15.0,19.897,1
+Witch,0,48.099,0
+Silverfish,20.0,10.980,1
+Creeper,12.0,11.971,1
+Wolf,20.0,34.688,1
+Blaze,7.0,31.655,1
+Zombie Pigman,20.0,18.295,1
+Cave Spider,13.0,12.806,1
+Ghast,0,12.534,0
+Skeleton,13.0,30.223,1
+Endermite,20.0,20.672,1
+Spider,18.0,16.544,1
+Zombie,15.0,28.142,1
+Witch,0,51.794,0
+Silverfish,20.0,9.989,1
+Creeper,0,11.693,0
+Wolf,20.0,9.930,1
+Blaze,0,22.005,0
+Zombie Pigman,15.0,17.540,1
+Cave Spider,20.0,16.884,1
+Ghast,9.0,6.818,1
+Skeleton,11.0,30.958,1
+Spider,19.0,11.795,1
+Zombie,19.0,21.754,1
+Witch,9.0,56.322,1
+Silverfish,20.0,20.917,1
+Creeper,4.0,16.021,1
+Wolf,16.0,17.863,1
+Blaze,14.0,45.160,1
+Zombie Pigman,9.0,34.144,1
+Cave Spider,16.0,10.552,1
+Ghast,0,12.952,0
+Skeleton,14.0,20.874,1
+Endermite,17.0,17.252,1
+Spider,20.0,15.258,1
+Zombie,15.0,19.897,1
+Witch,0,48.099,0
+Silverfish,20.0,10.980,1
+Creeper,12.0,11.971,1
+Wolf,20.0,34.688,1
+Blaze,7.0,31.655,1
+Zombie Pigman,20.0,18.295,1
+Cave Spider,13.0,12.806,1
+Ghast,0,12.534,0
+Skeleton,13.0,30.223,1
+Endermite,20.0,20.672,1
+Spider,18.0,16.544,1
+Zombie,15.0,28.142,1
+Witch,0,51.794,0
+Silverfish,18.0,25.602,1
+Creeper,6.0,9.031,1
+Wolf,20.0,17.468,1
+Blaze,20.0,18.535,1
+Zombie Pigman,16.0,18.302,1
+Cave Spider,16.0,8.934,1
+Ghast,0,13.670,0
+Skeleton,10.0,36.309,1
+Endermite,20.0,9.727,1
+Spider,20.0,11.907,1
+Zombie,20.0,15.950,1
+Witch,0,62.386,0
+Silverfish,20.0,9.989,1
+Creeper,0,11.693,0
+Wolf,20.0,9.930,1
+Blaze,0,22.005,0
+Zombie Pigman,15.0,17.540,1
+Cave Spider,20.0,16.884,1
+Ghast,9.0,6.818,1
+Skeleton,11.0,30.958,1
+Spider,19.0,11.795,1
+Zombie,19.0,21.754,1
+Witch,9.0,56.322,1
+Silverfish,20.0,20.917,1
+Creeper,4.0,16.021,1
+Wolf,16.0,17.863,1
+Blaze,14.0,45.160,1
+Zombie Pigman,9.0,34.144,1
+Cave Spider,16.0,10.552,1
+Ghast,0,12.952,0
+Skeleton,14.0,20.874,1
+Endermite,17.0,17.252,1
+Spider,20.0,15.258,1
+Zombie,15.0,19.897,1
+Witch,0,48.099,0
+Silverfish,20.0,10.980,1
+Creeper,12.0,11.971,1
+Wolf,20.0,34.688,1
+Blaze,7.0,31.655,1
+Zombie Pigman,20.0,18.295,1
+Cave Spider,13.0,12.806,1
+Ghast,0,12.534,0
+Skeleton,13.0,30.223,1
+Endermite,20.0,20.672,1
+Spider,18.0,16.544,1
+Zombie,15.0,28.142,1
+Witch,0,51.794,0
+Silverfish,18.0,25.602,1
+Creeper,6.0,9.031,1
+Wolf,20.0,17.468,1
+Blaze,20.0,18.535,1
+Zombie Pigman,16.0,18.302,1
+Cave Spider,16.0,8.934,1
+Ghast,0,13.670,0
+Skeleton,10.0,36.309,1
+Endermite,20.0,9.727,1
+Spider,20.0,11.907,1
+Zombie,20.0,15.950,1
+Witch,0,62.386,0
+Silverfish,20.0,9.418,1
+Creeper,9.0,11.677,1
+Wolf,20.0,14.063,1
+Blaze,20.0,35.232,1
+Zombie Pigman,16.0,24.738,1
+Cave Spider,12.0,13.965,1
+Ghast,0,10.811,0
+Skeleton,17.0,17.112,1
+Endermite,20.0,10.088,1
+Spider,19.0,15.107,1
+Zombie,18.0,15.278,1
+Witch,0,63.974,0
+Silverfish,20.0,9.989,1
+Creeper,0,11.693,0
+Wolf,20.0,9.930,1
+Blaze,0,22.005,0
+Zombie Pigman,15.0,17.540,1
+Cave Spider,20.0,16.884,1
+Ghast,9.0,6.818,1
+Skeleton,11.0,30.958,1
+Spider,19.0,11.795,1
+Zombie,19.0,21.754,1
+Witch,9.0,56.322,1
+Silverfish,20.0,20.917,1
+Creeper,4.0,16.021,1
+Wolf,16.0,17.863,1
+Blaze,14.0,45.160,1
+Zombie Pigman,9.0,34.144,1
+Cave Spider,16.0,10.552,1
+Ghast,0,12.952,0
+Skeleton,14.0,20.874,1
+Endermite,17.0,17.252,1
+Spider,20.0,15.258,1
+Zombie,15.0,19.897,1
+Witch,0,48.099,0
+Silverfish,20.0,10.980,1
+Creeper,12.0,11.971,1
+Wolf,20.0,34.688,1
+Blaze,7.0,31.655,1
+Zombie Pigman,20.0,18.295,1
+Cave Spider,13.0,12.806,1
+Ghast,0,12.534,0
+Skeleton,13.0,30.223,1
+Endermite,20.0,20.672,1
+Spider,18.0,16.544,1
+Zombie,15.0,28.142,1
+Witch,0,51.794,0
+Silverfish,18.0,25.602,1
+Creeper,6.0,9.031,1
+Wolf,20.0,17.468,1
+Blaze,20.0,18.535,1
+Zombie Pigman,16.0,18.302,1
+Cave Spider,16.0,8.934,1
+Ghast,0,13.670,0
+Skeleton,10.0,36.309,1
+Endermite,20.0,9.727,1
+Spider,20.0,11.907,1
+Zombie,20.0,15.950,1
+Witch,0,62.386,0
+Silverfish,20.0,9.418,1
+Creeper,9.0,11.677,1
+Wolf,20.0,14.063,1
+Blaze,20.0,35.232,1
+Zombie Pigman,16.0,24.738,1
+Cave Spider,12.0,13.965,1
+Ghast,0,10.811,0
+Skeleton,17.0,17.112,1
+Endermite,20.0,10.088,1
+Spider,19.0,15.107,1
+Zombie,18.0,15.278,1
+Witch,0,63.974,0
+Silverfish,20.0,16.801,1
+Creeper,0,13.238,0
+Wolf,20.0,16.596,1
+Blaze,20.0,17.528,1
+Zombie Pigman,20.0,26.777,1
+Cave Spider,20.0,9.591,1
+Ghast,20.0,5.229,1
+Skeleton,19.0,33.171,1
+Endermite,20.0,15.212,1
+Spider,18.0,18.795,1
+Zombie,17.0,21.620,1
+Witch,0,37.641,0
+Silverfish,20.0,9.989,1
+Creeper,0,11.693,0
+Wolf,20.0,9.930,1
+Blaze,0,22.005,0
+Zombie Pigman,15.0,17.540,1
+Cave Spider,20.0,16.884,1
+Ghast,9.0,6.818,1
+Skeleton,11.0,30.958,1
+Spider,19.0,11.795,1
+Zombie,19.0,21.754,1
+Witch,9.0,56.322,1
+Silverfish,20.0,20.917,1
+Creeper,4.0,16.021,1
+Wolf,16.0,17.863,1
+Blaze,14.0,45.160,1
+Zombie Pigman,9.0,34.144,1
+Cave Spider,16.0,10.552,1
+Ghast,0,12.952,0
+Skeleton,14.0,20.874,1
+Endermite,17.0,17.252,1
+Spider,20.0,15.258,1
+Zombie,15.0,19.897,1
+Witch,0,48.099,0
+Silverfish,20.0,10.980,1
+Creeper,12.0,11.971,1
+Wolf,20.0,34.688,1
+Blaze,7.0,31.655,1
+Zombie Pigman,20.0,18.295,1
+Cave Spider,13.0,12.806,1
+Ghast,0,12.534,0
+Skeleton,13.0,30.223,1
+Endermite,20.0,20.672,1
+Spider,18.0,16.544,1
+Zombie,15.0,28.142,1
+Witch,0,51.794,0
+Silverfish,18.0,25.602,1
+Creeper,6.0,9.031,1
+Wolf,20.0,17.468,1
+Blaze,20.0,18.535,1
+Zombie Pigman,16.0,18.302,1
+Cave Spider,16.0,8.934,1
+Ghast,0,13.670,0
+Skeleton,10.0,36.309,1
+Endermite,20.0,9.727,1
+Spider,20.0,11.907,1
+Zombie,20.0,15.950,1
+Witch,0,62.386,0
+Silverfish,20.0,9.418,1
+Creeper,9.0,11.677,1
+Wolf,20.0,14.063,1
+Blaze,20.0,35.232,1
+Zombie Pigman,16.0,24.738,1
+Cave Spider,12.0,13.965,1
+Ghast,0,10.811,0
+Skeleton,17.0,17.112,1
+Endermite,20.0,10.088,1
+Spider,19.0,15.107,1
+Zombie,18.0,15.278,1
+Witch,0,63.974,0
+Silverfish,20.0,16.801,1
+Creeper,0,13.238,0
+Wolf,20.0,16.596,1
+Blaze,20.0,17.528,1
+Zombie Pigman,20.0,26.777,1
+Cave Spider,20.0,9.591,1
+Ghast,20.0,5.229,1
+Skeleton,19.0,33.171,1
+Endermite,20.0,15.212,1
+Spider,18.0,18.795,1
+Zombie,17.0,21.620,1
+Witch,0,37.641,0
+Silverfish,20.0,14.417,1
+Creeper,12.0,16.437,1
+Wolf,20.0,20.315,1
+Blaze,14.0,35.864,1
+Zombie Pigman,20.0,20.154,1
+Cave Spider,16.0,9.694,1
+Ghast,3.0,14.727,1
+Skeleton,17.0,17.139,1
+Endermite,20.0,10.535,1
+Spider,19.0,12.664,1
+Zombie,18.0,23.096,1
+Witch,0,64.489,0
+Silverfish,20.0,9.989,1
+Creeper,0,11.693,0
+Wolf,20.0,9.930,1
+Blaze,0,22.005,0
+Zombie Pigman,15.0,17.540,1
+Cave Spider,20.0,16.884,1
+Ghast,9.0,6.818,1
+Skeleton,11.0,30.958,1
+Spider,19.0,11.795,1
+Zombie,19.0,21.754,1
+Witch,9.0,56.322,1
+Silverfish,20.0,20.917,1
+Creeper,4.0,16.021,1
+Wolf,16.0,17.863,1
+Blaze,14.0,45.160,1
+Zombie Pigman,9.0,34.144,1
+Cave Spider,16.0,10.552,1
+Ghast,0,12.952,0
+Skeleton,14.0,20.874,1
+Endermite,17.0,17.252,1
+Spider,20.0,15.258,1
+Zombie,15.0,19.897,1
+Witch,0,48.099,0
+Silverfish,20.0,10.980,1
+Creeper,12.0,11.971,1
+Wolf,20.0,34.688,1
+Blaze,7.0,31.655,1
+Zombie Pigman,20.0,18.295,1
+Cave Spider,13.0,12.806,1
+Ghast,0,12.534,0
+Skeleton,13.0,30.223,1
+Endermite,20.0,20.672,1
+Spider,18.0,16.544,1
+Zombie,15.0,28.142,1
+Witch,0,51.794,0
+Silverfish,18.0,25.602,1
+Creeper,6.0,9.031,1
+Wolf,20.0,17.468,1
+Blaze,20.0,18.535,1
+Zombie Pigman,16.0,18.302,1
+Cave Spider,16.0,8.934,1
+Ghast,0,13.670,0
+Skeleton,10.0,36.309,1
+Endermite,20.0,9.727,1
+Spider,20.0,11.907,1
+Zombie,20.0,15.950,1
+Witch,0,62.386,0
+Silverfish,20.0,9.418,1
+Creeper,9.0,11.677,1
+Wolf,20.0,14.063,1
+Blaze,20.0,35.232,1
+Zombie Pigman,16.0,24.738,1
+Cave Spider,12.0,13.965,1
+Ghast,0,10.811,0
+Skeleton,17.0,17.112,1
+Endermite,20.0,10.088,1
+Spider,19.0,15.107,1
+Zombie,18.0,15.278,1
+Witch,0,63.974,0
+Silverfish,20.0,16.801,1
+Creeper,0,13.238,0
+Wolf,20.0,16.596,1
+Blaze,20.0,17.528,1
+Zombie Pigman,20.0,26.777,1
+Cave Spider,20.0,9.591,1
+Ghast,20.0,5.229,1
+Skeleton,19.0,33.171,1
+Endermite,20.0,15.212,1
+Spider,18.0,18.795,1
+Zombie,17.0,21.620,1
+Witch,0,37.641,0
+Silverfish,20.0,14.417,1
+Creeper,12.0,16.437,1
+Wolf,20.0,20.315,1
+Blaze,14.0,35.864,1
+Zombie Pigman,20.0,20.154,1
+Cave Spider,16.0,9.694,1
+Ghast,3.0,14.727,1
+Skeleton,17.0,17.139,1
+Endermite,20.0,10.535,1
+Spider,19.0,12.664,1
+Zombie,18.0,23.096,1
+Witch,0,64.489,0
+Silverfish,20.0,11.669,1
+Creeper,13.0,12.833,1
+Wolf,20.0,11.081,1
+Blaze,7.0,28.413,1
+Zombie Pigman,16.0,22.903,1
+Cave Spider,20.0,7.688,1
+Ghast,20.0,5.650,1
+Skeleton,16.0,24.769,1
+Endermite,20.0,20.190,1
+Spider,18.0,12.781,1
+Zombie,20.0,20.154,1
+Witch,0,67.937,0
+Silverfish,20.0,9.989,1
+Creeper,0,11.693,0
+Wolf,20.0,9.930,1
+Blaze,0,22.005,0
+Zombie Pigman,15.0,17.540,1
+Cave Spider,20.0,16.884,1
+Ghast,9.0,6.818,1
+Skeleton,11.0,30.958,1
+Spider,19.0,11.795,1
+Zombie,19.0,21.754,1
+Witch,9.0,56.322,1
+Silverfish,20.0,20.917,1
+Creeper,4.0,16.021,1
+Wolf,16.0,17.863,1
+Blaze,14.0,45.160,1
+Zombie Pigman,9.0,34.144,1
+Cave Spider,16.0,10.552,1
+Ghast,0,12.952,0
+Skeleton,14.0,20.874,1
+Endermite,17.0,17.252,1
+Spider,20.0,15.258,1
+Zombie,15.0,19.897,1
+Witch,0,48.099,0
+Silverfish,20.0,10.980,1
+Creeper,12.0,11.971,1
+Wolf,20.0,34.688,1
+Blaze,7.0,31.655,1
+Zombie Pigman,20.0,18.295,1
+Cave Spider,13.0,12.806,1
+Ghast,0,12.534,0
+Skeleton,13.0,30.223,1
+Endermite,20.0,20.672,1
+Spider,18.0,16.544,1
+Zombie,15.0,28.142,1
+Witch,0,51.794,0
+Silverfish,18.0,25.602,1
+Creeper,6.0,9.031,1
+Wolf,20.0,17.468,1
+Blaze,20.0,18.535,1
+Zombie Pigman,16.0,18.302,1
+Cave Spider,16.0,8.934,1
+Ghast,0,13.670,0
+Skeleton,10.0,36.309,1
+Endermite,20.0,9.727,1
+Spider,20.0,11.907,1
+Zombie,20.0,15.950,1
+Witch,0,62.386,0
+Silverfish,20.0,9.418,1
+Creeper,9.0,11.677,1
+Wolf,20.0,14.063,1
+Blaze,20.0,35.232,1
+Zombie Pigman,16.0,24.738,1
+Cave Spider,12.0,13.965,1
+Ghast,0,10.811,0
+Skeleton,17.0,17.112,1
+Endermite,20.0,10.088,1
+Spider,19.0,15.107,1
+Zombie,18.0,15.278,1
+Witch,0,63.974,0
+Silverfish,20.0,16.801,1
+Creeper,0,13.238,0
+Wolf,20.0,16.596,1
+Blaze,20.0,17.528,1
+Zombie Pigman,20.0,26.777,1
+Cave Spider,20.0,9.591,1
+Ghast,20.0,5.229,1
+Skeleton,19.0,33.171,1
+Endermite,20.0,15.212,1
+Spider,18.0,18.795,1
+Zombie,17.0,21.620,1
+Witch,0,37.641,0
+Silverfish,20.0,14.417,1
+Creeper,12.0,16.437,1
+Wolf,20.0,20.315,1
+Blaze,14.0,35.864,1
+Zombie Pigman,20.0,20.154,1
+Cave Spider,16.0,9.694,1
+Ghast,3.0,14.727,1
+Skeleton,17.0,17.139,1
+Endermite,20.0,10.535,1
+Spider,19.0,12.664,1
+Zombie,18.0,23.096,1
+Witch,0,64.489,0
+Silverfish,20.0,11.669,1
+Creeper,13.0,12.833,1
+Wolf,20.0,11.081,1
+Blaze,7.0,28.413,1
+Zombie Pigman,16.0,22.903,1
+Cave Spider,20.0,7.688,1
+Ghast,20.0,5.650,1
+Skeleton,16.0,24.769,1
+Endermite,20.0,20.190,1
+Spider,18.0,12.781,1
+Zombie,20.0,20.154,1
+Witch,0,67.937,0
+Silverfish,20.0,7.386,1
+Creeper,0,11.438,0
+Wolf,13.0,21.758,1
+Blaze,0,65.111,0
+Zombie Pigman,15.0,20.632,1
+Cave Spider,20.0,8.520,1
+Ghast,20.0,5.607,1
+Skeleton,19.0,38.602,1
+Endermite,18.0,31.410,1
+Spider,20.0,12.905,1
+Zombie,20.0,21.110,1
+Witch,0,69.487,0
+Silverfish,20.0,9.989,1
+Creeper,0,11.693,0
+Wolf,20.0,9.930,1
+Blaze,0,22.005,0
+Zombie Pigman,15.0,17.540,1
+Cave Spider,20.0,16.884,1
+Ghast,9.0,6.818,1
+Skeleton,11.0,30.958,1
+Spider,19.0,11.795,1
+Zombie,19.0,21.754,1
+Witch,9.0,56.322,1
+Silverfish,20.0,20.917,1
+Creeper,4.0,16.021,1
+Wolf,16.0,17.863,1
+Blaze,14.0,45.160,1
+Zombie Pigman,9.0,34.144,1
+Cave Spider,16.0,10.552,1
+Ghast,0,12.952,0
+Skeleton,14.0,20.874,1
+Endermite,17.0,17.252,1
+Spider,20.0,15.258,1
+Zombie,15.0,19.897,1
+Witch,0,48.099,0
+Silverfish,20.0,10.980,1
+Creeper,12.0,11.971,1
+Wolf,20.0,34.688,1
+Blaze,7.0,31.655,1
+Zombie Pigman,20.0,18.295,1
+Cave Spider,13.0,12.806,1
+Ghast,0,12.534,0
+Skeleton,13.0,30.223,1
+Endermite,20.0,20.672,1
+Spider,18.0,16.544,1
+Zombie,15.0,28.142,1
+Witch,0,51.794,0
+Silverfish,18.0,25.602,1
+Creeper,6.0,9.031,1
+Wolf,20.0,17.468,1
+Blaze,20.0,18.535,1
+Zombie Pigman,16.0,18.302,1
+Cave Spider,16.0,8.934,1
+Ghast,0,13.670,0
+Skeleton,10.0,36.309,1
+Endermite,20.0,9.727,1
+Spider,20.0,11.907,1
+Zombie,20.0,15.950,1
+Witch,0,62.386,0
+Silverfish,20.0,9.418,1
+Creeper,9.0,11.677,1
+Wolf,20.0,14.063,1
+Blaze,20.0,35.232,1
+Zombie Pigman,16.0,24.738,1
+Cave Spider,12.0,13.965,1
+Ghast,0,10.811,0
+Skeleton,17.0,17.112,1
+Endermite,20.0,10.088,1
+Spider,19.0,15.107,1
+Zombie,18.0,15.278,1
+Witch,0,63.974,0
+Silverfish,20.0,16.801,1
+Creeper,0,13.238,0
+Wolf,20.0,16.596,1
+Blaze,20.0,17.528,1
+Zombie Pigman,20.0,26.777,1
+Cave Spider,20.0,9.591,1
+Ghast,20.0,5.229,1
+Skeleton,19.0,33.171,1
+Endermite,20.0,15.212,1
+Spider,18.0,18.795,1
+Zombie,17.0,21.620,1
+Witch,0,37.641,0
+Silverfish,20.0,14.417,1
+Creeper,12.0,16.437,1
+Wolf,20.0,20.315,1
+Blaze,14.0,35.864,1
+Zombie Pigman,20.0,20.154,1
+Cave Spider,16.0,9.694,1
+Ghast,3.0,14.727,1
+Skeleton,17.0,17.139,1
+Endermite,20.0,10.535,1
+Spider,19.0,12.664,1
+Zombie,18.0,23.096,1
+Witch,0,64.489,0
+Silverfish,20.0,11.669,1
+Creeper,13.0,12.833,1
+Wolf,20.0,11.081,1
+Blaze,7.0,28.413,1
+Zombie Pigman,16.0,22.903,1
+Cave Spider,20.0,7.688,1
+Ghast,20.0,5.650,1
+Skeleton,16.0,24.769,1
+Endermite,20.0,20.190,1
+Spider,18.0,12.781,1
+Zombie,20.0,20.154,1
+Witch,0,67.937,0
+Silverfish,20.0,7.386,1
+Creeper,0,11.438,0
+Wolf,13.0,21.758,1
+Blaze,0,65.111,0
+Zombie Pigman,15.0,20.632,1
+Cave Spider,20.0,8.520,1
+Ghast,20.0,5.607,1
+Skeleton,19.0,38.602,1
+Endermite,18.0,31.410,1
+Spider,20.0,12.905,1
+Zombie,20.0,21.110,1
+Witch,0,69.487,0
+Silverfish,20.0,18.971,1
+Creeper,9.0,14.678,1
+Wolf,20.0,20.754,1
+Blaze,-1,25.562,0
+Zombie Pigman,20.0,17.119,1
+Cave Spider,14.0,10.929,1
+Ghast,0,20.640,0
+Skeleton,16.0,28.326,1
+Endermite,20.0,9.080,1
+Spider,20.0,13.354,1
+Zombie,17.0,19.609,1
+Witch,0,45.400,0
+Silverfish,20.0,9.989,1
+Creeper,0,11.693,0
+Wolf,20.0,9.930,1
+Blaze,0,22.005,0
+Zombie Pigman,15.0,17.540,1
+Cave Spider,20.0,16.884,1
+Ghast,9.0,6.818,1
+Skeleton,11.0,30.958,1
+Spider,19.0,11.795,1
+Zombie,19.0,21.754,1
+Witch,9.0,56.322,1
+Silverfish,20.0,20.917,1
+Creeper,4.0,16.021,1
+Wolf,16.0,17.863,1
+Blaze,14.0,45.160,1
+Zombie Pigman,9.0,34.144,1
+Cave Spider,16.0,10.552,1
+Ghast,0,12.952,0
+Skeleton,14.0,20.874,1
+Endermite,17.0,17.252,1
+Spider,20.0,15.258,1
+Zombie,15.0,19.897,1
+Witch,0,48.099,0
+Silverfish,20.0,10.980,1
+Creeper,12.0,11.971,1
+Wolf,20.0,34.688,1
+Blaze,7.0,31.655,1
+Zombie Pigman,20.0,18.295,1
+Cave Spider,13.0,12.806,1
+Ghast,0,12.534,0
+Skeleton,13.0,30.223,1
+Endermite,20.0,20.672,1
+Spider,18.0,16.544,1
+Zombie,15.0,28.142,1
+Witch,0,51.794,0
+Silverfish,18.0,25.602,1
+Creeper,6.0,9.031,1
+Wolf,20.0,17.468,1
+Blaze,20.0,18.535,1
+Zombie Pigman,16.0,18.302,1
+Cave Spider,16.0,8.934,1
+Ghast,0,13.670,0
+Skeleton,10.0,36.309,1
+Endermite,20.0,9.727,1
+Spider,20.0,11.907,1
+Zombie,20.0,15.950,1
+Witch,0,62.386,0
+Silverfish,20.0,9.418,1
+Creeper,9.0,11.677,1
+Wolf,20.0,14.063,1
+Blaze,20.0,35.232,1
+Zombie Pigman,16.0,24.738,1
+Cave Spider,12.0,13.965,1
+Ghast,0,10.811,0
+Skeleton,17.0,17.112,1
+Endermite,20.0,10.088,1
+Spider,19.0,15.107,1
+Zombie,18.0,15.278,1
+Witch,0,63.974,0
+Silverfish,20.0,16.801,1
+Creeper,0,13.238,0
+Wolf,20.0,16.596,1
+Blaze,20.0,17.528,1
+Zombie Pigman,20.0,26.777,1
+Cave Spider,20.0,9.591,1
+Ghast,20.0,5.229,1
+Skeleton,19.0,33.171,1
+Endermite,20.0,15.212,1
+Spider,18.0,18.795,1
+Zombie,17.0,21.620,1
+Witch,0,37.641,0
+Silverfish,20.0,14.417,1
+Creeper,12.0,16.437,1
+Wolf,20.0,20.315,1
+Blaze,14.0,35.864,1
+Zombie Pigman,20.0,20.154,1
+Cave Spider,16.0,9.694,1
+Ghast,3.0,14.727,1
+Skeleton,17.0,17.139,1
+Endermite,20.0,10.535,1
+Spider,19.0,12.664,1
+Zombie,18.0,23.096,1
+Witch,0,64.489,0
+Silverfish,20.0,11.669,1
+Creeper,13.0,12.833,1
+Wolf,20.0,11.081,1
+Blaze,7.0,28.413,1
+Zombie Pigman,16.0,22.903,1
+Cave Spider,20.0,7.688,1
+Ghast,20.0,5.650,1
+Skeleton,16.0,24.769,1
+Endermite,20.0,20.190,1
+Spider,18.0,12.781,1
+Zombie,20.0,20.154,1
+Witch,0,67.937,0
+Silverfish,20.0,7.386,1
+Creeper,0,11.438,0
+Wolf,13.0,21.758,1
+Blaze,0,65.111,0
+Zombie Pigman,15.0,20.632,1
+Cave Spider,20.0,8.520,1
+Ghast,20.0,5.607,1
+Skeleton,19.0,38.602,1
+Endermite,18.0,31.410,1
+Spider,20.0,12.905,1
+Zombie,20.0,21.110,1
+Witch,0,69.487,0
+Silverfish,20.0,18.971,1
+Creeper,9.0,14.678,1
+Wolf,20.0,20.754,1
+Blaze,-1,25.562,0
+Zombie Pigman,20.0,17.119,1
+Cave Spider,14.0,10.929,1
+Ghast,0,20.640,0
+Skeleton,16.0,28.326,1
+Endermite,20.0,9.080,1
+Spider,20.0,13.354,1
+Zombie,17.0,19.609,1
+Witch,0,45.400,0
+Creeper,5.0,12.492,1
+Wolf,16.0,15.023,1
+Blaze,20.0,21.709,1
+Zombie Pigman,16.0,19.001,1
+Cave Spider,17.0,9.521,1
+Ghast,20.0,4.923,1
+Skeleton,18.0,19.887,1
+Endermite,20.0,20.021,1
+Spider,17.0,17.678,1
+Zombie,17.0,19.842,1
+Witch,0,47.930,0
+Silverfish,20.0,9.989,1
+Creeper,0,11.693,0
+Wolf,20.0,9.930,1
+Blaze,0,22.005,0
+Zombie Pigman,15.0,17.540,1
+Cave Spider,20.0,16.884,1
+Ghast,9.0,6.818,1
+Skeleton,11.0,30.958,1
+Spider,19.0,11.795,1
+Zombie,19.0,21.754,1
+Witch,9.0,56.322,1
+Silverfish,20.0,20.917,1
+Creeper,4.0,16.021,1
+Wolf,16.0,17.863,1
+Blaze,14.0,45.160,1
+Zombie Pigman,9.0,34.144,1
+Cave Spider,16.0,10.552,1
+Ghast,0,12.952,0
+Skeleton,14.0,20.874,1
+Endermite,17.0,17.252,1
+Spider,20.0,15.258,1
+Zombie,15.0,19.897,1
+Witch,0,48.099,0
+Silverfish,20.0,10.980,1
+Creeper,12.0,11.971,1
+Wolf,20.0,34.688,1
+Blaze,7.0,31.655,1
+Zombie Pigman,20.0,18.295,1
+Cave Spider,13.0,12.806,1
+Ghast,0,12.534,0
+Skeleton,13.0,30.223,1
+Endermite,20.0,20.672,1
+Spider,18.0,16.544,1
+Zombie,15.0,28.142,1
+Witch,0,51.794,0
+Silverfish,18.0,25.602,1
+Creeper,6.0,9.031,1
+Wolf,20.0,17.468,1
+Blaze,20.0,18.535,1
+Zombie Pigman,16.0,18.302,1
+Cave Spider,16.0,8.934,1
+Ghast,0,13.670,0
+Skeleton,10.0,36.309,1
+Endermite,20.0,9.727,1
+Spider,20.0,11.907,1
+Zombie,20.0,15.950,1
+Witch,0,62.386,0
+Silverfish,20.0,9.418,1
+Creeper,9.0,11.677,1
+Wolf,20.0,14.063,1
+Blaze,20.0,35.232,1
+Zombie Pigman,16.0,24.738,1
+Cave Spider,12.0,13.965,1
+Ghast,0,10.811,0
+Skeleton,17.0,17.112,1
+Endermite,20.0,10.088,1
+Spider,19.0,15.107,1
+Zombie,18.0,15.278,1
+Witch,0,63.974,0
+Silverfish,20.0,16.801,1
+Creeper,0,13.238,0
+Wolf,20.0,16.596,1
+Blaze,20.0,17.528,1
+Zombie Pigman,20.0,26.777,1
+Cave Spider,20.0,9.591,1
+Ghast,20.0,5.229,1
+Skeleton,19.0,33.171,1
+Endermite,20.0,15.212,1
+Spider,18.0,18.795,1
+Zombie,17.0,21.620,1
+Witch,0,37.641,0
+Silverfish,20.0,14.417,1
+Creeper,12.0,16.437,1
+Wolf,20.0,20.315,1
+Blaze,14.0,35.864,1
+Zombie Pigman,20.0,20.154,1
+Cave Spider,16.0,9.694,1
+Ghast,3.0,14.727,1
+Skeleton,17.0,17.139,1
+Endermite,20.0,10.535,1
+Spider,19.0,12.664,1
+Zombie,18.0,23.096,1
+Witch,0,64.489,0
+Silverfish,20.0,11.669,1
+Creeper,13.0,12.833,1
+Wolf,20.0,11.081,1
+Blaze,7.0,28.413,1
+Zombie Pigman,16.0,22.903,1
+Cave Spider,20.0,7.688,1
+Ghast,20.0,5.650,1
+Skeleton,16.0,24.769,1
+Endermite,20.0,20.190,1
+Spider,18.0,12.781,1
+Zombie,20.0,20.154,1
+Witch,0,67.937,0
+Silverfish,20.0,7.386,1
+Creeper,0,11.438,0
+Wolf,13.0,21.758,1
+Blaze,0,65.111,0
+Zombie Pigman,15.0,20.632,1
+Cave Spider,20.0,8.520,1
+Ghast,20.0,5.607,1
+Skeleton,19.0,38.602,1
+Endermite,18.0,31.410,1
+Spider,20.0,12.905,1
+Zombie,20.0,21.110,1
+Witch,0,69.487,0
+Silverfish,20.0,18.971,1
+Creeper,9.0,14.678,1
+Wolf,20.0,20.754,1
+Blaze,-1,25.562,0
+Zombie Pigman,20.0,17.119,1
+Cave Spider,14.0,10.929,1
+Ghast,0,20.640,0
+Skeleton,16.0,28.326,1
+Endermite,20.0,9.080,1
+Spider,20.0,13.354,1
+Zombie,17.0,19.609,1
+Witch,0,45.400,0
+Creeper,5.0,12.492,1
+Wolf,16.0,15.023,1
+Blaze,20.0,21.709,1
+Zombie Pigman,16.0,19.001,1
+Cave Spider,17.0,9.521,1
+Ghast,20.0,4.923,1
+Skeleton,18.0,19.887,1
+Endermite,20.0,20.021,1
+Spider,17.0,17.678,1
+Zombie,17.0,19.842,1
+Witch,0,47.930,0
+Silverfish,20.0,13.227,1
+Creeper,7.0,17.044,1
+Wolf,20.0,15.862,1
+Blaze,-1,24.593,0
+Zombie Pigman,15.0,18.095,1
+Cave Spider,15.0,9.631,1
+Ghast,20.0,5.527,1
+Skeleton,17.0,13.596,1
+Endermite,20.0,10.128,1
+Spider,17.0,16.971,1
+Zombie,19.0,18.184,1
+Witch,0,47.200,0
+Silverfish,20.0,9.989,1
+Creeper,0,11.693,0
+Wolf,20.0,9.930,1
+Blaze,0,22.005,0
+Zombie Pigman,15.0,17.540,1
+Cave Spider,20.0,16.884,1
+Ghast,9.0,6.818,1
+Skeleton,11.0,30.958,1
+Spider,19.0,11.795,1
+Zombie,19.0,21.754,1
+Witch,9.0,56.322,1
+Silverfish,20.0,20.917,1
+Creeper,4.0,16.021,1
+Wolf,16.0,17.863,1
+Blaze,14.0,45.160,1
+Zombie Pigman,9.0,34.144,1
+Cave Spider,16.0,10.552,1
+Ghast,0,12.952,0
+Skeleton,14.0,20.874,1
+Endermite,17.0,17.252,1
+Spider,20.0,15.258,1
+Zombie,15.0,19.897,1
+Witch,0,48.099,0
+Silverfish,20.0,10.980,1
+Creeper,12.0,11.971,1
+Wolf,20.0,34.688,1
+Blaze,7.0,31.655,1
+Zombie Pigman,20.0,18.295,1
+Cave Spider,13.0,12.806,1
+Ghast,0,12.534,0
+Skeleton,13.0,30.223,1
+Endermite,20.0,20.672,1
+Spider,18.0,16.544,1
+Zombie,15.0,28.142,1
+Witch,0,51.794,0
+Silverfish,18.0,25.602,1
+Creeper,6.0,9.031,1
+Wolf,20.0,17.468,1
+Blaze,20.0,18.535,1
+Zombie Pigman,16.0,18.302,1
+Cave Spider,16.0,8.934,1
+Ghast,0,13.670,0
+Skeleton,10.0,36.309,1
+Endermite,20.0,9.727,1
+Spider,20.0,11.907,1
+Zombie,20.0,15.950,1
+Witch,0,62.386,0
+Silverfish,20.0,9.418,1
+Creeper,9.0,11.677,1
+Wolf,20.0,14.063,1
+Blaze,20.0,35.232,1
+Zombie Pigman,16.0,24.738,1
+Cave Spider,12.0,13.965,1
+Ghast,0,10.811,0
+Skeleton,17.0,17.112,1
+Endermite,20.0,10.088,1
+Spider,19.0,15.107,1
+Zombie,18.0,15.278,1
+Witch,0,63.974,0
+Silverfish,20.0,16.801,1
+Creeper,0,13.238,0
+Wolf,20.0,16.596,1
+Blaze,20.0,17.528,1
+Zombie Pigman,20.0,26.777,1
+Cave Spider,20.0,9.591,1
+Ghast,20.0,5.229,1
+Skeleton,19.0,33.171,1
+Endermite,20.0,15.212,1
+Spider,18.0,18.795,1
+Zombie,17.0,21.620,1
+Witch,0,37.641,0
+Silverfish,20.0,14.417,1
+Creeper,12.0,16.437,1
+Wolf,20.0,20.315,1
+Blaze,14.0,35.864,1
+Zombie Pigman,20.0,20.154,1
+Cave Spider,16.0,9.694,1
+Ghast,3.0,14.727,1
+Skeleton,17.0,17.139,1
+Endermite,20.0,10.535,1
+Spider,19.0,12.664,1
+Zombie,18.0,23.096,1
+Witch,0,64.489,0
+Silverfish,20.0,11.669,1
+Creeper,13.0,12.833,1
+Wolf,20.0,11.081,1
+Blaze,7.0,28.413,1
+Zombie Pigman,16.0,22.903,1
+Cave Spider,20.0,7.688,1
+Ghast,20.0,5.650,1
+Skeleton,16.0,24.769,1
+Endermite,20.0,20.190,1
+Spider,18.0,12.781,1
+Zombie,20.0,20.154,1
+Witch,0,67.937,0
+Silverfish,20.0,7.386,1
+Creeper,0,11.438,0
+Wolf,13.0,21.758,1
+Blaze,0,65.111,0
+Zombie Pigman,15.0,20.632,1
+Cave Spider,20.0,8.520,1
+Ghast,20.0,5.607,1
+Skeleton,19.0,38.602,1
+Endermite,18.0,31.410,1
+Spider,20.0,12.905,1
+Zombie,20.0,21.110,1
+Witch,0,69.487,0
+Silverfish,20.0,18.971,1
+Creeper,9.0,14.678,1
+Wolf,20.0,20.754,1
+Blaze,-1,25.562,0
+Zombie Pigman,20.0,17.119,1
+Cave Spider,14.0,10.929,1
+Ghast,0,20.640,0
+Skeleton,16.0,28.326,1
+Endermite,20.0,9.080,1
+Spider,20.0,13.354,1
+Zombie,17.0,19.609,1
+Witch,0,45.400,0
+Creeper,5.0,12.492,1
+Wolf,16.0,15.023,1
+Blaze,20.0,21.709,1
+Zombie Pigman,16.0,19.001,1
+Cave Spider,17.0,9.521,1
+Ghast,20.0,4.923,1
+Skeleton,18.0,19.887,1
+Endermite,20.0,20.021,1
+Spider,17.0,17.678,1
+Zombie,17.0,19.842,1
+Witch,0,47.930,0
+Silverfish,20.0,13.227,1
+Creeper,7.0,17.044,1
+Wolf,20.0,15.862,1
+Blaze,-1,24.593,0
+Zombie Pigman,15.0,18.095,1
+Cave Spider,15.0,9.631,1
+Ghast,20.0,5.527,1
+Skeleton,17.0,13.596,1
+Endermite,20.0,10.128,1
+Spider,17.0,16.971,1
+Zombie,19.0,18.184,1
+Witch,0,47.200,0
+Silverfish,19.0,11.160,1
+Creeper,7.0,15.057,1
+Wolf,16.0,12.025,1
+Blaze,0,13.614,0
+Zombie Pigman,20.0,15.144,1
+Cave Spider,15.0,13.564,1
+Ghast,20.0,5.606,1
+Skeleton,14.0,27.162,1
+Endermite,18.0,16.563,1
+Spider,20.0,12.712,1
+Zombie,16.0,24.919,1
+Witch,0,65.250,0
+Silverfish,20.0,9.989,1
+Creeper,0,11.693,0
+Wolf,20.0,9.930,1
+Blaze,0,22.005,0
+Zombie Pigman,15.0,17.540,1
+Cave Spider,20.0,16.884,1
+Ghast,9.0,6.818,1
+Skeleton,11.0,30.958,1
+Spider,19.0,11.795,1
+Zombie,19.0,21.754,1
+Witch,9.0,56.322,1
+Silverfish,20.0,20.917,1
+Creeper,4.0,16.021,1
+Wolf,16.0,17.863,1
+Blaze,14.0,45.160,1
+Zombie Pigman,9.0,34.144,1
+Cave Spider,16.0,10.552,1
+Ghast,0,12.952,0
+Skeleton,14.0,20.874,1
+Endermite,17.0,17.252,1
+Spider,20.0,15.258,1
+Zombie,15.0,19.897,1
+Witch,0,48.099,0
+Silverfish,20.0,10.980,1
+Creeper,12.0,11.971,1
+Wolf,20.0,34.688,1
+Blaze,7.0,31.655,1
+Zombie Pigman,20.0,18.295,1
+Cave Spider,13.0,12.806,1
+Ghast,0,12.534,0
+Skeleton,13.0,30.223,1
+Endermite,20.0,20.672,1
+Spider,18.0,16.544,1
+Zombie,15.0,28.142,1
+Witch,0,51.794,0
+Silverfish,18.0,25.602,1
+Creeper,6.0,9.031,1
+Wolf,20.0,17.468,1
+Blaze,20.0,18.535,1
+Zombie Pigman,16.0,18.302,1
+Cave Spider,16.0,8.934,1
+Ghast,0,13.670,0
+Skeleton,10.0,36.309,1
+Endermite,20.0,9.727,1
+Spider,20.0,11.907,1
+Zombie,20.0,15.950,1
+Witch,0,62.386,0
+Silverfish,20.0,9.418,1
+Creeper,9.0,11.677,1
+Wolf,20.0,14.063,1
+Blaze,20.0,35.232,1
+Zombie Pigman,16.0,24.738,1
+Cave Spider,12.0,13.965,1
+Ghast,0,10.811,0
+Skeleton,17.0,17.112,1
+Endermite,20.0,10.088,1
+Spider,19.0,15.107,1
+Zombie,18.0,15.278,1
+Witch,0,63.974,0
+Silverfish,20.0,16.801,1
+Creeper,0,13.238,0
+Wolf,20.0,16.596,1
+Blaze,20.0,17.528,1
+Zombie Pigman,20.0,26.777,1
+Cave Spider,20.0,9.591,1
+Ghast,20.0,5.229,1
+Skeleton,19.0,33.171,1
+Endermite,20.0,15.212,1
+Spider,18.0,18.795,1
+Zombie,17.0,21.620,1
+Witch,0,37.641,0
+Silverfish,20.0,14.417,1
+Creeper,12.0,16.437,1
+Wolf,20.0,20.315,1
+Blaze,14.0,35.864,1
+Zombie Pigman,20.0,20.154,1
+Cave Spider,16.0,9.694,1
+Ghast,3.0,14.727,1
+Skeleton,17.0,17.139,1
+Endermite,20.0,10.535,1
+Spider,19.0,12.664,1
+Zombie,18.0,23.096,1
+Witch,0,64.489,0
+Silverfish,20.0,11.669,1
+Creeper,13.0,12.833,1
+Wolf,20.0,11.081,1
+Blaze,7.0,28.413,1
+Zombie Pigman,16.0,22.903,1
+Cave Spider,20.0,7.688,1
+Ghast,20.0,5.650,1
+Skeleton,16.0,24.769,1
+Endermite,20.0,20.190,1
+Spider,18.0,12.781,1
+Zombie,20.0,20.154,1
+Witch,0,67.937,0
+Silverfish,20.0,7.386,1
+Creeper,0,11.438,0
+Wolf,13.0,21.758,1
+Blaze,0,65.111,0
+Zombie Pigman,15.0,20.632,1
+Cave Spider,20.0,8.520,1
+Ghast,20.0,5.607,1
+Skeleton,19.0,38.602,1
+Endermite,18.0,31.410,1
+Spider,20.0,12.905,1
+Zombie,20.0,21.110,1
+Witch,0,69.487,0
+Silverfish,20.0,18.971,1
+Creeper,9.0,14.678,1
+Wolf,20.0,20.754,1
+Blaze,-1,25.562,0
+Zombie Pigman,20.0,17.119,1
+Cave Spider,14.0,10.929,1
+Ghast,0,20.640,0
+Skeleton,16.0,28.326,1
+Endermite,20.0,9.080,1
+Spider,20.0,13.354,1
+Zombie,17.0,19.609,1
+Witch,0,45.400,0
+Creeper,5.0,12.492,1
+Wolf,16.0,15.023,1
+Blaze,20.0,21.709,1
+Zombie Pigman,16.0,19.001,1
+Cave Spider,17.0,9.521,1
+Ghast,20.0,4.923,1
+Skeleton,18.0,19.887,1
+Endermite,20.0,20.021,1
+Spider,17.0,17.678,1
+Zombie,17.0,19.842,1
+Witch,0,47.930,0
+Silverfish,20.0,13.227,1
+Creeper,7.0,17.044,1
+Wolf,20.0,15.862,1
+Blaze,-1,24.593,0
+Zombie Pigman,15.0,18.095,1
+Cave Spider,15.0,9.631,1
+Ghast,20.0,5.527,1
+Skeleton,17.0,13.596,1
+Endermite,20.0,10.128,1
+Spider,17.0,16.971,1
+Zombie,19.0,18.184,1
+Witch,0,47.200,0
+Silverfish,19.0,11.160,1
+Creeper,7.0,15.057,1
+Wolf,16.0,12.025,1
+Blaze,0,13.614,0
+Zombie Pigman,20.0,15.144,1
+Cave Spider,15.0,13.564,1
+Ghast,20.0,5.606,1
+Skeleton,14.0,27.162,1
+Endermite,18.0,16.563,1
+Spider,20.0,12.712,1
+Zombie,16.0,24.919,1
+Witch,0,65.250,0
+Silverfish,20.0,14.343,1
+Creeper,0,20.915,0
+Wolf,20.0,15.161,1
+Blaze,15.0,27.966,1
+Zombie Pigman,20.0,21.234,1
+Cave Spider,15.0,9.316,1
+Ghast,20.0,7.172,1
+Skeleton,15.0,23.390,1
+Endermite,20.0,15.425,1
+Spider,18.0,13.913,1
+Zombie,20.0,22.401,1
+Witch,0,63.843,0
+Silverfish,20.0,9.989,1
+Creeper,0,11.693,0
+Wolf,20.0,9.930,1
+Blaze,0,22.005,0
+Zombie Pigman,15.0,17.540,1
+Cave Spider,20.0,16.884,1
+Ghast,9.0,6.818,1
+Skeleton,11.0,30.958,1
+Spider,19.0,11.795,1
+Zombie,19.0,21.754,1
+Witch,9.0,56.322,1
+Silverfish,20.0,20.917,1
+Creeper,4.0,16.021,1
+Wolf,16.0,17.863,1
+Blaze,14.0,45.160,1
+Zombie Pigman,9.0,34.144,1
+Cave Spider,16.0,10.552,1
+Ghast,0,12.952,0
+Skeleton,14.0,20.874,1
+Endermite,17.0,17.252,1
+Spider,20.0,15.258,1
+Zombie,15.0,19.897,1
+Witch,0,48.099,0
+Silverfish,20.0,10.980,1
+Creeper,12.0,11.971,1
+Wolf,20.0,34.688,1
+Blaze,7.0,31.655,1
+Zombie Pigman,20.0,18.295,1
+Cave Spider,13.0,12.806,1
+Ghast,0,12.534,0
+Skeleton,13.0,30.223,1
+Endermite,20.0,20.672,1
+Spider,18.0,16.544,1
+Zombie,15.0,28.142,1
+Witch,0,51.794,0
+Silverfish,18.0,25.602,1
+Creeper,6.0,9.031,1
+Wolf,20.0,17.468,1
+Blaze,20.0,18.535,1
+Zombie Pigman,16.0,18.302,1
+Cave Spider,16.0,8.934,1
+Ghast,0,13.670,0
+Skeleton,10.0,36.309,1
+Endermite,20.0,9.727,1
+Spider,20.0,11.907,1
+Zombie,20.0,15.950,1
+Witch,0,62.386,0
+Silverfish,20.0,9.418,1
+Creeper,9.0,11.677,1
+Wolf,20.0,14.063,1
+Blaze,20.0,35.232,1
+Zombie Pigman,16.0,24.738,1
+Cave Spider,12.0,13.965,1
+Ghast,0,10.811,0
+Skeleton,17.0,17.112,1
+Endermite,20.0,10.088,1
+Spider,19.0,15.107,1
+Zombie,18.0,15.278,1
+Witch,0,63.974,0
+Silverfish,20.0,16.801,1
+Creeper,0,13.238,0
+Wolf,20.0,16.596,1
+Blaze,20.0,17.528,1
+Zombie Pigman,20.0,26.777,1
+Cave Spider,20.0,9.591,1
+Ghast,20.0,5.229,1
+Skeleton,19.0,33.171,1
+Endermite,20.0,15.212,1
+Spider,18.0,18.795,1
+Zombie,17.0,21.620,1
+Witch,0,37.641,0
+Silverfish,20.0,14.417,1
+Creeper,12.0,16.437,1
+Wolf,20.0,20.315,1
+Blaze,14.0,35.864,1
+Zombie Pigman,20.0,20.154,1
+Cave Spider,16.0,9.694,1
+Ghast,3.0,14.727,1
+Skeleton,17.0,17.139,1
+Endermite,20.0,10.535,1
+Spider,19.0,12.664,1
+Zombie,18.0,23.096,1
+Witch,0,64.489,0
+Silverfish,20.0,11.669,1
+Creeper,13.0,12.833,1
+Wolf,20.0,11.081,1
+Blaze,7.0,28.413,1
+Zombie Pigman,16.0,22.903,1
+Cave Spider,20.0,7.688,1
+Ghast,20.0,5.650,1
+Skeleton,16.0,24.769,1
+Endermite,20.0,20.190,1
+Spider,18.0,12.781,1
+Zombie,20.0,20.154,1
+Witch,0,67.937,0
+Silverfish,20.0,7.386,1
+Creeper,0,11.438,0
+Wolf,13.0,21.758,1
+Blaze,0,65.111,0
+Zombie Pigman,15.0,20.632,1
+Cave Spider,20.0,8.520,1
+Ghast,20.0,5.607,1
+Skeleton,19.0,38.602,1
+Endermite,18.0,31.410,1
+Spider,20.0,12.905,1
+Zombie,20.0,21.110,1
+Witch,0,69.487,0
+Silverfish,20.0,18.971,1
+Creeper,9.0,14.678,1
+Wolf,20.0,20.754,1
+Blaze,-1,25.562,0
+Zombie Pigman,20.0,17.119,1
+Cave Spider,14.0,10.929,1
+Ghast,0,20.640,0
+Skeleton,16.0,28.326,1
+Endermite,20.0,9.080,1
+Spider,20.0,13.354,1
+Zombie,17.0,19.609,1
+Witch,0,45.400,0
+Creeper,5.0,12.492,1
+Wolf,16.0,15.023,1
+Blaze,20.0,21.709,1
+Zombie Pigman,16.0,19.001,1
+Cave Spider,17.0,9.521,1
+Ghast,20.0,4.923,1
+Skeleton,18.0,19.887,1
+Endermite,20.0,20.021,1
+Spider,17.0,17.678,1
+Zombie,17.0,19.842,1
+Witch,0,47.930,0
+Silverfish,20.0,13.227,1
+Creeper,7.0,17.044,1
+Wolf,20.0,15.862,1
+Blaze,-1,24.593,0
+Zombie Pigman,15.0,18.095,1
+Cave Spider,15.0,9.631,1
+Ghast,20.0,5.527,1
+Skeleton,17.0,13.596,1
+Endermite,20.0,10.128,1
+Spider,17.0,16.971,1
+Zombie,19.0,18.184,1
+Witch,0,47.200,0
+Silverfish,19.0,11.160,1
+Creeper,7.0,15.057,1
+Wolf,16.0,12.025,1
+Blaze,0,13.614,0
+Zombie Pigman,20.0,15.144,1
+Cave Spider,15.0,13.564,1
+Ghast,20.0,5.606,1
+Skeleton,14.0,27.162,1
+Endermite,18.0,16.563,1
+Spider,20.0,12.712,1
+Zombie,16.0,24.919,1
+Witch,0,65.250,0
+Silverfish,20.0,14.343,1
+Creeper,0,20.915,0
+Wolf,20.0,15.161,1
+Blaze,15.0,27.966,1
+Zombie Pigman,20.0,21.234,1
+Cave Spider,15.0,9.316,1
+Ghast,20.0,7.172,1
+Skeleton,15.0,23.390,1
+Endermite,20.0,15.425,1
+Spider,18.0,13.913,1
+Zombie,20.0,22.401,1
+Witch,0,63.843,0
+Silverfish,20.0,11.685,1
+Creeper,8.0,13.170,1
+Wolf,20.0,17.698,1
+Blaze,20.0,31.970,1
+Zombie Pigman,16.0,17.095,1
+Cave Spider,20.0,8.750,1
+Ghast,20.0,5.531,1
+Endermite,20.0,25.828,1
+Spider,18.0,10.606,1
+Zombie,14.0,21.613,1
+Witch,0,47.538,0
+Silverfish,20.0,9.989,1
+Creeper,0,11.693,0
+Wolf,20.0,9.930,1
+Blaze,0,22.005,0
+Zombie Pigman,15.0,17.540,1
+Cave Spider,20.0,16.884,1
+Ghast,9.0,6.818,1
+Skeleton,11.0,30.958,1
+Spider,19.0,11.795,1
+Zombie,19.0,21.754,1
+Witch,9.0,56.322,1
+Silverfish,20.0,20.917,1
+Creeper,4.0,16.021,1
+Wolf,16.0,17.863,1
+Blaze,14.0,45.160,1
+Zombie Pigman,9.0,34.144,1
+Cave Spider,16.0,10.552,1
+Ghast,0,12.952,0
+Skeleton,14.0,20.874,1
+Endermite,17.0,17.252,1
+Spider,20.0,15.258,1
+Zombie,15.0,19.897,1
+Witch,0,48.099,0
+Silverfish,20.0,10.980,1
+Creeper,12.0,11.971,1
+Wolf,20.0,34.688,1
+Blaze,7.0,31.655,1
+Zombie Pigman,20.0,18.295,1
+Cave Spider,13.0,12.806,1
+Ghast,0,12.534,0
+Skeleton,13.0,30.223,1
+Endermite,20.0,20.672,1
+Spider,18.0,16.544,1
+Zombie,15.0,28.142,1
+Witch,0,51.794,0
+Silverfish,18.0,25.602,1
+Creeper,6.0,9.031,1
+Wolf,20.0,17.468,1
+Blaze,20.0,18.535,1
+Zombie Pigman,16.0,18.302,1
+Cave Spider,16.0,8.934,1
+Ghast,0,13.670,0
+Skeleton,10.0,36.309,1
+Endermite,20.0,9.727,1
+Spider,20.0,11.907,1
+Zombie,20.0,15.950,1
+Witch,0,62.386,0
+Silverfish,20.0,9.418,1
+Creeper,9.0,11.677,1
+Wolf,20.0,14.063,1
+Blaze,20.0,35.232,1
+Zombie Pigman,16.0,24.738,1
+Cave Spider,12.0,13.965,1
+Ghast,0,10.811,0
+Skeleton,17.0,17.112,1
+Endermite,20.0,10.088,1
+Spider,19.0,15.107,1
+Zombie,18.0,15.278,1
+Witch,0,63.974,0
+Silverfish,20.0,16.801,1
+Creeper,0,13.238,0
+Wolf,20.0,16.596,1
+Blaze,20.0,17.528,1
+Zombie Pigman,20.0,26.777,1
+Cave Spider,20.0,9.591,1
+Ghast,20.0,5.229,1
+Skeleton,19.0,33.171,1
+Endermite,20.0,15.212,1
+Spider,18.0,18.795,1
+Zombie,17.0,21.620,1
+Witch,0,37.641,0
+Silverfish,20.0,14.417,1
+Creeper,12.0,16.437,1
+Wolf,20.0,20.315,1
+Blaze,14.0,35.864,1
+Zombie Pigman,20.0,20.154,1
+Cave Spider,16.0,9.694,1
+Ghast,3.0,14.727,1
+Skeleton,17.0,17.139,1
+Endermite,20.0,10.535,1
+Spider,19.0,12.664,1
+Zombie,18.0,23.096,1
+Witch,0,64.489,0
+Silverfish,20.0,11.669,1
+Creeper,13.0,12.833,1
+Wolf,20.0,11.081,1
+Blaze,7.0,28.413,1
+Zombie Pigman,16.0,22.903,1
+Cave Spider,20.0,7.688,1
+Ghast,20.0,5.650,1
+Skeleton,16.0,24.769,1
+Endermite,20.0,20.190,1
+Spider,18.0,12.781,1
+Zombie,20.0,20.154,1
+Witch,0,67.937,0
+Silverfish,20.0,7.386,1
+Creeper,0,11.438,0
+Wolf,13.0,21.758,1
+Blaze,0,65.111,0
+Zombie Pigman,15.0,20.632,1
+Cave Spider,20.0,8.520,1
+Ghast,20.0,5.607,1
+Skeleton,19.0,38.602,1
+Endermite,18.0,31.410,1
+Spider,20.0,12.905,1
+Zombie,20.0,21.110,1
+Witch,0,69.487,0
+Silverfish,20.0,18.971,1
+Creeper,9.0,14.678,1
+Wolf,20.0,20.754,1
+Blaze,-1,25.562,0
+Zombie Pigman,20.0,17.119,1
+Cave Spider,14.0,10.929,1
+Ghast,0,20.640,0
+Skeleton,16.0,28.326,1
+Endermite,20.0,9.080,1
+Spider,20.0,13.354,1
+Zombie,17.0,19.609,1
+Witch,0,45.400,0
+Creeper,5.0,12.492,1
+Wolf,16.0,15.023,1
+Blaze,20.0,21.709,1
+Zombie Pigman,16.0,19.001,1
+Cave Spider,17.0,9.521,1
+Ghast,20.0,4.923,1
+Skeleton,18.0,19.887,1
+Endermite,20.0,20.021,1
+Spider,17.0,17.678,1
+Zombie,17.0,19.842,1
+Witch,0,47.930,0
+Silverfish,20.0,13.227,1
+Creeper,7.0,17.044,1
+Wolf,20.0,15.862,1
+Blaze,-1,24.593,0
+Zombie Pigman,15.0,18.095,1
+Cave Spider,15.0,9.631,1
+Ghast,20.0,5.527,1
+Skeleton,17.0,13.596,1
+Endermite,20.0,10.128,1
+Spider,17.0,16.971,1
+Zombie,19.0,18.184,1
+Witch,0,47.200,0
+Silverfish,19.0,11.160,1
+Creeper,7.0,15.057,1
+Wolf,16.0,12.025,1
+Blaze,0,13.614,0
+Zombie Pigman,20.0,15.144,1
+Cave Spider,15.0,13.564,1
+Ghast,20.0,5.606,1
+Skeleton,14.0,27.162,1
+Endermite,18.0,16.563,1
+Spider,20.0,12.712,1
+Zombie,16.0,24.919,1
+Witch,0,65.250,0
+Silverfish,20.0,14.343,1
+Creeper,0,20.915,0
+Wolf,20.0,15.161,1
+Blaze,15.0,27.966,1
+Zombie Pigman,20.0,21.234,1
+Cave Spider,15.0,9.316,1
+Ghast,20.0,7.172,1
+Skeleton,15.0,23.390,1
+Endermite,20.0,15.425,1
+Spider,18.0,13.913,1
+Zombie,20.0,22.401,1
+Witch,0,63.843,0
+Silverfish,20.0,11.685,1
+Creeper,8.0,13.170,1
+Wolf,20.0,17.698,1
+Blaze,20.0,31.970,1
+Zombie Pigman,16.0,17.095,1
+Cave Spider,20.0,8.750,1
+Ghast,20.0,5.531,1
+Endermite,20.0,25.828,1
+Spider,18.0,10.606,1
+Zombie,14.0,21.613,1
+Witch,0,47.538,0
+Silverfish,20.0,13.045,1
+Creeper,0,11.521,0
+Wolf,20.0,15.820,1
+Blaze,8.0,37.525,1
+Zombie Pigman,14.0,34.249,1
+Cave Spider,15.0,10.761,1
+Ghast,20.0,18.152,1
+Skeleton,17.0,20.554,1
+Endermite,20.0,16.335,1
+Spider,19.0,12.042,1
+Zombie,17.0,19.113,1
+Witch,0,47.908,0
+Silverfish,20.0,9.989,1
+Creeper,0,11.693,0
+Wolf,20.0,9.930,1
+Blaze,0,22.005,0
+Zombie Pigman,15.0,17.540,1
+Cave Spider,20.0,16.884,1
+Ghast,9.0,6.818,1
+Skeleton,11.0,30.958,1
+Spider,19.0,11.795,1
+Zombie,19.0,21.754,1
+Witch,9.0,56.322,1
+Silverfish,20.0,20.917,1
+Creeper,4.0,16.021,1
+Wolf,16.0,17.863,1
+Blaze,14.0,45.160,1
+Zombie Pigman,9.0,34.144,1
+Cave Spider,16.0,10.552,1
+Ghast,0,12.952,0
+Skeleton,14.0,20.874,1
+Endermite,17.0,17.252,1
+Spider,20.0,15.258,1
+Zombie,15.0,19.897,1
+Witch,0,48.099,0
+Silverfish,20.0,10.980,1
+Creeper,12.0,11.971,1
+Wolf,20.0,34.688,1
+Blaze,7.0,31.655,1
+Zombie Pigman,20.0,18.295,1
+Cave Spider,13.0,12.806,1
+Ghast,0,12.534,0
+Skeleton,13.0,30.223,1
+Endermite,20.0,20.672,1
+Spider,18.0,16.544,1
+Zombie,15.0,28.142,1
+Witch,0,51.794,0
+Silverfish,18.0,25.602,1
+Creeper,6.0,9.031,1
+Wolf,20.0,17.468,1
+Blaze,20.0,18.535,1
+Zombie Pigman,16.0,18.302,1
+Cave Spider,16.0,8.934,1
+Ghast,0,13.670,0
+Skeleton,10.0,36.309,1
+Endermite,20.0,9.727,1
+Spider,20.0,11.907,1
+Zombie,20.0,15.950,1
+Witch,0,62.386,0
+Silverfish,20.0,9.418,1
+Creeper,9.0,11.677,1
+Wolf,20.0,14.063,1
+Blaze,20.0,35.232,1
+Zombie Pigman,16.0,24.738,1
+Cave Spider,12.0,13.965,1
+Ghast,0,10.811,0
+Skeleton,17.0,17.112,1
+Endermite,20.0,10.088,1
+Spider,19.0,15.107,1
+Zombie,18.0,15.278,1
+Witch,0,63.974,0
+Silverfish,20.0,16.801,1
+Creeper,0,13.238,0
+Wolf,20.0,16.596,1
+Blaze,20.0,17.528,1
+Zombie Pigman,20.0,26.777,1
+Cave Spider,20.0,9.591,1
+Ghast,20.0,5.229,1
+Skeleton,19.0,33.171,1
+Endermite,20.0,15.212,1
+Spider,18.0,18.795,1
+Zombie,17.0,21.620,1
+Witch,0,37.641,0
+Silverfish,20.0,14.417,1
+Creeper,12.0,16.437,1
+Wolf,20.0,20.315,1
+Blaze,14.0,35.864,1
+Zombie Pigman,20.0,20.154,1
+Cave Spider,16.0,9.694,1
+Ghast,3.0,14.727,1
+Skeleton,17.0,17.139,1
+Endermite,20.0,10.535,1
+Spider,19.0,12.664,1
+Zombie,18.0,23.096,1
+Witch,0,64.489,0
+Silverfish,20.0,11.669,1
+Creeper,13.0,12.833,1
+Wolf,20.0,11.081,1
+Blaze,7.0,28.413,1
+Zombie Pigman,16.0,22.903,1
+Cave Spider,20.0,7.688,1
+Ghast,20.0,5.650,1
+Skeleton,16.0,24.769,1
+Endermite,20.0,20.190,1
+Spider,18.0,12.781,1
+Zombie,20.0,20.154,1
+Witch,0,67.937,0
+Silverfish,20.0,7.386,1
+Creeper,0,11.438,0
+Wolf,13.0,21.758,1
+Blaze,0,65.111,0
+Zombie Pigman,15.0,20.632,1
+Cave Spider,20.0,8.520,1
+Ghast,20.0,5.607,1
+Skeleton,19.0,38.602,1
+Endermite,18.0,31.410,1
+Spider,20.0,12.905,1
+Zombie,20.0,21.110,1
+Witch,0,69.487,0
+Silverfish,20.0,18.971,1
+Creeper,9.0,14.678,1
+Wolf,20.0,20.754,1
+Blaze,-1,25.562,0
+Zombie Pigman,20.0,17.119,1
+Cave Spider,14.0,10.929,1
+Ghast,0,20.640,0
+Skeleton,16.0,28.326,1
+Endermite,20.0,9.080,1
+Spider,20.0,13.354,1
+Zombie,17.0,19.609,1
+Witch,0,45.400,0
+Creeper,5.0,12.492,1
+Wolf,16.0,15.023,1
+Blaze,20.0,21.709,1
+Zombie Pigman,16.0,19.001,1
+Cave Spider,17.0,9.521,1
+Ghast,20.0,4.923,1
+Skeleton,18.0,19.887,1
+Endermite,20.0,20.021,1
+Spider,17.0,17.678,1
+Zombie,17.0,19.842,1
+Witch,0,47.930,0
+Silverfish,20.0,13.227,1
+Creeper,7.0,17.044,1
+Wolf,20.0,15.862,1
+Blaze,-1,24.593,0
+Zombie Pigman,15.0,18.095,1
+Cave Spider,15.0,9.631,1
+Ghast,20.0,5.527,1
+Skeleton,17.0,13.596,1
+Endermite,20.0,10.128,1
+Spider,17.0,16.971,1
+Zombie,19.0,18.184,1
+Witch,0,47.200,0
+Silverfish,19.0,11.160,1
+Creeper,7.0,15.057,1
+Wolf,16.0,12.025,1
+Blaze,0,13.614,0
+Zombie Pigman,20.0,15.144,1
+Cave Spider,15.0,13.564,1
+Ghast,20.0,5.606,1
+Skeleton,14.0,27.162,1
+Endermite,18.0,16.563,1
+Spider,20.0,12.712,1
+Zombie,16.0,24.919,1
+Witch,0,65.250,0
+Silverfish,20.0,14.343,1
+Creeper,0,20.915,0
+Wolf,20.0,15.161,1
+Blaze,15.0,27.966,1
+Zombie Pigman,20.0,21.234,1
+Cave Spider,15.0,9.316,1
+Ghast,20.0,7.172,1
+Skeleton,15.0,23.390,1
+Endermite,20.0,15.425,1
+Spider,18.0,13.913,1
+Zombie,20.0,22.401,1
+Witch,0,63.843,0
+Silverfish,20.0,11.685,1
+Creeper,8.0,13.170,1
+Wolf,20.0,17.698,1
+Blaze,20.0,31.970,1
+Zombie Pigman,16.0,17.095,1
+Cave Spider,20.0,8.750,1
+Ghast,20.0,5.531,1
+Endermite,20.0,25.828,1
+Spider,18.0,10.606,1
+Zombie,14.0,21.613,1
+Witch,0,47.538,0
+Silverfish,20.0,13.045,1
+Creeper,0,11.521,0
+Wolf,20.0,15.820,1
+Blaze,8.0,37.525,1
+Zombie Pigman,14.0,34.249,1
+Cave Spider,15.0,10.761,1
+Ghast,20.0,18.152,1
+Skeleton,17.0,20.554,1
+Endermite,20.0,16.335,1
+Spider,19.0,12.042,1
+Zombie,17.0,19.113,1
+Witch,0,47.908,0
+Silverfish,20.0,12.086,1
+Creeper,2.0,19.445,1
+Wolf,20.0,9.084,1
+Blaze,20.0,26.327,1
+Zombie Pigman,16.0,20.906,1
+Cave Spider,20.0,11.629,1
+Ghast,20.0,4.897,1
+Skeleton,18.0,15.141,1
+Endermite,20.0,11.684,1
+Spider,20.0,13.506,1
+Zombie,20.0,19.661,1
+Witch,0,28.537,0
+Silverfish,20.0,9.989,1
+Creeper,0,11.693,0
+Wolf,20.0,9.930,1
+Blaze,0,22.005,0
+Zombie Pigman,15.0,17.540,1
+Cave Spider,20.0,16.884,1
+Ghast,9.0,6.818,1
+Skeleton,11.0,30.958,1
+Spider,19.0,11.795,1
+Zombie,19.0,21.754,1
+Witch,9.0,56.322,1
+Silverfish,20.0,20.917,1
+Creeper,4.0,16.021,1
+Wolf,16.0,17.863,1
+Blaze,14.0,45.160,1
+Zombie Pigman,9.0,34.144,1
+Cave Spider,16.0,10.552,1
+Ghast,0,12.952,0
+Skeleton,14.0,20.874,1
+Endermite,17.0,17.252,1
+Spider,20.0,15.258,1
+Zombie,15.0,19.897,1
+Witch,0,48.099,0
+Silverfish,20.0,10.980,1
+Creeper,12.0,11.971,1
+Wolf,20.0,34.688,1
+Blaze,7.0,31.655,1
+Zombie Pigman,20.0,18.295,1
+Cave Spider,13.0,12.806,1
+Ghast,0,12.534,0
+Skeleton,13.0,30.223,1
+Endermite,20.0,20.672,1
+Spider,18.0,16.544,1
+Zombie,15.0,28.142,1
+Witch,0,51.794,0
+Silverfish,18.0,25.602,1
+Creeper,6.0,9.031,1
+Wolf,20.0,17.468,1
+Blaze,20.0,18.535,1
+Zombie Pigman,16.0,18.302,1
+Cave Spider,16.0,8.934,1
+Ghast,0,13.670,0
+Skeleton,10.0,36.309,1
+Endermite,20.0,9.727,1
+Spider,20.0,11.907,1
+Zombie,20.0,15.950,1
+Witch,0,62.386,0
+Silverfish,20.0,9.418,1
+Creeper,9.0,11.677,1
+Wolf,20.0,14.063,1
+Blaze,20.0,35.232,1
+Zombie Pigman,16.0,24.738,1
+Cave Spider,12.0,13.965,1
+Ghast,0,10.811,0
+Skeleton,17.0,17.112,1
+Endermite,20.0,10.088,1
+Spider,19.0,15.107,1
+Zombie,18.0,15.278,1
+Witch,0,63.974,0
+Silverfish,20.0,16.801,1
+Creeper,0,13.238,0
+Wolf,20.0,16.596,1
+Blaze,20.0,17.528,1
+Zombie Pigman,20.0,26.777,1
+Cave Spider,20.0,9.591,1
+Ghast,20.0,5.229,1
+Skeleton,19.0,33.171,1
+Endermite,20.0,15.212,1
+Spider,18.0,18.795,1
+Zombie,17.0,21.620,1
+Witch,0,37.641,0
+Silverfish,20.0,14.417,1
+Creeper,12.0,16.437,1
+Wolf,20.0,20.315,1
+Blaze,14.0,35.864,1
+Zombie Pigman,20.0,20.154,1
+Cave Spider,16.0,9.694,1
+Ghast,3.0,14.727,1
+Skeleton,17.0,17.139,1
+Endermite,20.0,10.535,1
+Spider,19.0,12.664,1
+Zombie,18.0,23.096,1
+Witch,0,64.489,0
+Silverfish,20.0,11.669,1
+Creeper,13.0,12.833,1
+Wolf,20.0,11.081,1
+Blaze,7.0,28.413,1
+Zombie Pigman,16.0,22.903,1
+Cave Spider,20.0,7.688,1
+Ghast,20.0,5.650,1
+Skeleton,16.0,24.769,1
+Endermite,20.0,20.190,1
+Spider,18.0,12.781,1
+Zombie,20.0,20.154,1
+Witch,0,67.937,0
+Silverfish,20.0,7.386,1
+Creeper,0,11.438,0
+Wolf,13.0,21.758,1
+Blaze,0,65.111,0
+Zombie Pigman,15.0,20.632,1
+Cave Spider,20.0,8.520,1
+Ghast,20.0,5.607,1
+Skeleton,19.0,38.602,1
+Endermite,18.0,31.410,1
+Spider,20.0,12.905,1
+Zombie,20.0,21.110,1
+Witch,0,69.487,0
+Silverfish,20.0,18.971,1
+Creeper,9.0,14.678,1
+Wolf,20.0,20.754,1
+Blaze,-1,25.562,0
+Zombie Pigman,20.0,17.119,1
+Cave Spider,14.0,10.929,1
+Ghast,0,20.640,0
+Skeleton,16.0,28.326,1
+Endermite,20.0,9.080,1
+Spider,20.0,13.354,1
+Zombie,17.0,19.609,1
+Witch,0,45.400,0
+Creeper,5.0,12.492,1
+Wolf,16.0,15.023,1
+Blaze,20.0,21.709,1
+Zombie Pigman,16.0,19.001,1
+Cave Spider,17.0,9.521,1
+Ghast,20.0,4.923,1
+Skeleton,18.0,19.887,1
+Endermite,20.0,20.021,1
+Spider,17.0,17.678,1
+Zombie,17.0,19.842,1
+Witch,0,47.930,0
+Silverfish,20.0,13.227,1
+Creeper,7.0,17.044,1
+Wolf,20.0,15.862,1
+Blaze,-1,24.593,0
+Zombie Pigman,15.0,18.095,1
+Cave Spider,15.0,9.631,1
+Ghast,20.0,5.527,1
+Skeleton,17.0,13.596,1
+Endermite,20.0,10.128,1
+Spider,17.0,16.971,1
+Zombie,19.0,18.184,1
+Witch,0,47.200,0
+Silverfish,19.0,11.160,1
+Creeper,7.0,15.057,1
+Wolf,16.0,12.025,1
+Blaze,0,13.614,0
+Zombie Pigman,20.0,15.144,1
+Cave Spider,15.0,13.564,1
+Ghast,20.0,5.606,1
+Skeleton,14.0,27.162,1
+Endermite,18.0,16.563,1
+Spider,20.0,12.712,1
+Zombie,16.0,24.919,1
+Witch,0,65.250,0
+Silverfish,20.0,14.343,1
+Creeper,0,20.915,0
+Wolf,20.0,15.161,1
+Blaze,15.0,27.966,1
+Zombie Pigman,20.0,21.234,1
+Cave Spider,15.0,9.316,1
+Ghast,20.0,7.172,1
+Skeleton,15.0,23.390,1
+Endermite,20.0,15.425,1
+Spider,18.0,13.913,1
+Zombie,20.0,22.401,1
+Witch,0,63.843,0
+Silverfish,20.0,11.685,1
+Creeper,8.0,13.170,1
+Wolf,20.0,17.698,1
+Blaze,20.0,31.970,1
+Zombie Pigman,16.0,17.095,1
+Cave Spider,20.0,8.750,1
+Ghast,20.0,5.531,1
+Endermite,20.0,25.828,1
+Spider,18.0,10.606,1
+Zombie,14.0,21.613,1
+Witch,0,47.538,0
+Silverfish,20.0,13.045,1
+Creeper,0,11.521,0
+Wolf,20.0,15.820,1
+Blaze,8.0,37.525,1
+Zombie Pigman,14.0,34.249,1
+Cave Spider,15.0,10.761,1
+Ghast,20.0,18.152,1
+Skeleton,17.0,20.554,1
+Endermite,20.0,16.335,1
+Spider,19.0,12.042,1
+Zombie,17.0,19.113,1
+Witch,0,47.908,0
+Silverfish,20.0,12.086,1
+Creeper,2.0,19.445,1
+Wolf,20.0,9.084,1
+Blaze,20.0,26.327,1
+Zombie Pigman,16.0,20.906,1
+Cave Spider,20.0,11.629,1
+Ghast,20.0,4.897,1
+Skeleton,18.0,15.141,1
+Endermite,20.0,11.684,1
+Spider,20.0,13.506,1
+Zombie,20.0,19.661,1
+Witch,0,28.537,0
+Silverfish,20.0,16.332,1
+Creeper,18.0,20.715,1
+Wolf,20.0,12.359,1
+Blaze,20.0,28.516,1
+Zombie Pigman,10.0,39.854,1
+Cave Spider,20.0,16.034,1
+Skeleton,14.0,21.280,1
+Endermite,20.0,14.661,1
+Spider,19.0,14.030,1
+Zombie,19.0,19.589,1
+Witch,0,65.689,0
+Silverfish,20.0,9.989,1
+Creeper,0,11.693,0
+Wolf,20.0,9.930,1
+Blaze,0,22.005,0
+Zombie Pigman,15.0,17.540,1
+Cave Spider,20.0,16.884,1
+Ghast,9.0,6.818,1
+Skeleton,11.0,30.958,1
+Spider,19.0,11.795,1
+Zombie,19.0,21.754,1
+Witch,9.0,56.322,1
+Silverfish,20.0,20.917,1
+Creeper,4.0,16.021,1
+Wolf,16.0,17.863,1
+Blaze,14.0,45.160,1
+Zombie Pigman,9.0,34.144,1
+Cave Spider,16.0,10.552,1
+Ghast,0,12.952,0
+Skeleton,14.0,20.874,1
+Endermite,17.0,17.252,1
+Spider,20.0,15.258,1
+Zombie,15.0,19.897,1
+Witch,0,48.099,0
+Silverfish,20.0,10.980,1
+Creeper,12.0,11.971,1
+Wolf,20.0,34.688,1
+Blaze,7.0,31.655,1
+Zombie Pigman,20.0,18.295,1
+Cave Spider,13.0,12.806,1
+Ghast,0,12.534,0
+Skeleton,13.0,30.223,1
+Endermite,20.0,20.672,1
+Spider,18.0,16.544,1
+Zombie,15.0,28.142,1
+Witch,0,51.794,0
+Silverfish,18.0,25.602,1
+Creeper,6.0,9.031,1
+Wolf,20.0,17.468,1
+Blaze,20.0,18.535,1
+Zombie Pigman,16.0,18.302,1
+Cave Spider,16.0,8.934,1
+Ghast,0,13.670,0
+Skeleton,10.0,36.309,1
+Endermite,20.0,9.727,1
+Spider,20.0,11.907,1
+Zombie,20.0,15.950,1
+Witch,0,62.386,0
+Silverfish,20.0,9.418,1
+Creeper,9.0,11.677,1
+Wolf,20.0,14.063,1
+Blaze,20.0,35.232,1
+Zombie Pigman,16.0,24.738,1
+Cave Spider,12.0,13.965,1
+Ghast,0,10.811,0
+Skeleton,17.0,17.112,1
+Endermite,20.0,10.088,1
+Spider,19.0,15.107,1
+Zombie,18.0,15.278,1
+Witch,0,63.974,0
+Silverfish,20.0,16.801,1
+Creeper,0,13.238,0
+Wolf,20.0,16.596,1
+Blaze,20.0,17.528,1
+Zombie Pigman,20.0,26.777,1
+Cave Spider,20.0,9.591,1
+Ghast,20.0,5.229,1
+Skeleton,19.0,33.171,1
+Endermite,20.0,15.212,1
+Spider,18.0,18.795,1
+Zombie,17.0,21.620,1
+Witch,0,37.641,0
+Silverfish,20.0,14.417,1
+Creeper,12.0,16.437,1
+Wolf,20.0,20.315,1
+Blaze,14.0,35.864,1
+Zombie Pigman,20.0,20.154,1
+Cave Spider,16.0,9.694,1
+Ghast,3.0,14.727,1
+Skeleton,17.0,17.139,1
+Endermite,20.0,10.535,1
+Spider,19.0,12.664,1
+Zombie,18.0,23.096,1
+Witch,0,64.489,0
+Silverfish,20.0,11.669,1
+Creeper,13.0,12.833,1
+Wolf,20.0,11.081,1
+Blaze,7.0,28.413,1
+Zombie Pigman,16.0,22.903,1
+Cave Spider,20.0,7.688,1
+Ghast,20.0,5.650,1
+Skeleton,16.0,24.769,1
+Endermite,20.0,20.190,1
+Spider,18.0,12.781,1
+Zombie,20.0,20.154,1
+Witch,0,67.937,0
+Silverfish,20.0,7.386,1
+Creeper,0,11.438,0
+Wolf,13.0,21.758,1
+Blaze,0,65.111,0
+Zombie Pigman,15.0,20.632,1
+Cave Spider,20.0,8.520,1
+Ghast,20.0,5.607,1
+Skeleton,19.0,38.602,1
+Endermite,18.0,31.410,1
+Spider,20.0,12.905,1
+Zombie,20.0,21.110,1
+Witch,0,69.487,0
+Silverfish,20.0,18.971,1
+Creeper,9.0,14.678,1
+Wolf,20.0,20.754,1
+Blaze,-1,25.562,0
+Zombie Pigman,20.0,17.119,1
+Cave Spider,14.0,10.929,1
+Ghast,0,20.640,0
+Skeleton,16.0,28.326,1
+Endermite,20.0,9.080,1
+Spider,20.0,13.354,1
+Zombie,17.0,19.609,1
+Witch,0,45.400,0
+Creeper,5.0,12.492,1
+Wolf,16.0,15.023,1
+Blaze,20.0,21.709,1
+Zombie Pigman,16.0,19.001,1
+Cave Spider,17.0,9.521,1
+Ghast,20.0,4.923,1
+Skeleton,18.0,19.887,1
+Endermite,20.0,20.021,1
+Spider,17.0,17.678,1
+Zombie,17.0,19.842,1
+Witch,0,47.930,0
+Silverfish,20.0,13.227,1
+Creeper,7.0,17.044,1
+Wolf,20.0,15.862,1
+Blaze,-1,24.593,0
+Zombie Pigman,15.0,18.095,1
+Cave Spider,15.0,9.631,1
+Ghast,20.0,5.527,1
+Skeleton,17.0,13.596,1
+Endermite,20.0,10.128,1
+Spider,17.0,16.971,1
+Zombie,19.0,18.184,1
+Witch,0,47.200,0
+Silverfish,19.0,11.160,1
+Creeper,7.0,15.057,1
+Wolf,16.0,12.025,1
+Blaze,0,13.614,0
+Zombie Pigman,20.0,15.144,1
+Cave Spider,15.0,13.564,1
+Ghast,20.0,5.606,1
+Skeleton,14.0,27.162,1
+Endermite,18.0,16.563,1
+Spider,20.0,12.712,1
+Zombie,16.0,24.919,1
+Witch,0,65.250,0
+Silverfish,20.0,14.343,1
+Creeper,0,20.915,0
+Wolf,20.0,15.161,1
+Blaze,15.0,27.966,1
+Zombie Pigman,20.0,21.234,1
+Cave Spider,15.0,9.316,1
+Ghast,20.0,7.172,1
+Skeleton,15.0,23.390,1
+Endermite,20.0,15.425,1
+Spider,18.0,13.913,1
+Zombie,20.0,22.401,1
+Witch,0,63.843,0
+Silverfish,20.0,11.685,1
+Creeper,8.0,13.170,1
+Wolf,20.0,17.698,1
+Blaze,20.0,31.970,1
+Zombie Pigman,16.0,17.095,1
+Cave Spider,20.0,8.750,1
+Ghast,20.0,5.531,1
+Endermite,20.0,25.828,1
+Spider,18.0,10.606,1
+Zombie,14.0,21.613,1
+Witch,0,47.538,0
+Silverfish,20.0,13.045,1
+Creeper,0,11.521,0
+Wolf,20.0,15.820,1
+Blaze,8.0,37.525,1
+Zombie Pigman,14.0,34.249,1
+Cave Spider,15.0,10.761,1
+Ghast,20.0,18.152,1
+Skeleton,17.0,20.554,1
+Endermite,20.0,16.335,1
+Spider,19.0,12.042,1
+Zombie,17.0,19.113,1
+Witch,0,47.908,0
+Silverfish,20.0,12.086,1
+Creeper,2.0,19.445,1
+Wolf,20.0,9.084,1
+Blaze,20.0,26.327,1
+Zombie Pigman,16.0,20.906,1
+Cave Spider,20.0,11.629,1
+Ghast,20.0,4.897,1
+Skeleton,18.0,15.141,1
+Endermite,20.0,11.684,1
+Spider,20.0,13.506,1
+Zombie,20.0,19.661,1
+Witch,0,28.537,0
+Silverfish,20.0,16.332,1
+Creeper,18.0,20.715,1
+Wolf,20.0,12.359,1
+Blaze,20.0,28.516,1
+Zombie Pigman,10.0,39.854,1
+Cave Spider,20.0,16.034,1
+Skeleton,14.0,21.280,1
+Endermite,20.0,14.661,1
+Spider,19.0,14.030,1
+Zombie,19.0,19.589,1
+Witch,0,65.689,0
+Silverfish,19.0,14.877,1
+Creeper,20.0,12.364,1
+Wolf,20.0,11.271,1
+Blaze,7.0,34.141,1
+Zombie Pigman,16.0,27.359,1
+Cave Spider,20.0,12.029,1
+Ghast,20.0,5.829,1
+Skeleton,17.0,33.302,1
+Endermite,20.0,16.445,1
+Spider,19.0,12.592,1
+Zombie,19.0,22.326,1
+Witch,0,34.691,0
+Silverfish,20.0,9.989,1
+Creeper,0,11.693,0
+Wolf,20.0,9.930,1
+Blaze,0,22.005,0
+Zombie Pigman,15.0,17.540,1
+Cave Spider,20.0,16.884,1
+Ghast,9.0,6.818,1
+Skeleton,11.0,30.958,1
+Spider,19.0,11.795,1
+Zombie,19.0,21.754,1
+Witch,9.0,56.322,1
+Silverfish,20.0,20.917,1
+Creeper,4.0,16.021,1
+Wolf,16.0,17.863,1
+Blaze,14.0,45.160,1
+Zombie Pigman,9.0,34.144,1
+Cave Spider,16.0,10.552,1
+Ghast,0,12.952,0
+Skeleton,14.0,20.874,1
+Endermite,17.0,17.252,1
+Spider,20.0,15.258,1
+Zombie,15.0,19.897,1
+Witch,0,48.099,0
+Silverfish,20.0,10.980,1
+Creeper,12.0,11.971,1
+Wolf,20.0,34.688,1
+Blaze,7.0,31.655,1
+Zombie Pigman,20.0,18.295,1
+Cave Spider,13.0,12.806,1
+Ghast,0,12.534,0
+Skeleton,13.0,30.223,1
+Endermite,20.0,20.672,1
+Spider,18.0,16.544,1
+Zombie,15.0,28.142,1
+Witch,0,51.794,0
+Silverfish,18.0,25.602,1
+Creeper,6.0,9.031,1
+Wolf,20.0,17.468,1
+Blaze,20.0,18.535,1
+Zombie Pigman,16.0,18.302,1
+Cave Spider,16.0,8.934,1
+Ghast,0,13.670,0
+Skeleton,10.0,36.309,1
+Endermite,20.0,9.727,1
+Spider,20.0,11.907,1
+Zombie,20.0,15.950,1
+Witch,0,62.386,0
+Silverfish,20.0,9.418,1
+Creeper,9.0,11.677,1
+Wolf,20.0,14.063,1
+Blaze,20.0,35.232,1
+Zombie Pigman,16.0,24.738,1
+Cave Spider,12.0,13.965,1
+Ghast,0,10.811,0
+Skeleton,17.0,17.112,1
+Endermite,20.0,10.088,1
+Spider,19.0,15.107,1
+Zombie,18.0,15.278,1
+Witch,0,63.974,0
+Silverfish,20.0,16.801,1
+Creeper,0,13.238,0
+Wolf,20.0,16.596,1
+Blaze,20.0,17.528,1
+Zombie Pigman,20.0,26.777,1
+Cave Spider,20.0,9.591,1
+Ghast,20.0,5.229,1
+Skeleton,19.0,33.171,1
+Endermite,20.0,15.212,1
+Spider,18.0,18.795,1
+Zombie,17.0,21.620,1
+Witch,0,37.641,0
+Silverfish,20.0,14.417,1
+Creeper,12.0,16.437,1
+Wolf,20.0,20.315,1
+Blaze,14.0,35.864,1
+Zombie Pigman,20.0,20.154,1
+Cave Spider,16.0,9.694,1
+Ghast,3.0,14.727,1
+Skeleton,17.0,17.139,1
+Endermite,20.0,10.535,1
+Spider,19.0,12.664,1
+Zombie,18.0,23.096,1
+Witch,0,64.489,0
+Silverfish,20.0,11.669,1
+Creeper,13.0,12.833,1
+Wolf,20.0,11.081,1
+Blaze,7.0,28.413,1
+Zombie Pigman,16.0,22.903,1
+Cave Spider,20.0,7.688,1
+Ghast,20.0,5.650,1
+Skeleton,16.0,24.769,1
+Endermite,20.0,20.190,1
+Spider,18.0,12.781,1
+Zombie,20.0,20.154,1
+Witch,0,67.937,0
+Silverfish,20.0,7.386,1
+Creeper,0,11.438,0
+Wolf,13.0,21.758,1
+Blaze,0,65.111,0
+Zombie Pigman,15.0,20.632,1
+Cave Spider,20.0,8.520,1
+Ghast,20.0,5.607,1
+Skeleton,19.0,38.602,1
+Endermite,18.0,31.410,1
+Spider,20.0,12.905,1
+Zombie,20.0,21.110,1
+Witch,0,69.487,0
+Silverfish,20.0,18.971,1
+Creeper,9.0,14.678,1
+Wolf,20.0,20.754,1
+Blaze,-1,25.562,0
+Zombie Pigman,20.0,17.119,1
+Cave Spider,14.0,10.929,1
+Ghast,0,20.640,0
+Skeleton,16.0,28.326,1
+Endermite,20.0,9.080,1
+Spider,20.0,13.354,1
+Zombie,17.0,19.609,1
+Witch,0,45.400,0
+Creeper,5.0,12.492,1
+Wolf,16.0,15.023,1
+Blaze,20.0,21.709,1
+Zombie Pigman,16.0,19.001,1
+Cave Spider,17.0,9.521,1
+Ghast,20.0,4.923,1
+Skeleton,18.0,19.887,1
+Endermite,20.0,20.021,1
+Spider,17.0,17.678,1
+Zombie,17.0,19.842,1
+Witch,0,47.930,0
+Silverfish,20.0,13.227,1
+Creeper,7.0,17.044,1
+Wolf,20.0,15.862,1
+Blaze,-1,24.593,0
+Zombie Pigman,15.0,18.095,1
+Cave Spider,15.0,9.631,1
+Ghast,20.0,5.527,1
+Skeleton,17.0,13.596,1
+Endermite,20.0,10.128,1
+Spider,17.0,16.971,1
+Zombie,19.0,18.184,1
+Witch,0,47.200,0
+Silverfish,19.0,11.160,1
+Creeper,7.0,15.057,1
+Wolf,16.0,12.025,1
+Blaze,0,13.614,0
+Zombie Pigman,20.0,15.144,1
+Cave Spider,15.0,13.564,1
+Ghast,20.0,5.606,1
+Skeleton,14.0,27.162,1
+Endermite,18.0,16.563,1
+Spider,20.0,12.712,1
+Zombie,16.0,24.919,1
+Witch,0,65.250,0
+Silverfish,20.0,14.343,1
+Creeper,0,20.915,0
+Wolf,20.0,15.161,1
+Blaze,15.0,27.966,1
+Zombie Pigman,20.0,21.234,1
+Cave Spider,15.0,9.316,1
+Ghast,20.0,7.172,1
+Skeleton,15.0,23.390,1
+Endermite,20.0,15.425,1
+Spider,18.0,13.913,1
+Zombie,20.0,22.401,1
+Witch,0,63.843,0
+Silverfish,20.0,11.685,1
+Creeper,8.0,13.170,1
+Wolf,20.0,17.698,1
+Blaze,20.0,31.970,1
+Zombie Pigman,16.0,17.095,1
+Cave Spider,20.0,8.750,1
+Ghast,20.0,5.531,1
+Endermite,20.0,25.828,1
+Spider,18.0,10.606,1
+Zombie,14.0,21.613,1
+Witch,0,47.538,0
+Silverfish,20.0,13.045,1
+Creeper,0,11.521,0
+Wolf,20.0,15.820,1
+Blaze,8.0,37.525,1
+Zombie Pigman,14.0,34.249,1
+Cave Spider,15.0,10.761,1
+Ghast,20.0,18.152,1
+Skeleton,17.0,20.554,1
+Endermite,20.0,16.335,1
+Spider,19.0,12.042,1
+Zombie,17.0,19.113,1
+Witch,0,47.908,0
+Silverfish,20.0,12.086,1
+Creeper,2.0,19.445,1
+Wolf,20.0,9.084,1
+Blaze,20.0,26.327,1
+Zombie Pigman,16.0,20.906,1
+Cave Spider,20.0,11.629,1
+Ghast,20.0,4.897,1
+Skeleton,18.0,15.141,1
+Endermite,20.0,11.684,1
+Spider,20.0,13.506,1
+Zombie,20.0,19.661,1
+Witch,0,28.537,0
+Silverfish,20.0,16.332,1
+Creeper,18.0,20.715,1
+Wolf,20.0,12.359,1
+Blaze,20.0,28.516,1
+Zombie Pigman,10.0,39.854,1
+Cave Spider,20.0,16.034,1
+Skeleton,14.0,21.280,1
+Endermite,20.0,14.661,1
+Spider,19.0,14.030,1
+Zombie,19.0,19.589,1
+Witch,0,65.689,0
+Silverfish,19.0,14.877,1
+Creeper,20.0,12.364,1
+Wolf,20.0,11.271,1
+Blaze,7.0,34.141,1
+Zombie Pigman,16.0,27.359,1
+Cave Spider,20.0,12.029,1
+Ghast,20.0,5.829,1
+Skeleton,17.0,33.302,1
+Endermite,20.0,16.445,1
+Spider,19.0,12.592,1
+Zombie,19.0,22.326,1
+Witch,0,34.691,0
+Silverfish,20.0,10.043,1
+Creeper,12.0,10.872,1
+Wolf,16.0,19.071,1
+Blaze,13.0,27.433,1
+Zombie Pigman,5.0,36.019,1
+Cave Spider,20.0,12.535,1
+Ghast,20.0,5.054,1
+Skeleton,15.0,27.579,1
+Endermite,20.0,11.027,1
+Spider,20.0,18.330,1
+Zombie,17.0,17.646,1
+Witch,0,65.521,0
+Silverfish,20.0,9.989,1
+Creeper,0,11.693,0
+Wolf,20.0,9.930,1
+Blaze,0,22.005,0
+Zombie Pigman,15.0,17.540,1
+Cave Spider,20.0,16.884,1
+Ghast,9.0,6.818,1
+Skeleton,11.0,30.958,1
+Spider,19.0,11.795,1
+Zombie,19.0,21.754,1
+Witch,9.0,56.322,1
+Silverfish,20.0,20.917,1
+Creeper,4.0,16.021,1
+Wolf,16.0,17.863,1
+Blaze,14.0,45.160,1
+Zombie Pigman,9.0,34.144,1
+Cave Spider,16.0,10.552,1
+Ghast,0,12.952,0
+Skeleton,14.0,20.874,1
+Endermite,17.0,17.252,1
+Spider,20.0,15.258,1
+Zombie,15.0,19.897,1
+Witch,0,48.099,0
+Silverfish,20.0,10.980,1
+Creeper,12.0,11.971,1
+Wolf,20.0,34.688,1
+Blaze,7.0,31.655,1
+Zombie Pigman,20.0,18.295,1
+Cave Spider,13.0,12.806,1
+Ghast,0,12.534,0
+Skeleton,13.0,30.223,1
+Endermite,20.0,20.672,1
+Spider,18.0,16.544,1
+Zombie,15.0,28.142,1
+Witch,0,51.794,0
+Silverfish,18.0,25.602,1
+Creeper,6.0,9.031,1
+Wolf,20.0,17.468,1
+Blaze,20.0,18.535,1
+Zombie Pigman,16.0,18.302,1
+Cave Spider,16.0,8.934,1
+Ghast,0,13.670,0
+Skeleton,10.0,36.309,1
+Endermite,20.0,9.727,1
+Spider,20.0,11.907,1
+Zombie,20.0,15.950,1
+Witch,0,62.386,0
+Silverfish,20.0,9.418,1
+Creeper,9.0,11.677,1
+Wolf,20.0,14.063,1
+Blaze,20.0,35.232,1
+Zombie Pigman,16.0,24.738,1
+Cave Spider,12.0,13.965,1
+Ghast,0,10.811,0
+Skeleton,17.0,17.112,1
+Endermite,20.0,10.088,1
+Spider,19.0,15.107,1
+Zombie,18.0,15.278,1
+Witch,0,63.974,0
+Silverfish,20.0,16.801,1
+Creeper,0,13.238,0
+Wolf,20.0,16.596,1
+Blaze,20.0,17.528,1
+Zombie Pigman,20.0,26.777,1
+Cave Spider,20.0,9.591,1
+Ghast,20.0,5.229,1
+Skeleton,19.0,33.171,1
+Endermite,20.0,15.212,1
+Spider,18.0,18.795,1
+Zombie,17.0,21.620,1
+Witch,0,37.641,0
+Silverfish,20.0,14.417,1
+Creeper,12.0,16.437,1
+Wolf,20.0,20.315,1
+Blaze,14.0,35.864,1
+Zombie Pigman,20.0,20.154,1
+Cave Spider,16.0,9.694,1
+Ghast,3.0,14.727,1
+Skeleton,17.0,17.139,1
+Endermite,20.0,10.535,1
+Spider,19.0,12.664,1
+Zombie,18.0,23.096,1
+Witch,0,64.489,0
+Silverfish,20.0,11.669,1
+Creeper,13.0,12.833,1
+Wolf,20.0,11.081,1
+Blaze,7.0,28.413,1
+Zombie Pigman,16.0,22.903,1
+Cave Spider,20.0,7.688,1
+Ghast,20.0,5.650,1
+Skeleton,16.0,24.769,1
+Endermite,20.0,20.190,1
+Spider,18.0,12.781,1
+Zombie,20.0,20.154,1
+Witch,0,67.937,0
+Silverfish,20.0,7.386,1
+Creeper,0,11.438,0
+Wolf,13.0,21.758,1
+Blaze,0,65.111,0
+Zombie Pigman,15.0,20.632,1
+Cave Spider,20.0,8.520,1
+Ghast,20.0,5.607,1
+Skeleton,19.0,38.602,1
+Endermite,18.0,31.410,1
+Spider,20.0,12.905,1
+Zombie,20.0,21.110,1
+Witch,0,69.487,0
+Silverfish,20.0,18.971,1
+Creeper,9.0,14.678,1
+Wolf,20.0,20.754,1
+Blaze,-1,25.562,0
+Zombie Pigman,20.0,17.119,1
+Cave Spider,14.0,10.929,1
+Ghast,0,20.640,0
+Skeleton,16.0,28.326,1
+Endermite,20.0,9.080,1
+Spider,20.0,13.354,1
+Zombie,17.0,19.609,1
+Witch,0,45.400,0
+Creeper,5.0,12.492,1
+Wolf,16.0,15.023,1
+Blaze,20.0,21.709,1
+Zombie Pigman,16.0,19.001,1
+Cave Spider,17.0,9.521,1
+Ghast,20.0,4.923,1
+Skeleton,18.0,19.887,1
+Endermite,20.0,20.021,1
+Spider,17.0,17.678,1
+Zombie,17.0,19.842,1
+Witch,0,47.930,0
+Silverfish,20.0,13.227,1
+Creeper,7.0,17.044,1
+Wolf,20.0,15.862,1
+Blaze,-1,24.593,0
+Zombie Pigman,15.0,18.095,1
+Cave Spider,15.0,9.631,1
+Ghast,20.0,5.527,1
+Skeleton,17.0,13.596,1
+Endermite,20.0,10.128,1
+Spider,17.0,16.971,1
+Zombie,19.0,18.184,1
+Witch,0,47.200,0
+Silverfish,19.0,11.160,1
+Creeper,7.0,15.057,1
+Wolf,16.0,12.025,1
+Blaze,0,13.614,0
+Zombie Pigman,20.0,15.144,1
+Cave Spider,15.0,13.564,1
+Ghast,20.0,5.606,1
+Skeleton,14.0,27.162,1
+Endermite,18.0,16.563,1
+Spider,20.0,12.712,1
+Zombie,16.0,24.919,1
+Witch,0,65.250,0
+Silverfish,20.0,14.343,1
+Creeper,0,20.915,0
+Wolf,20.0,15.161,1
+Blaze,15.0,27.966,1
+Zombie Pigman,20.0,21.234,1
+Cave Spider,15.0,9.316,1
+Ghast,20.0,7.172,1
+Skeleton,15.0,23.390,1
+Endermite,20.0,15.425,1
+Spider,18.0,13.913,1
+Zombie,20.0,22.401,1
+Witch,0,63.843,0
+Silverfish,20.0,11.685,1
+Creeper,8.0,13.170,1
+Wolf,20.0,17.698,1
+Blaze,20.0,31.970,1
+Zombie Pigman,16.0,17.095,1
+Cave Spider,20.0,8.750,1
+Ghast,20.0,5.531,1
+Endermite,20.0,25.828,1
+Spider,18.0,10.606,1
+Zombie,14.0,21.613,1
+Witch,0,47.538,0
+Silverfish,20.0,13.045,1
+Creeper,0,11.521,0
+Wolf,20.0,15.820,1
+Blaze,8.0,37.525,1
+Zombie Pigman,14.0,34.249,1
+Cave Spider,15.0,10.761,1
+Ghast,20.0,18.152,1
+Skeleton,17.0,20.554,1
+Endermite,20.0,16.335,1
+Spider,19.0,12.042,1
+Zombie,17.0,19.113,1
+Witch,0,47.908,0
+Silverfish,20.0,12.086,1
+Creeper,2.0,19.445,1
+Wolf,20.0,9.084,1
+Blaze,20.0,26.327,1
+Zombie Pigman,16.0,20.906,1
+Cave Spider,20.0,11.629,1
+Ghast,20.0,4.897,1
+Skeleton,18.0,15.141,1
+Endermite,20.0,11.684,1
+Spider,20.0,13.506,1
+Zombie,20.0,19.661,1
+Witch,0,28.537,0
+Silverfish,20.0,16.332,1
+Creeper,18.0,20.715,1
+Wolf,20.0,12.359,1
+Blaze,20.0,28.516,1
+Zombie Pigman,10.0,39.854,1
+Cave Spider,20.0,16.034,1
+Skeleton,14.0,21.280,1
+Endermite,20.0,14.661,1
+Spider,19.0,14.030,1
+Zombie,19.0,19.589,1
+Witch,0,65.689,0
+Silverfish,19.0,14.877,1
+Creeper,20.0,12.364,1
+Wolf,20.0,11.271,1
+Blaze,7.0,34.141,1
+Zombie Pigman,16.0,27.359,1
+Cave Spider,20.0,12.029,1
+Ghast,20.0,5.829,1
+Skeleton,17.0,33.302,1
+Endermite,20.0,16.445,1
+Spider,19.0,12.592,1
+Zombie,19.0,22.326,1
+Witch,0,34.691,0
+Silverfish,20.0,10.043,1
+Creeper,12.0,10.872,1
+Wolf,16.0,19.071,1
+Blaze,13.0,27.433,1
+Zombie Pigman,5.0,36.019,1
+Cave Spider,20.0,12.535,1
+Ghast,20.0,5.054,1
+Skeleton,15.0,27.579,1
+Endermite,20.0,11.027,1
+Spider,20.0,18.330,1
+Zombie,17.0,17.646,1
+Witch,0,65.521,0
+Silverfish,20.0,10.577,1
+Creeper,0,13.717,0
+Wolf,20.0,19.419,1
+Blaze,19.0,32.513,1
+Zombie Pigman,15.0,20.317,1
+Cave Spider,19.0,11.069,1
+Ghast,20.0,4.989,1
+Skeleton,18.0,19.704,1
+Endermite,20.0,14.127,1
+Spider,19.0,13.578,1
+Zombie,20.0,19.645,1
+Witch,0,65.988,0
+Silverfish,20.0,9.989,1
+Creeper,0,11.693,0
+Wolf,20.0,9.930,1
+Blaze,0,22.005,0
+Zombie Pigman,15.0,17.540,1
+Cave Spider,20.0,16.884,1
+Ghast,9.0,6.818,1
+Skeleton,11.0,30.958,1
+Spider,19.0,11.795,1
+Zombie,19.0,21.754,1
+Witch,9.0,56.322,1
+Silverfish,20.0,20.917,1
+Creeper,4.0,16.021,1
+Wolf,16.0,17.863,1
+Blaze,14.0,45.160,1
+Zombie Pigman,9.0,34.144,1
+Cave Spider,16.0,10.552,1
+Ghast,0,12.952,0
+Skeleton,14.0,20.874,1
+Endermite,17.0,17.252,1
+Spider,20.0,15.258,1
+Zombie,15.0,19.897,1
+Witch,0,48.099,0
+Silverfish,20.0,10.980,1
+Creeper,12.0,11.971,1
+Wolf,20.0,34.688,1
+Blaze,7.0,31.655,1
+Zombie Pigman,20.0,18.295,1
+Cave Spider,13.0,12.806,1
+Ghast,0,12.534,0
+Skeleton,13.0,30.223,1
+Endermite,20.0,20.672,1
+Spider,18.0,16.544,1
+Zombie,15.0,28.142,1
+Witch,0,51.794,0
+Silverfish,18.0,25.602,1
+Creeper,6.0,9.031,1
+Wolf,20.0,17.468,1
+Blaze,20.0,18.535,1
+Zombie Pigman,16.0,18.302,1
+Cave Spider,16.0,8.934,1
+Ghast,0,13.670,0
+Skeleton,10.0,36.309,1
+Endermite,20.0,9.727,1
+Spider,20.0,11.907,1
+Zombie,20.0,15.950,1
+Witch,0,62.386,0
+Silverfish,20.0,9.418,1
+Creeper,9.0,11.677,1
+Wolf,20.0,14.063,1
+Blaze,20.0,35.232,1
+Zombie Pigman,16.0,24.738,1
+Cave Spider,12.0,13.965,1
+Ghast,0,10.811,0
+Skeleton,17.0,17.112,1
+Endermite,20.0,10.088,1
+Spider,19.0,15.107,1
+Zombie,18.0,15.278,1
+Witch,0,63.974,0
+Silverfish,20.0,16.801,1
+Creeper,0,13.238,0
+Wolf,20.0,16.596,1
+Blaze,20.0,17.528,1
+Zombie Pigman,20.0,26.777,1
+Cave Spider,20.0,9.591,1
+Ghast,20.0,5.229,1
+Skeleton,19.0,33.171,1
+Endermite,20.0,15.212,1
+Spider,18.0,18.795,1
+Zombie,17.0,21.620,1
+Witch,0,37.641,0
+Silverfish,20.0,14.417,1
+Creeper,12.0,16.437,1
+Wolf,20.0,20.315,1
+Blaze,14.0,35.864,1
+Zombie Pigman,20.0,20.154,1
+Cave Spider,16.0,9.694,1
+Ghast,3.0,14.727,1
+Skeleton,17.0,17.139,1
+Endermite,20.0,10.535,1
+Spider,19.0,12.664,1
+Zombie,18.0,23.096,1
+Witch,0,64.489,0
+Silverfish,20.0,11.669,1
+Creeper,13.0,12.833,1
+Wolf,20.0,11.081,1
+Blaze,7.0,28.413,1
+Zombie Pigman,16.0,22.903,1
+Cave Spider,20.0,7.688,1
+Ghast,20.0,5.650,1
+Skeleton,16.0,24.769,1
+Endermite,20.0,20.190,1
+Spider,18.0,12.781,1
+Zombie,20.0,20.154,1
+Witch,0,67.937,0
+Silverfish,20.0,7.386,1
+Creeper,0,11.438,0
+Wolf,13.0,21.758,1
+Blaze,0,65.111,0
+Zombie Pigman,15.0,20.632,1
+Cave Spider,20.0,8.520,1
+Ghast,20.0,5.607,1
+Skeleton,19.0,38.602,1
+Endermite,18.0,31.410,1
+Spider,20.0,12.905,1
+Zombie,20.0,21.110,1
+Witch,0,69.487,0
+Silverfish,20.0,18.971,1
+Creeper,9.0,14.678,1
+Wolf,20.0,20.754,1
+Blaze,-1,25.562,0
+Zombie Pigman,20.0,17.119,1
+Cave Spider,14.0,10.929,1
+Ghast,0,20.640,0
+Skeleton,16.0,28.326,1
+Endermite,20.0,9.080,1
+Spider,20.0,13.354,1
+Zombie,17.0,19.609,1
+Witch,0,45.400,0
+Creeper,5.0,12.492,1
+Wolf,16.0,15.023,1
+Blaze,20.0,21.709,1
+Zombie Pigman,16.0,19.001,1
+Cave Spider,17.0,9.521,1
+Ghast,20.0,4.923,1
+Skeleton,18.0,19.887,1
+Endermite,20.0,20.021,1
+Spider,17.0,17.678,1
+Zombie,17.0,19.842,1
+Witch,0,47.930,0
+Silverfish,20.0,13.227,1
+Creeper,7.0,17.044,1
+Wolf,20.0,15.862,1
+Blaze,-1,24.593,0
+Zombie Pigman,15.0,18.095,1
+Cave Spider,15.0,9.631,1
+Ghast,20.0,5.527,1
+Skeleton,17.0,13.596,1
+Endermite,20.0,10.128,1
+Spider,17.0,16.971,1
+Zombie,19.0,18.184,1
+Witch,0,47.200,0
+Silverfish,19.0,11.160,1
+Creeper,7.0,15.057,1
+Wolf,16.0,12.025,1
+Blaze,0,13.614,0
+Zombie Pigman,20.0,15.144,1
+Cave Spider,15.0,13.564,1
+Ghast,20.0,5.606,1
+Skeleton,14.0,27.162,1
+Endermite,18.0,16.563,1
+Spider,20.0,12.712,1
+Zombie,16.0,24.919,1
+Witch,0,65.250,0
+Silverfish,20.0,14.343,1
+Creeper,0,20.915,0
+Wolf,20.0,15.161,1
+Blaze,15.0,27.966,1
+Zombie Pigman,20.0,21.234,1
+Cave Spider,15.0,9.316,1
+Ghast,20.0,7.172,1
+Skeleton,15.0,23.390,1
+Endermite,20.0,15.425,1
+Spider,18.0,13.913,1
+Zombie,20.0,22.401,1
+Witch,0,63.843,0
+Silverfish,20.0,11.685,1
+Creeper,8.0,13.170,1
+Wolf,20.0,17.698,1
+Blaze,20.0,31.970,1
+Zombie Pigman,16.0,17.095,1
+Cave Spider,20.0,8.750,1
+Ghast,20.0,5.531,1
+Endermite,20.0,25.828,1
+Spider,18.0,10.606,1
+Zombie,14.0,21.613,1
+Witch,0,47.538,0
+Silverfish,20.0,13.045,1
+Creeper,0,11.521,0
+Wolf,20.0,15.820,1
+Blaze,8.0,37.525,1
+Zombie Pigman,14.0,34.249,1
+Cave Spider,15.0,10.761,1
+Ghast,20.0,18.152,1
+Skeleton,17.0,20.554,1
+Endermite,20.0,16.335,1
+Spider,19.0,12.042,1
+Zombie,17.0,19.113,1
+Witch,0,47.908,0
+Silverfish,20.0,12.086,1
+Creeper,2.0,19.445,1
+Wolf,20.0,9.084,1
+Blaze,20.0,26.327,1
+Zombie Pigman,16.0,20.906,1
+Cave Spider,20.0,11.629,1
+Ghast,20.0,4.897,1
+Skeleton,18.0,15.141,1
+Endermite,20.0,11.684,1
+Spider,20.0,13.506,1
+Zombie,20.0,19.661,1
+Witch,0,28.537,0
+Silverfish,20.0,16.332,1
+Creeper,18.0,20.715,1
+Wolf,20.0,12.359,1
+Blaze,20.0,28.516,1
+Zombie Pigman,10.0,39.854,1
+Cave Spider,20.0,16.034,1
+Skeleton,14.0,21.280,1
+Endermite,20.0,14.661,1
+Spider,19.0,14.030,1
+Zombie,19.0,19.589,1
+Witch,0,65.689,0
+Silverfish,19.0,14.877,1
+Creeper,20.0,12.364,1
+Wolf,20.0,11.271,1
+Blaze,7.0,34.141,1
+Zombie Pigman,16.0,27.359,1
+Cave Spider,20.0,12.029,1
+Ghast,20.0,5.829,1
+Skeleton,17.0,33.302,1
+Endermite,20.0,16.445,1
+Spider,19.0,12.592,1
+Zombie,19.0,22.326,1
+Witch,0,34.691,0
+Silverfish,20.0,10.043,1
+Creeper,12.0,10.872,1
+Wolf,16.0,19.071,1
+Blaze,13.0,27.433,1
+Zombie Pigman,5.0,36.019,1
+Cave Spider,20.0,12.535,1
+Ghast,20.0,5.054,1
+Skeleton,15.0,27.579,1
+Endermite,20.0,11.027,1
+Spider,20.0,18.330,1
+Zombie,17.0,17.646,1
+Witch,0,65.521,0
+Silverfish,20.0,10.577,1
+Creeper,0,13.717,0
+Wolf,20.0,19.419,1
+Blaze,19.0,32.513,1
+Zombie Pigman,15.0,20.317,1
+Cave Spider,19.0,11.069,1
+Ghast,20.0,4.989,1
+Skeleton,18.0,19.704,1
+Endermite,20.0,14.127,1
+Spider,19.0,13.578,1
+Zombie,20.0,19.645,1
+Witch,0,65.988,0
+Silverfish,20.0,13.322,1
+Creeper,14.0,14.296,1
+Wolf,16.0,16.733,1
+Blaze,20.0,24.771,1
+Zombie Pigman,15.0,18.136,1
+Cave Spider,15.0,12.528,1
+Ghast,20.0,5.188,1
+Skeleton,17.0,18.074,1
+Endermite,20.0,14.447,1
+Spider,20.0,11.050,1
+Zombie,20.0,18.290,1
+Witch,4.0,60.218,1
+Silverfish,20.0,9.989,1
+Creeper,0,11.693,0
+Wolf,20.0,9.930,1
+Blaze,0,22.005,0
+Zombie Pigman,15.0,17.540,1
+Cave Spider,20.0,16.884,1
+Ghast,9.0,6.818,1
+Skeleton,11.0,30.958,1
+Spider,19.0,11.795,1
+Zombie,19.0,21.754,1
+Witch,9.0,56.322,1
+Silverfish,20.0,20.917,1
+Creeper,4.0,16.021,1
+Wolf,16.0,17.863,1
+Blaze,14.0,45.160,1
+Zombie Pigman,9.0,34.144,1
+Cave Spider,16.0,10.552,1
+Ghast,0,12.952,0
+Skeleton,14.0,20.874,1
+Endermite,17.0,17.252,1
+Spider,20.0,15.258,1
+Zombie,15.0,19.897,1
+Witch,0,48.099,0
+Silverfish,20.0,10.980,1
+Creeper,12.0,11.971,1
+Wolf,20.0,34.688,1
+Blaze,7.0,31.655,1
+Zombie Pigman,20.0,18.295,1
+Cave Spider,13.0,12.806,1
+Ghast,0,12.534,0
+Skeleton,13.0,30.223,1
+Endermite,20.0,20.672,1
+Spider,18.0,16.544,1
+Zombie,15.0,28.142,1
+Witch,0,51.794,0
+Silverfish,18.0,25.602,1
+Creeper,6.0,9.031,1
+Wolf,20.0,17.468,1
+Blaze,20.0,18.535,1
+Zombie Pigman,16.0,18.302,1
+Cave Spider,16.0,8.934,1
+Ghast,0,13.670,0
+Skeleton,10.0,36.309,1
+Endermite,20.0,9.727,1
+Spider,20.0,11.907,1
+Zombie,20.0,15.950,1
+Witch,0,62.386,0
+Silverfish,20.0,9.418,1
+Creeper,9.0,11.677,1
+Wolf,20.0,14.063,1
+Blaze,20.0,35.232,1
+Zombie Pigman,16.0,24.738,1
+Cave Spider,12.0,13.965,1
+Ghast,0,10.811,0
+Skeleton,17.0,17.112,1
+Endermite,20.0,10.088,1
+Spider,19.0,15.107,1
+Zombie,18.0,15.278,1
+Witch,0,63.974,0
+Silverfish,20.0,16.801,1
+Creeper,0,13.238,0
+Wolf,20.0,16.596,1
+Blaze,20.0,17.528,1
+Zombie Pigman,20.0,26.777,1
+Cave Spider,20.0,9.591,1
+Ghast,20.0,5.229,1
+Skeleton,19.0,33.171,1
+Endermite,20.0,15.212,1
+Spider,18.0,18.795,1
+Zombie,17.0,21.620,1
+Witch,0,37.641,0
+Silverfish,20.0,14.417,1
+Creeper,12.0,16.437,1
+Wolf,20.0,20.315,1
+Blaze,14.0,35.864,1
+Zombie Pigman,20.0,20.154,1
+Cave Spider,16.0,9.694,1
+Ghast,3.0,14.727,1
+Skeleton,17.0,17.139,1
+Endermite,20.0,10.535,1
+Spider,19.0,12.664,1
+Zombie,18.0,23.096,1
+Witch,0,64.489,0
+Silverfish,20.0,11.669,1
+Creeper,13.0,12.833,1
+Wolf,20.0,11.081,1
+Blaze,7.0,28.413,1
+Zombie Pigman,16.0,22.903,1
+Cave Spider,20.0,7.688,1
+Ghast,20.0,5.650,1
+Skeleton,16.0,24.769,1
+Endermite,20.0,20.190,1
+Spider,18.0,12.781,1
+Zombie,20.0,20.154,1
+Witch,0,67.937,0
+Silverfish,20.0,7.386,1
+Creeper,0,11.438,0
+Wolf,13.0,21.758,1
+Blaze,0,65.111,0
+Zombie Pigman,15.0,20.632,1
+Cave Spider,20.0,8.520,1
+Ghast,20.0,5.607,1
+Skeleton,19.0,38.602,1
+Endermite,18.0,31.410,1
+Spider,20.0,12.905,1
+Zombie,20.0,21.110,1
+Witch,0,69.487,0
+Silverfish,20.0,18.971,1
+Creeper,9.0,14.678,1
+Wolf,20.0,20.754,1
+Blaze,-1,25.562,0
+Zombie Pigman,20.0,17.119,1
+Cave Spider,14.0,10.929,1
+Ghast,0,20.640,0
+Skeleton,16.0,28.326,1
+Endermite,20.0,9.080,1
+Spider,20.0,13.354,1
+Zombie,17.0,19.609,1
+Witch,0,45.400,0
+Creeper,5.0,12.492,1
+Wolf,16.0,15.023,1
+Blaze,20.0,21.709,1
+Zombie Pigman,16.0,19.001,1
+Cave Spider,17.0,9.521,1
+Ghast,20.0,4.923,1
+Skeleton,18.0,19.887,1
+Endermite,20.0,20.021,1
+Spider,17.0,17.678,1
+Zombie,17.0,19.842,1
+Witch,0,47.930,0
+Silverfish,20.0,13.227,1
+Creeper,7.0,17.044,1
+Wolf,20.0,15.862,1
+Blaze,-1,24.593,0
+Zombie Pigman,15.0,18.095,1
+Cave Spider,15.0,9.631,1
+Ghast,20.0,5.527,1
+Skeleton,17.0,13.596,1
+Endermite,20.0,10.128,1
+Spider,17.0,16.971,1
+Zombie,19.0,18.184,1
+Witch,0,47.200,0
+Silverfish,19.0,11.160,1
+Creeper,7.0,15.057,1
+Wolf,16.0,12.025,1
+Blaze,0,13.614,0
+Zombie Pigman,20.0,15.144,1
+Cave Spider,15.0,13.564,1
+Ghast,20.0,5.606,1
+Skeleton,14.0,27.162,1
+Endermite,18.0,16.563,1
+Spider,20.0,12.712,1
+Zombie,16.0,24.919,1
+Witch,0,65.250,0
+Silverfish,20.0,14.343,1
+Creeper,0,20.915,0
+Wolf,20.0,15.161,1
+Blaze,15.0,27.966,1
+Zombie Pigman,20.0,21.234,1
+Cave Spider,15.0,9.316,1
+Ghast,20.0,7.172,1
+Skeleton,15.0,23.390,1
+Endermite,20.0,15.425,1
+Spider,18.0,13.913,1
+Zombie,20.0,22.401,1
+Witch,0,63.843,0
+Silverfish,20.0,11.685,1
+Creeper,8.0,13.170,1
+Wolf,20.0,17.698,1
+Blaze,20.0,31.970,1
+Zombie Pigman,16.0,17.095,1
+Cave Spider,20.0,8.750,1
+Ghast,20.0,5.531,1
+Endermite,20.0,25.828,1
+Spider,18.0,10.606,1
+Zombie,14.0,21.613,1
+Witch,0,47.538,0
+Silverfish,20.0,13.045,1
+Creeper,0,11.521,0
+Wolf,20.0,15.820,1
+Blaze,8.0,37.525,1
+Zombie Pigman,14.0,34.249,1
+Cave Spider,15.0,10.761,1
+Ghast,20.0,18.152,1
+Skeleton,17.0,20.554,1
+Endermite,20.0,16.335,1
+Spider,19.0,12.042,1
+Zombie,17.0,19.113,1
+Witch,0,47.908,0
+Silverfish,20.0,12.086,1
+Creeper,2.0,19.445,1
+Wolf,20.0,9.084,1
+Blaze,20.0,26.327,1
+Zombie Pigman,16.0,20.906,1
+Cave Spider,20.0,11.629,1
+Ghast,20.0,4.897,1
+Skeleton,18.0,15.141,1
+Endermite,20.0,11.684,1
+Spider,20.0,13.506,1
+Zombie,20.0,19.661,1
+Witch,0,28.537,0
+Silverfish,20.0,16.332,1
+Creeper,18.0,20.715,1
+Wolf,20.0,12.359,1
+Blaze,20.0,28.516,1
+Zombie Pigman,10.0,39.854,1
+Cave Spider,20.0,16.034,1
+Skeleton,14.0,21.280,1
+Endermite,20.0,14.661,1
+Spider,19.0,14.030,1
+Zombie,19.0,19.589,1
+Witch,0,65.689,0
+Silverfish,19.0,14.877,1
+Creeper,20.0,12.364,1
+Wolf,20.0,11.271,1
+Blaze,7.0,34.141,1
+Zombie Pigman,16.0,27.359,1
+Cave Spider,20.0,12.029,1
+Ghast,20.0,5.829,1
+Skeleton,17.0,33.302,1
+Endermite,20.0,16.445,1
+Spider,19.0,12.592,1
+Zombie,19.0,22.326,1
+Witch,0,34.691,0
+Silverfish,20.0,10.043,1
+Creeper,12.0,10.872,1
+Wolf,16.0,19.071,1
+Blaze,13.0,27.433,1
+Zombie Pigman,5.0,36.019,1
+Cave Spider,20.0,12.535,1
+Ghast,20.0,5.054,1
+Skeleton,15.0,27.579,1
+Endermite,20.0,11.027,1
+Spider,20.0,18.330,1
+Zombie,17.0,17.646,1
+Witch,0,65.521,0
+Silverfish,20.0,10.577,1
+Creeper,0,13.717,0
+Wolf,20.0,19.419,1
+Blaze,19.0,32.513,1
+Zombie Pigman,15.0,20.317,1
+Cave Spider,19.0,11.069,1
+Ghast,20.0,4.989,1
+Skeleton,18.0,19.704,1
+Endermite,20.0,14.127,1
+Spider,19.0,13.578,1
+Zombie,20.0,19.645,1
+Witch,0,65.988,0
+Silverfish,20.0,13.322,1
+Creeper,14.0,14.296,1
+Wolf,16.0,16.733,1
+Blaze,20.0,24.771,1
+Zombie Pigman,15.0,18.136,1
+Cave Spider,15.0,12.528,1
+Ghast,20.0,5.188,1
+Skeleton,17.0,18.074,1
+Endermite,20.0,14.447,1
+Spider,20.0,11.050,1
+Zombie,20.0,18.290,1
+Witch,4.0,60.218,1
+Silverfish,20.0,18.414,1
+Creeper,12.0,10.333,1
+Wolf,20.0,7.323,1
+Blaze,20.0,23.248,1
+Zombie Pigman,15.0,19.054,1
+Cave Spider,15.0,14.524,1
+Ghast,20.0,5.561,1
+Skeleton,17.0,26.131,1
+Endermite,19.0,16.783,1
+Spider,20.0,18.553,1
+Zombie,13.0,25.614,1
+Witch,0,66.220,0
+Silverfish,20.0,9.989,1
+Creeper,0,11.693,0
+Wolf,20.0,9.930,1
+Blaze,0,22.005,0
+Zombie Pigman,15.0,17.540,1
+Cave Spider,20.0,16.884,1
+Ghast,9.0,6.818,1
+Skeleton,11.0,30.958,1
+Spider,19.0,11.795,1
+Zombie,19.0,21.754,1
+Witch,9.0,56.322,1
+Silverfish,20.0,20.917,1
+Creeper,4.0,16.021,1
+Wolf,16.0,17.863,1
+Blaze,14.0,45.160,1
+Zombie Pigman,9.0,34.144,1
+Cave Spider,16.0,10.552,1
+Ghast,0,12.952,0
+Skeleton,14.0,20.874,1
+Endermite,17.0,17.252,1
+Spider,20.0,15.258,1
+Zombie,15.0,19.897,1
+Witch,0,48.099,0
+Silverfish,20.0,10.980,1
+Creeper,12.0,11.971,1
+Wolf,20.0,34.688,1
+Blaze,7.0,31.655,1
+Zombie Pigman,20.0,18.295,1
+Cave Spider,13.0,12.806,1
+Ghast,0,12.534,0
+Skeleton,13.0,30.223,1
+Endermite,20.0,20.672,1
+Spider,18.0,16.544,1
+Zombie,15.0,28.142,1
+Witch,0,51.794,0
+Silverfish,18.0,25.602,1
+Creeper,6.0,9.031,1
+Wolf,20.0,17.468,1
+Blaze,20.0,18.535,1
+Zombie Pigman,16.0,18.302,1
+Cave Spider,16.0,8.934,1
+Ghast,0,13.670,0
+Skeleton,10.0,36.309,1
+Endermite,20.0,9.727,1
+Spider,20.0,11.907,1
+Zombie,20.0,15.950,1
+Witch,0,62.386,0
+Silverfish,20.0,9.418,1
+Creeper,9.0,11.677,1
+Wolf,20.0,14.063,1
+Blaze,20.0,35.232,1
+Zombie Pigman,16.0,24.738,1
+Cave Spider,12.0,13.965,1
+Ghast,0,10.811,0
+Skeleton,17.0,17.112,1
+Endermite,20.0,10.088,1
+Spider,19.0,15.107,1
+Zombie,18.0,15.278,1
+Witch,0,63.974,0
+Silverfish,20.0,16.801,1
+Creeper,0,13.238,0
+Wolf,20.0,16.596,1
+Blaze,20.0,17.528,1
+Zombie Pigman,20.0,26.777,1
+Cave Spider,20.0,9.591,1
+Ghast,20.0,5.229,1
+Skeleton,19.0,33.171,1
+Endermite,20.0,15.212,1
+Spider,18.0,18.795,1
+Zombie,17.0,21.620,1
+Witch,0,37.641,0
+Silverfish,20.0,14.417,1
+Creeper,12.0,16.437,1
+Wolf,20.0,20.315,1
+Blaze,14.0,35.864,1
+Zombie Pigman,20.0,20.154,1
+Cave Spider,16.0,9.694,1
+Ghast,3.0,14.727,1
+Skeleton,17.0,17.139,1
+Endermite,20.0,10.535,1
+Spider,19.0,12.664,1
+Zombie,18.0,23.096,1
+Witch,0,64.489,0
+Silverfish,20.0,11.669,1
+Creeper,13.0,12.833,1
+Wolf,20.0,11.081,1
+Blaze,7.0,28.413,1
+Zombie Pigman,16.0,22.903,1
+Cave Spider,20.0,7.688,1
+Ghast,20.0,5.650,1
+Skeleton,16.0,24.769,1
+Endermite,20.0,20.190,1
+Spider,18.0,12.781,1
+Zombie,20.0,20.154,1
+Witch,0,67.937,0
+Silverfish,20.0,7.386,1
+Creeper,0,11.438,0
+Wolf,13.0,21.758,1
+Blaze,0,65.111,0
+Zombie Pigman,15.0,20.632,1
+Cave Spider,20.0,8.520,1
+Ghast,20.0,5.607,1
+Skeleton,19.0,38.602,1
+Endermite,18.0,31.410,1
+Spider,20.0,12.905,1
+Zombie,20.0,21.110,1
+Witch,0,69.487,0
+Silverfish,20.0,18.971,1
+Creeper,9.0,14.678,1
+Wolf,20.0,20.754,1
+Blaze,-1,25.562,0
+Zombie Pigman,20.0,17.119,1
+Cave Spider,14.0,10.929,1
+Ghast,0,20.640,0
+Skeleton,16.0,28.326,1
+Endermite,20.0,9.080,1
+Spider,20.0,13.354,1
+Zombie,17.0,19.609,1
+Witch,0,45.400,0
+Creeper,5.0,12.492,1
+Wolf,16.0,15.023,1
+Blaze,20.0,21.709,1
+Zombie Pigman,16.0,19.001,1
+Cave Spider,17.0,9.521,1
+Ghast,20.0,4.923,1
+Skeleton,18.0,19.887,1
+Endermite,20.0,20.021,1
+Spider,17.0,17.678,1
+Zombie,17.0,19.842,1
+Witch,0,47.930,0
+Silverfish,20.0,13.227,1
+Creeper,7.0,17.044,1
+Wolf,20.0,15.862,1
+Blaze,-1,24.593,0
+Zombie Pigman,15.0,18.095,1
+Cave Spider,15.0,9.631,1
+Ghast,20.0,5.527,1
+Skeleton,17.0,13.596,1
+Endermite,20.0,10.128,1
+Spider,17.0,16.971,1
+Zombie,19.0,18.184,1
+Witch,0,47.200,0
+Silverfish,19.0,11.160,1
+Creeper,7.0,15.057,1
+Wolf,16.0,12.025,1
+Blaze,0,13.614,0
+Zombie Pigman,20.0,15.144,1
+Cave Spider,15.0,13.564,1
+Ghast,20.0,5.606,1
+Skeleton,14.0,27.162,1
+Endermite,18.0,16.563,1
+Spider,20.0,12.712,1
+Zombie,16.0,24.919,1
+Witch,0,65.250,0
+Silverfish,20.0,14.343,1
+Creeper,0,20.915,0
+Wolf,20.0,15.161,1
+Blaze,15.0,27.966,1
+Zombie Pigman,20.0,21.234,1
+Cave Spider,15.0,9.316,1
+Ghast,20.0,7.172,1
+Skeleton,15.0,23.390,1
+Endermite,20.0,15.425,1
+Spider,18.0,13.913,1
+Zombie,20.0,22.401,1
+Witch,0,63.843,0
+Silverfish,20.0,11.685,1
+Creeper,8.0,13.170,1
+Wolf,20.0,17.698,1
+Blaze,20.0,31.970,1
+Zombie Pigman,16.0,17.095,1
+Cave Spider,20.0,8.750,1
+Ghast,20.0,5.531,1
+Endermite,20.0,25.828,1
+Spider,18.0,10.606,1
+Zombie,14.0,21.613,1
+Witch,0,47.538,0
+Silverfish,20.0,13.045,1
+Creeper,0,11.521,0
+Wolf,20.0,15.820,1
+Blaze,8.0,37.525,1
+Zombie Pigman,14.0,34.249,1
+Cave Spider,15.0,10.761,1
+Ghast,20.0,18.152,1
+Skeleton,17.0,20.554,1
+Endermite,20.0,16.335,1
+Spider,19.0,12.042,1
+Zombie,17.0,19.113,1
+Witch,0,47.908,0
+Silverfish,20.0,12.086,1
+Creeper,2.0,19.445,1
+Wolf,20.0,9.084,1
+Blaze,20.0,26.327,1
+Zombie Pigman,16.0,20.906,1
+Cave Spider,20.0,11.629,1
+Ghast,20.0,4.897,1
+Skeleton,18.0,15.141,1
+Endermite,20.0,11.684,1
+Spider,20.0,13.506,1
+Zombie,20.0,19.661,1
+Witch,0,28.537,0
+Silverfish,20.0,16.332,1
+Creeper,18.0,20.715,1
+Wolf,20.0,12.359,1
+Blaze,20.0,28.516,1
+Zombie Pigman,10.0,39.854,1
+Cave Spider,20.0,16.034,1
+Skeleton,14.0,21.280,1
+Endermite,20.0,14.661,1
+Spider,19.0,14.030,1
+Zombie,19.0,19.589,1
+Witch,0,65.689,0
+Silverfish,19.0,14.877,1
+Creeper,20.0,12.364,1
+Wolf,20.0,11.271,1
+Blaze,7.0,34.141,1
+Zombie Pigman,16.0,27.359,1
+Cave Spider,20.0,12.029,1
+Ghast,20.0,5.829,1
+Skeleton,17.0,33.302,1
+Endermite,20.0,16.445,1
+Spider,19.0,12.592,1
+Zombie,19.0,22.326,1
+Witch,0,34.691,0
+Silverfish,20.0,10.043,1
+Creeper,12.0,10.872,1
+Wolf,16.0,19.071,1
+Blaze,13.0,27.433,1
+Zombie Pigman,5.0,36.019,1
+Cave Spider,20.0,12.535,1
+Ghast,20.0,5.054,1
+Skeleton,15.0,27.579,1
+Endermite,20.0,11.027,1
+Spider,20.0,18.330,1
+Zombie,17.0,17.646,1
+Witch,0,65.521,0
+Silverfish,20.0,10.577,1
+Creeper,0,13.717,0
+Wolf,20.0,19.419,1
+Blaze,19.0,32.513,1
+Zombie Pigman,15.0,20.317,1
+Cave Spider,19.0,11.069,1
+Ghast,20.0,4.989,1
+Skeleton,18.0,19.704,1
+Endermite,20.0,14.127,1
+Spider,19.0,13.578,1
+Zombie,20.0,19.645,1
+Witch,0,65.988,0
+Silverfish,20.0,13.322,1
+Creeper,14.0,14.296,1
+Wolf,16.0,16.733,1
+Blaze,20.0,24.771,1
+Zombie Pigman,15.0,18.136,1
+Cave Spider,15.0,12.528,1
+Ghast,20.0,5.188,1
+Skeleton,17.0,18.074,1
+Endermite,20.0,14.447,1
+Spider,20.0,11.050,1
+Zombie,20.0,18.290,1
+Witch,4.0,60.218,1
+Silverfish,20.0,18.414,1
+Creeper,12.0,10.333,1
+Wolf,20.0,7.323,1
+Blaze,20.0,23.248,1
+Zombie Pigman,15.0,19.054,1
+Cave Spider,15.0,14.524,1
+Ghast,20.0,5.561,1
+Skeleton,17.0,26.131,1
+Endermite,19.0,16.783,1
+Spider,20.0,18.553,1
+Zombie,13.0,25.614,1
+Witch,0,66.220,0
+Silverfish,20.0,18.825,1
+Creeper,20.0,22.681,1
+Wolf,20.0,16.387,1
+Blaze,8.0,25.587,1
+Zombie Pigman,20.0,22.585,1
+Cave Spider,20.0,15.554,1
+Ghast,16.0,15.036,1
+Skeleton,16.0,19.575,1
+Endermite,20.0,13.119,1
+Spider,18.0,13.552,1
+Zombie,20.0,16.362,1
+Witch,0,66.511,0
+Silverfish,20.0,9.989,1
+Creeper,0,11.693,0
+Wolf,20.0,9.930,1
+Blaze,0,22.005,0
+Zombie Pigman,15.0,17.540,1
+Cave Spider,20.0,16.884,1
+Ghast,9.0,6.818,1
+Skeleton,11.0,30.958,1
+Spider,19.0,11.795,1
+Zombie,19.0,21.754,1
+Witch,9.0,56.322,1
+Silverfish,20.0,20.917,1
+Creeper,4.0,16.021,1
+Wolf,16.0,17.863,1
+Blaze,14.0,45.160,1
+Zombie Pigman,9.0,34.144,1
+Cave Spider,16.0,10.552,1
+Ghast,0,12.952,0
+Skeleton,14.0,20.874,1
+Endermite,17.0,17.252,1
+Spider,20.0,15.258,1
+Zombie,15.0,19.897,1
+Witch,0,48.099,0
+Silverfish,20.0,10.980,1
+Creeper,12.0,11.971,1
+Wolf,20.0,34.688,1
+Blaze,7.0,31.655,1
+Zombie Pigman,20.0,18.295,1
+Cave Spider,13.0,12.806,1
+Ghast,0,12.534,0
+Skeleton,13.0,30.223,1
+Endermite,20.0,20.672,1
+Spider,18.0,16.544,1
+Zombie,15.0,28.142,1
+Witch,0,51.794,0
+Silverfish,18.0,25.602,1
+Creeper,6.0,9.031,1
+Wolf,20.0,17.468,1
+Blaze,20.0,18.535,1
+Zombie Pigman,16.0,18.302,1
+Cave Spider,16.0,8.934,1
+Ghast,0,13.670,0
+Skeleton,10.0,36.309,1
+Endermite,20.0,9.727,1
+Spider,20.0,11.907,1
+Zombie,20.0,15.950,1
+Witch,0,62.386,0
+Silverfish,20.0,9.418,1
+Creeper,9.0,11.677,1
+Wolf,20.0,14.063,1
+Blaze,20.0,35.232,1
+Zombie Pigman,16.0,24.738,1
+Cave Spider,12.0,13.965,1
+Ghast,0,10.811,0
+Skeleton,17.0,17.112,1
+Endermite,20.0,10.088,1
+Spider,19.0,15.107,1
+Zombie,18.0,15.278,1
+Witch,0,63.974,0
+Silverfish,20.0,16.801,1
+Creeper,0,13.238,0
+Wolf,20.0,16.596,1
+Blaze,20.0,17.528,1
+Zombie Pigman,20.0,26.777,1
+Cave Spider,20.0,9.591,1
+Ghast,20.0,5.229,1
+Skeleton,19.0,33.171,1
+Endermite,20.0,15.212,1
+Spider,18.0,18.795,1
+Zombie,17.0,21.620,1
+Witch,0,37.641,0
+Silverfish,20.0,14.417,1
+Creeper,12.0,16.437,1
+Wolf,20.0,20.315,1
+Blaze,14.0,35.864,1
+Zombie Pigman,20.0,20.154,1
+Cave Spider,16.0,9.694,1
+Ghast,3.0,14.727,1
+Skeleton,17.0,17.139,1
+Endermite,20.0,10.535,1
+Spider,19.0,12.664,1
+Zombie,18.0,23.096,1
+Witch,0,64.489,0
+Silverfish,20.0,11.669,1
+Creeper,13.0,12.833,1
+Wolf,20.0,11.081,1
+Blaze,7.0,28.413,1
+Zombie Pigman,16.0,22.903,1
+Cave Spider,20.0,7.688,1
+Ghast,20.0,5.650,1
+Skeleton,16.0,24.769,1
+Endermite,20.0,20.190,1
+Spider,18.0,12.781,1
+Zombie,20.0,20.154,1
+Witch,0,67.937,0
+Silverfish,20.0,7.386,1
+Creeper,0,11.438,0
+Wolf,13.0,21.758,1
+Blaze,0,65.111,0
+Zombie Pigman,15.0,20.632,1
+Cave Spider,20.0,8.520,1
+Ghast,20.0,5.607,1
+Skeleton,19.0,38.602,1
+Endermite,18.0,31.410,1
+Spider,20.0,12.905,1
+Zombie,20.0,21.110,1
+Witch,0,69.487,0
+Silverfish,20.0,18.971,1
+Creeper,9.0,14.678,1
+Wolf,20.0,20.754,1
+Blaze,-1,25.562,0
+Zombie Pigman,20.0,17.119,1
+Cave Spider,14.0,10.929,1
+Ghast,0,20.640,0
+Skeleton,16.0,28.326,1
+Endermite,20.0,9.080,1
+Spider,20.0,13.354,1
+Zombie,17.0,19.609,1
+Witch,0,45.400,0
+Creeper,5.0,12.492,1
+Wolf,16.0,15.023,1
+Blaze,20.0,21.709,1
+Zombie Pigman,16.0,19.001,1
+Cave Spider,17.0,9.521,1
+Ghast,20.0,4.923,1
+Skeleton,18.0,19.887,1
+Endermite,20.0,20.021,1
+Spider,17.0,17.678,1
+Zombie,17.0,19.842,1
+Witch,0,47.930,0
+Silverfish,20.0,13.227,1
+Creeper,7.0,17.044,1
+Wolf,20.0,15.862,1
+Blaze,-1,24.593,0
+Zombie Pigman,15.0,18.095,1
+Cave Spider,15.0,9.631,1
+Ghast,20.0,5.527,1
+Skeleton,17.0,13.596,1
+Endermite,20.0,10.128,1
+Spider,17.0,16.971,1
+Zombie,19.0,18.184,1
+Witch,0,47.200,0
+Silverfish,19.0,11.160,1
+Creeper,7.0,15.057,1
+Wolf,16.0,12.025,1
+Blaze,0,13.614,0
+Zombie Pigman,20.0,15.144,1
+Cave Spider,15.0,13.564,1
+Ghast,20.0,5.606,1
+Skeleton,14.0,27.162,1
+Endermite,18.0,16.563,1
+Spider,20.0,12.712,1
+Zombie,16.0,24.919,1
+Witch,0,65.250,0
+Silverfish,20.0,14.343,1
+Creeper,0,20.915,0
+Wolf,20.0,15.161,1
+Blaze,15.0,27.966,1
+Zombie Pigman,20.0,21.234,1
+Cave Spider,15.0,9.316,1
+Ghast,20.0,7.172,1
+Skeleton,15.0,23.390,1
+Endermite,20.0,15.425,1
+Spider,18.0,13.913,1
+Zombie,20.0,22.401,1
+Witch,0,63.843,0
+Silverfish,20.0,11.685,1
+Creeper,8.0,13.170,1
+Wolf,20.0,17.698,1
+Blaze,20.0,31.970,1
+Zombie Pigman,16.0,17.095,1
+Cave Spider,20.0,8.750,1
+Ghast,20.0,5.531,1
+Endermite,20.0,25.828,1
+Spider,18.0,10.606,1
+Zombie,14.0,21.613,1
+Witch,0,47.538,0
+Silverfish,20.0,13.045,1
+Creeper,0,11.521,0
+Wolf,20.0,15.820,1
+Blaze,8.0,37.525,1
+Zombie Pigman,14.0,34.249,1
+Cave Spider,15.0,10.761,1
+Ghast,20.0,18.152,1
+Skeleton,17.0,20.554,1
+Endermite,20.0,16.335,1
+Spider,19.0,12.042,1
+Zombie,17.0,19.113,1
+Witch,0,47.908,0
+Silverfish,20.0,12.086,1
+Creeper,2.0,19.445,1
+Wolf,20.0,9.084,1
+Blaze,20.0,26.327,1
+Zombie Pigman,16.0,20.906,1
+Cave Spider,20.0,11.629,1
+Ghast,20.0,4.897,1
+Skeleton,18.0,15.141,1
+Endermite,20.0,11.684,1
+Spider,20.0,13.506,1
+Zombie,20.0,19.661,1
+Witch,0,28.537,0
+Silverfish,20.0,16.332,1
+Creeper,18.0,20.715,1
+Wolf,20.0,12.359,1
+Blaze,20.0,28.516,1
+Zombie Pigman,10.0,39.854,1
+Cave Spider,20.0,16.034,1
+Skeleton,14.0,21.280,1
+Endermite,20.0,14.661,1
+Spider,19.0,14.030,1
+Zombie,19.0,19.589,1
+Witch,0,65.689,0
+Silverfish,19.0,14.877,1
+Creeper,20.0,12.364,1
+Wolf,20.0,11.271,1
+Blaze,7.0,34.141,1
+Zombie Pigman,16.0,27.359,1
+Cave Spider,20.0,12.029,1
+Ghast,20.0,5.829,1
+Skeleton,17.0,33.302,1
+Endermite,20.0,16.445,1
+Spider,19.0,12.592,1
+Zombie,19.0,22.326,1
+Witch,0,34.691,0
+Silverfish,20.0,10.043,1
+Creeper,12.0,10.872,1
+Wolf,16.0,19.071,1
+Blaze,13.0,27.433,1
+Zombie Pigman,5.0,36.019,1
+Cave Spider,20.0,12.535,1
+Ghast,20.0,5.054,1
+Skeleton,15.0,27.579,1
+Endermite,20.0,11.027,1
+Spider,20.0,18.330,1
+Zombie,17.0,17.646,1
+Witch,0,65.521,0
+Silverfish,20.0,10.577,1
+Creeper,0,13.717,0
+Wolf,20.0,19.419,1
+Blaze,19.0,32.513,1
+Zombie Pigman,15.0,20.317,1
+Cave Spider,19.0,11.069,1
+Ghast,20.0,4.989,1
+Skeleton,18.0,19.704,1
+Endermite,20.0,14.127,1
+Spider,19.0,13.578,1
+Zombie,20.0,19.645,1
+Witch,0,65.988,0
+Silverfish,20.0,13.322,1
+Creeper,14.0,14.296,1
+Wolf,16.0,16.733,1
+Blaze,20.0,24.771,1
+Zombie Pigman,15.0,18.136,1
+Cave Spider,15.0,12.528,1
+Ghast,20.0,5.188,1
+Skeleton,17.0,18.074,1
+Endermite,20.0,14.447,1
+Spider,20.0,11.050,1
+Zombie,20.0,18.290,1
+Witch,4.0,60.218,1
+Silverfish,20.0,18.414,1
+Creeper,12.0,10.333,1
+Wolf,20.0,7.323,1
+Blaze,20.0,23.248,1
+Zombie Pigman,15.0,19.054,1
+Cave Spider,15.0,14.524,1
+Ghast,20.0,5.561,1
+Skeleton,17.0,26.131,1
+Endermite,19.0,16.783,1
+Spider,20.0,18.553,1
+Zombie,13.0,25.614,1
+Witch,0,66.220,0
+Silverfish,20.0,18.825,1
+Creeper,20.0,22.681,1
+Wolf,20.0,16.387,1
+Blaze,8.0,25.587,1
+Zombie Pigman,20.0,22.585,1
+Cave Spider,20.0,15.554,1
+Ghast,16.0,15.036,1
+Skeleton,16.0,19.575,1
+Endermite,20.0,13.119,1
+Spider,18.0,13.552,1
+Zombie,20.0,16.362,1
+Witch,0,66.511,0
+Silverfish,20.0,18.707,1
+Creeper,20.0,14.792,1
+Wolf,20.0,13.064,1
+Blaze,20.0,21.633,1
+Zombie Pigman,5.0,47.177,1
+Cave Spider,16.0,10.717,1
+Ghast,0,10.682,0
+Skeleton,19.0,19.750,1
+Endermite,20.0,13.190,1
+Spider,20.0,11.764,1
+Zombie,17.0,17.243,1
+Witch,0,44.633,0

@@ -91,13 +91,13 @@ def main():
             print "Saving {}...\n".format("Q-Table & Results" if mode == "LEARN" else "Results")
             if mode == "LEARN":
                 SB.log_Q()
-            SB.log_results("temp_sb_results.txt", app=True)
+            SB.log_results("temp_osb_results.txt", app=True)
         # -- clean up -- #
         time.sleep(2)  # (let the Mod reset)
     print "Done."
     if mode == "LEARN":
         SB.log_Q()
-    f_str = 'results_sb@.txt'
+    f_str = 'results_sb_optimal@.txt'
     count = 1
     new_f = f_str.replace('@',str(count))
     while os.path.isfile(new_f):
