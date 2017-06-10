@@ -27,7 +27,7 @@ def main():
                 Bot = GeneralBot(epsilon=1)
             #Determine Round number
             rounds = int(sys.argv[3])
-        except Exception e:
+        except Exception as e:
             print 'something went wrong:', e
             return
     else:
@@ -101,7 +101,7 @@ def main():
     print "Done."
     if mode == "LEARN":
         Bot.log_Q()
-    f_str = 'results_'+sys.argv[1]+"_optimal@.txt'
+    f_str = 'results_'+sys.argv[1]+'_optimal@.txt'
     count = 1
     new_f = f_str.replace('@',str(count))
     while os.path.isfile(new_f):

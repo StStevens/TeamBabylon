@@ -13,7 +13,7 @@ from GeneralBot import GeneralBot
 class SpecialistBot(GeneralBot):
     """SpecialistBot will be given an AgentHost in its run method and use QTabular learning to attack enemies,
     caring about enemy type for strategy"""
-    def __init__(self, alpha=0.3, gamma=1, n=5, epsilon=0.3 fname=None):
+    def __init__(self, alpha=0.3, gamma=1, n=5, epsilon=0.3, fname=None):
         """Constructing an RL agent.
 
         Args
