@@ -24,7 +24,7 @@ class SpecialistBot(GeneralBot):
             fname:  <string> filename to store resulting q-table in
         """
         self.Movement = ["move 1", "move 0", "move -1", "strafe 1", "strafe -1"]
-        self.actionDelay = 200
+        self.actionDelay = 0.2
         self.weapon = "sword" #or "bow"
         self.fname = fname
         self.agent = None

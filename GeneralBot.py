@@ -22,7 +22,7 @@ class GeneralBot:
             fname:  <string> filename to store resulting q-table in
         """
         self.Movement = ["move 1", "move 0", "move -1", "strafe 1", "strafe -1"]
-        self.actionDelay = 200
+        self.actionDelay = 0.2
         self.fname = fname
         self.agent = None
         self.weapon = "sword"
@@ -252,6 +252,7 @@ class GeneralBot:
                     continue
                 self.track_target(obs, enemy)
                 if currentTime - lastActionTime >= self.actionDelay:
+                    lastActionTime = currentTime
                     state = self.get_curr_state(obs, enemy)
                     self.clearAction(action)
                     p_actions = self.get_possible_actions(self.weapon)
