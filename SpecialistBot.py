@@ -40,7 +40,7 @@ class SpecialistBot(GeneralBot):
             self.qMovement = dict()
             for dist in ["Close", "Melee", "Far"]:
                 for health in ["Low", "Med", "Hi"]:
-                    for weap in ["sword", "bow"]:
+                    for weap in ["sword", "draw 1", "draw 2", "draw 3", "draw 4", "draw 5", "fire"]:
                         for enemy in Arena.ENTITY_LIST:
                             self.q_table[(dist,health,weap,str(enemy))] = {action : 0 for action in self.get_possible_actions(weap)}
                             self.qMovement[(dist,health,weap,str(enemy))] = {action : 0 for action in self.Movement}

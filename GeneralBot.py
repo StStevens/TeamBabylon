@@ -98,6 +98,7 @@ class GeneralBot:
             if self.weapon != "sword":
                 self.agent.sendCommand("hotbar.1 1")
                 self.agent.sendCommand("hotbar.1 0")
+                self.agent.sendCommand("use 0");
             self.agent.sendCommand("attack 1")
             self.weapon = action
         elif "draw" in action:
@@ -274,7 +275,6 @@ class GeneralBot:
                     lastActionTime = currentTime
                     state = self.get_curr_state(obs, enemy)
                     self.clearAction(action)
-                    print self.weapon
                     p_actions = self.get_possible_actions(self.weapon)
                     if optimal:
                         action = self.choose_action(state, p_actions, 0)
