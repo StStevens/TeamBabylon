@@ -11,7 +11,7 @@ from collections import defaultdict, deque
 class GeneralBot:
     """GeneralBot will be given an AgentHost in its run method and use QTabular learning to attack enemies,
     ignoring enemy type for strategy"""
-    def __init__(self, alpha=0.3, gamma=1, n=5, epsilon=0.3, fname=None):
+    def __init__(self, alpha=0.3, gamma=1, n=25, epsilon=0.3, fname=None):
         """Constructing an RL agent.
 
         Args
@@ -96,7 +96,7 @@ class GeneralBot:
         reward = 0
         reward += damageDelta * 15
         reward += healthDelta * 10
-        return reward
+        return -10 if reward == 0 else reward
 
     def update_q_table(self, tau, S, A, R, T):
         """Performs relevant updates for state tau.
@@ -321,6 +321,7 @@ class GeneralBot:
             return
         if health == -1:
             raise ValueError('Health is -1')
+        return
 
     def log_Q(self):
         try:
