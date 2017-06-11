@@ -22,7 +22,7 @@ class GeneralBot:
             fname:  <string> filename to store resulting q-table in
         """
         self.Movement = ["move 1", "move 0", "move -1", "strafe 1", "strafe -1"]
-        self.actionDelay = 200
+        self.actionDelay = 0.2
         self.fname = fname
         self.agent = None
         self.weapon = "sword"
@@ -38,7 +38,7 @@ class GeneralBot:
             self.qMovement = dict()
             for dist in ["Close", "Melee", "Far"]:
                 for health in ["Low", "Med", "Hi"]:
-                    for weap in ["sword", "bow"]:
+                    for weap in ["sword", "draw 1", "draw 2", "draw 3", "draw 4", "draw 5", "fire"]:
                         self.q_table[(dist,health,weap)] = {action : 0 for action in self.get_possible_actions(weap)}
                         self.qMovement[(dist,health, weap)] = {action : 0 for action in self.Movement}
         self.n, self.gamma, self.alpha = n, gamma, alpha
@@ -93,15 +93,27 @@ class GeneralBot:
 
     def act(self, action):
         """"Sends a command to the agent to take the chosen course of action"""
-        if action == "switch":
-            switchCommand = "hotbar.2 1" if self.weapon == "sword" else "hotbar.1 1"
-            self.agent.sendCommand(switchCommand)
-            switchCommand = switchCommand[:-1]+"0"
-            self.agent.sendCommand(switchCommand)
-            self.weapon = "bow" if self.weapon == "sword" else "sword"
+        location = ""
+        if action == "sword":
+            if self.weapon != "sword":
+                self.agent.sendCommand("hotbar.1 1")
+                self.agent.sendCommand("hotbar.1 0")
+            self.agent.sendCommand("attack 1")
+            self.weapon = action
+        elif "draw" in action:
+            if self.weapon == "sword":
+                self.agent.sendCommand("attack 0")
+                self.agent.sendCommand("hotbar.2 1")
+                self.agent.sendCommand("hotbar.2 0")
+                self.agent.sendCommand("use 1")
+            if self.weapon == "fire":
+                self.agent.sendCommand("use 1")
+            self.weapon = action
+        elif action == "fire":
             self.agent.sendCommand("use 0")
-            return
-        self.agent.sendCommand(action)
+            self.weapon = action
+        else:
+            self.agent.sendCommand(action)
         return
 
     def clearAction(self, action):
@@ -204,10 +216,17 @@ class GeneralBot:
 
     def get_possible_actions(self, weap):
         '''Returns a list of possible actions based on weapon type'''
-        if weap == "bow":
-            return [ "use 1", "use 0", "switch"]
-        else: #using sword
-            return ["attack 1", "switch"]
+        if weap == "sword":
+            return ["sword", "draw 1"]
+        elif "draw" in weap:
+            nextDraw = int(weap[-1]) + 1
+            if nextDraw > 5:
+                return [ "fire" ]
+            else:
+                return [ "fire", "draw " + str(nextDraw) ]
+        elif weap == "fire":
+            return ["sword", "draw 1"]
+            
 
     def run(self, agent_host, optimal=False):
         """Run the agent_host on the world, acting according to the epsilon-greedy policy"""
@@ -252,8 +271,10 @@ class GeneralBot:
                     continue
                 self.track_target(obs, enemy)
                 if currentTime - lastActionTime >= self.actionDelay:
+                    lastActionTime = currentTime
                     state = self.get_curr_state(obs, enemy)
                     self.clearAction(action)
+                    print self.weapon
                     p_actions = self.get_possible_actions(self.weapon)
                     if optimal:
                         action = self.choose_action(state, p_actions, 0)
