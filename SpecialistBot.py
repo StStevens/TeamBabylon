@@ -13,13 +13,14 @@ from GeneralBot import GeneralBot
 class SpecialistBot(GeneralBot):
     """SpecialistBot will be given an AgentHost in its run method and use QTabular learning to attack enemies,
     caring about enemy type for strategy"""
-    def __init__(self, alpha=0.3, gamma=1, n=5, fname=None):
+    def __init__(self, alpha=0.3, gamma=1, n=5, epsilon=0.2, fname=None):
         """Constructing an RL agent.
 
         Args
             alpha:  <float>  learning rate      (default = 0.3)
             gamma:  <float>  value decay rate   (default = 1)
             n:      <int>    number of back steps to update (default = 1)
+            epsilon: <float> chance of taking a random action (default 0.2)
             fname:  <string> filename to store resulting q-table in
         """
         self.Movement = ["move 1", "move 0", "move -1", "strafe 1", "strafe -1"]
@@ -27,7 +28,7 @@ class SpecialistBot(GeneralBot):
         self.weapon = "sword" #or "bow"
         self.fname = fname
         self.agent = None
-        self.epsilon = 0.2  # chance of taking a random action instead of the best
+        self.epsilon = epsilon  # chance of taking a random action instead of the best
         if fname:
             f = open(fname, "r")
             q_tables = pickle.load(f)
