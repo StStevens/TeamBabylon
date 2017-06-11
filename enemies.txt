@@ -1,0 +1,12 @@
+Blaze
+Cave-Spider
+Creeper
+Endermite
+Ghast
+Silverfish
+Skeleton
+Spider
+Witch
+Wolf
+Zombie
+Zombie-Pigman
