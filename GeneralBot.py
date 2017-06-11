@@ -233,6 +233,7 @@ class GeneralBot:
         """Run the agent_host on the world, acting according to the epsilon-greedy policy"""
         roundTimeStart = time.time()
         kill = 0
+        self.weapon = "sword"
         round_enemy = None
         self.agent = agent_host
         max_score = 0
