@@ -36,7 +36,7 @@ class GeneralBot:
             self.fname = "gb_qtable.p"
             self.q_table = dict() # Create the Q-Table
             self.qMovement = dict()
-            for dist in ["Close", "Melee", "Far"]:
+            for dist in ["Close", "Melee", "Bow", "Far"]:
                 for health in ["Low", "Med", "Hi"]:
                     for weap in ["sword", "draw 1", "draw 2", "draw 3", "draw 4", "draw 5", "fire"]:
                         self.q_table[(dist,health,weap)] = {action : 0 for action in self.get_possible_actions(weap)}
@@ -52,7 +52,7 @@ class GeneralBot:
         '''
         if ent['name'] in Arena.HEIGHT_CHART.keys():
             dist = self.calcDist(ent['x'], ent['y'], ent['z'], obs['XPos'], obs['YPos'], obs['ZPos'], ent['name'])
-            dist = "Close" if dist <= 2 else "Melee" if dist <= 4 else "Far" # Discretize the distance
+            dist = "Close" if dist <= 2 else "Melee" if dist <= 4 else "Bow" if dist <=20 else "Far" # Discretize the distance
             health = obs['Life']
             health = "Low" if health <= 5 else "Med" if health <= 12 else "Hi"
             weap = self.weapon
@@ -227,7 +227,7 @@ class GeneralBot:
                 return [ "fire", "draw " + str(nextDraw) ]
         elif weap == "fire":
             return ["sword", "draw 1"]
-            
+
 
     def run(self, agent_host, optimal=False):
         """Run the agent_host on the world, acting according to the epsilon-greedy policy"""
