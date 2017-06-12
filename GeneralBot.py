@@ -228,6 +228,12 @@ class GeneralBot:
         elif weap == "fire":
             return ["sword", "draw 1"]
 
+    def dist(self, x,y,z,ex,ey,ez):
+        '''calc the euclidean distance to a given enemy'''
+        return math.sqrt((ex-x)**2+(ey-y)**2+(ez-z)**2)
+
+    def get_enemyHealth(self, obs):
+        return sum([ e['life'] for e in obs['entities'] if (e['name'] != obs['Name'] and 'life' in e)])
 
     def run(self, agent_host, optimal=False):
         """Run the agent_host on the world, acting according to the epsilon-greedy policy"""
@@ -263,11 +269,16 @@ class GeneralBot:
                 if "Name" not in obs: #Edge case where we observe before load.
                     continue
                 enemy = None
+                closest = 100
                 for e in obs['entities']:
                     if e['name'] != obs['Name'] and 'life' in e:
+                        ex, ey, ez = e['x'], e['y'], e['z']
+                        x, y, z = obs['XPos'], obs['YPos'], obs['ZPos']
                         round_enemy = e['name']
-                        enemy = e
-                        break
+                        d = self.dist(x,y,z,ex,ey,ez)
+                        if d < closest:
+                            enemy = e
+                            closest = d
                 if enemy == None:
                     state = ("last check",)
                     continue
@@ -286,10 +297,10 @@ class GeneralBot:
                     damageDelta = 0
                     healthDelta = 0
                     if enemyHealth == -1:
-                        enemyHealth = enemy['life']
+                        enemyHealth = self.get_enemyHealth(obs)
                     elif enemy['life'] != enemyHealth:
-                        damageDelta = enemyHealth - enemy['life']
-                        enemyHealth = enemy['life']
+                        damageDelta = enemyHealth - self.get_enemyHealth(obs)
+                        enemyHealth = self.get_enemyHealth(obs)
                     if agentHealth == -1:
                         agentHealth = obs['Life']
                     elif obs['Life'] != agentHealth:

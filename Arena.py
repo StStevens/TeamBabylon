@@ -67,7 +67,7 @@ def create_mission(entity, agent_name=AGENT_NAME, trackw=TRACK_WIDTH, trackb=TRA
                     <DrawCuboid type="bedrock" x1="30" y1="4" z1="30" x2="0" y2="12" z2="30"/>
                     <DrawCuboid type="bedrock" x1="30" y1="4" z1="30" x2="30" y2="12" z2="0"/>
                     <DrawCuboid type="glowstone" x1="0" y1="14" z1="0" x2="30" y2="12" z2="30"/>
-                    <DrawEntity x="15.0" y="4.0" z="10" type="@@@"/>
+                    <DrawEntity x="18.0" y="4.0" z="10" type="@@@"/>
                   </DrawingDecorator>
                   <ServerQuitWhenAnyAgentFinishes description="server sees murder happen"/>
                 </ServerHandlers>
