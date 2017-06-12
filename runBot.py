@@ -101,7 +101,7 @@ def main():
     print "Done."
     if mode == "LEARN":
         Bot.log_Q()
-    f_str = 'results_'+sys.argv[1]+'_optimal@.txt'
+    f_str = 'results_'+sys.argv[1]+'_'+mode+'_@.txt'
     count = 1
     new_f = f_str.replace('@',str(count))
     while os.path.isfile(new_f):
