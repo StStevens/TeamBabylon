@@ -24,7 +24,7 @@ class SpecialistBot(GeneralBot):
             fname:  <string> filename to store resulting q-table in
         """
         self.Movement = ["move 1", "move 0", "move -1", "strafe 1", "strafe -1"]
-        self.actionDelay = 200
+        self.actionDelay = .2
         self.weapon = "sword" #or "bow"
         self.fname = fname
         self.agent = None
@@ -38,7 +38,7 @@ class SpecialistBot(GeneralBot):
             self.fname = "sb_qtable.p"
             self.q_table = dict() # Create the Q-Table
             self.qMovement = dict()
-            for dist in ["Close", "Melee", "Far"]:
+            for dist in ["Close", "Melee", "Bow", "Far"]:
                 for health in ["Low", "Med", "Hi"]:
                     for weap in ["sword", "draw 1", "draw 2", "draw 3", "draw 4", "draw 5", "fire"]:
                         for enemy in Arena.ENTITY_LIST:
