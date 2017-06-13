@@ -38,6 +38,100 @@ def malmoName(minecraftName):
         return minecraftName
     return NAME_MAPPING[minecraftName]
 
+def create_pvp_mission(player_one, player_two, trackw=TRACK_WIDTH, trackb=TRACK_BREADTH, trackh=TRACK_HEIGHT, timelimit=TIMELIMIT):
+    missionXML = '''<?xml version="1.0" encoding="UTF-8" standalone="no" ?>
+            <Mission xmlns="http://ProjectMalmo.microsoft.com" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+              <About>
+                <Summary>Mortal Combat Fighting Simulator</Summary>
+                <Description>Defeat the other to Continue!</Description>
+              </About>
+              <ServerSection>
+                <ServerInitialConditions>
+                    <Time>
+                        <StartTime>18000</StartTime>
+                           <AllowPassageOfTime>false</AllowPassageOfTime>
+                        </Time>
+                    <AllowSpawning>false</AllowSpawning>
+                </ServerInitialConditions>
+                <ServerHandlers>
+                  <FlatWorldGenerator generatorString="3;1*minecraft:bedrock,3*minecraft:obsidian;1;"/>
+                  <DrawingDecorator>
+                    <DrawCuboid type="bedrock" x1="0" y1="4" z1="0" x2="0" y2="12" z2="30"/>
+                    <DrawCuboid type="bedrock" x1="0" y1="4" z1="0" x2="30" y2="12" z2="0"/>
+                    <DrawCuboid type="bedrock" x1="30" y1="4" z1="30" x2="0" y2="12" z2="30"/>
+                    <DrawCuboid type="bedrock" x1="30" y1="4" z1="30" x2="30" y2="12" z2="0"/>
+                    <DrawCuboid type="glowstone" x1="0" y1="14" z1="0" x2="30" y2="12" z2="30"/>
+                  </DrawingDecorator>
+                  <ServerQuitWhenAnyAgentFinishes description="server sees murder happen"/>
+                </ServerHandlers>
+              </ServerSection>
+              <AgentSection mode="Survival">
+                <Name>''' + player_one + '''</Name>
+                <AgentStart>
+                  <Placement x="15" y="4.0" z="20" pitch="0" yaw="-180"/>
+                  <Inventory>
+                    <InventoryObject slot="0" type="wooden_sword" quantity="1"/>
+                    <InventoryObject slot="1" type="bow" quantity="1"/>
+                    <InventoryObject slot="2" type="arrow" quantity="64"/>
+                  </Inventory>
+                </AgentStart>
+                <AgentHandlers>
+                  <MissionQuitCommands
+                    quitDescription="finished murdering">
+                      <ModifierList
+                        type='allow-list'>
+                          <command>quit</command>
+                      </ModifierList>
+                  </MissionQuitCommands>
+                  <ObservationFromFullStats/>
+                  <AgentQuitFromTimeUp timeLimitMs="'''+str(timelimit)+'''" description="out_of_time"/>
+                  <ContinuousMovementCommands turnSpeedDegs="900"/>
+                  <InventoryCommands>
+                    <ModifierList type = "deny-list">
+                        <command>discardCurrentItem</command>
+                    </ModifierList>
+                  </InventoryCommands>
+                  <ObservationFromNearbyEntities>
+                    <Range name="entities" xrange="'''+str(trackw)+'''" yrange="'''+str(trackh)+'''" zrange="'''+str(trackb)+'''" />
+                  </ObservationFromNearbyEntities>
+                  <ObservationFromHotBar/>
+                </AgentHandlers>
+              </AgentSection>
+              <AgentSection mode="Survival">
+                <Name>''' + player_two + '''</Name>
+                <AgentStart>
+                  <Placement x="15" y="4.0" z="10" pitch="0" yaw="-180"/>
+                  <Inventory>
+                    <InventoryObject slot="0" type="wooden_sword" quantity="1"/>
+                    <InventoryObject slot="1" type="bow" quantity="1"/>
+                    <InventoryObject slot="2" type="arrow" quantity="64"/>
+                  </Inventory>
+                </AgentStart>
+                <AgentHandlers>
+                  <MissionQuitCommands
+                    quitDescription="finished murdering">
+                      <ModifierList
+                        type='allow-list'>
+                          <command>quit</command>
+                      </ModifierList>
+                  </MissionQuitCommands>
+                  <ObservationFromFullStats/>
+                  <AgentQuitFromTimeUp timeLimitMs="'''+str(timelimit)+'''" description="out_of_time"/>
+                  <ContinuousMovementCommands turnSpeedDegs="900"/>
+                  <InventoryCommands>
+                    <ModifierList type = "deny-list">
+                        <command>discardCurrentItem</command>
+                    </ModifierList>
+                  </InventoryCommands>
+                  <ObservationFromNearbyEntities>
+                    <Range name="entities" xrange="'''+str(trackw)+'''" yrange="'''+str(trackh)+'''" zrange="'''+str(trackb)+'''" />
+                  </ObservationFromNearbyEntities>
+                  <ObservationFromHotBar/>
+                </AgentHandlers>
+              </AgentSection>
+            </Mission>'''
+    return missionXML
+
 def create_mission(entity, agent_name=AGENT_NAME, trackw=TRACK_WIDTH, trackb=TRACK_BREADTH, trackh=TRACK_HEIGHT, timelimit=TIMELIMIT):
     '''Creates the xml for a given encounter:
     arguments:
