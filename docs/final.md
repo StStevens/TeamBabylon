@@ -27,7 +27,6 @@ Our approach towards machine learning was to use Q-Learning and state tables to 
     α = .3: The learning rate of the agent
 
     n = 10: The lookback number, previous steps to update given current reward
-
         -we set this number somewhat high in order to encourage full bow extension
          and associate chains of actions with higher rewards
 
@@ -67,6 +66,8 @@ Our reward function is very straightforward. Each time we take an action, we che
 
 By putting a greater weight on enemy health, we attempted to make the bot prioritize doing damage as opposed to maintaining health.
 
+As the difference in the enemy health is a useful way of determining a reward for combat, we thought this feature was a vital part of the program. Unfortunately, when we began working on this there was no method for obtaining the enemy health from the observations. In order to add this capability, one of our team members modified the Malmo code based and became a contributor to the Malmo repository, adding this feature for our group and any other group that may need it.
+
 
 
 ## Evalutaion:
@@ -79,7 +80,7 @@ As far as qualitative observations go, a distinct difference can be seen in the 
 For quantitative evaluation, we used two metrics. At the end of each fight, we checked the health of our agent (‘Agent Post-Fight Health’) and recorded the time it took for the agent to kill the mob (‘Time to Kill’). Each round was capped at 25 seconds long to prevent stalled or drawn-out fights. In the following graphs, we show the statistics for each enemy type in side-by-side graphs. Displayed below is the scatter plot representing the data collected at the end of each fight. The horizontal lines represent the mean of the overall data for rounds with a specific mob type.
 
 
-##
+## 
 #### Blaze:
 ![alt text](https://raw.githubusercontent.com/StStevens/TeamBabylon/master/docs/res/blz.png)
 
@@ -125,3 +126,7 @@ As for the comparison between the General Bot and the Specialist, the results we
 
 
 ## References:
+As a guide for giving our bot the ability to aim at the enemy, we used the cart_test.py file in the Python_Examples/ directory of Malmo.
+Our main reference for understanding Q-Learning was the class notes and assignment2.py.
+[Q-Learn Wiki Page](https://en.wikipedia.org/wiki/Q-learning)
+[Artificial Intelligence: Foundations of Computational Agents](http://artint.info/html/ArtInt_265.html)
