@@ -3,11 +3,13 @@ layout: default
 title   Final Report
 ---
 
+## Video:
+<iframe width="560" height="315" src="https://www.youtube.com/embed/QOfay_gvvJ0" frameborder="0" allowfullscreen></iframe>
+
 ## Project Summary:
 Our project’s aim was to create Malmo agents that would learn to fight different enemies using Q-learning. In addition to training the bots in combat, we hoped to compare the performance of two different bots, a general bot and a specialist. The main difference between these two bots is that the general bot learns a combat strategy independent of the type of enemy that it is fighting, while the specialist learns a combat strategy specific to each mob type. Our hope was that the general bot would show an improvement over a naive bot, and that the specialist would show a greater improvement over the general bot. We believed this because with its more specific world state, accounting not just for position and health, but also the type of enemy, the specialist would learn to tailor its combat to a certain mob type.
 
 For the most recent update to our project, our group focused on expanding the state space, and along with it, the abilities of our bot. The main focus here was the ability to use both the bow and the sword, and switch between the two as the bot saw fit during combat. Given the increase in the number of possible actions, specifically those focused on attacking, we felt it was limiting for the bot to have to decide between either a movement action or an attack action. We therefore have implemented a dual Q-Table system, in which the bot associates rewards with both an attack action and a movement action separately, so they can be executed simultaneously, rather than having to decide between one or the other.
-
 
 ## Approaches:
 Our approach towards machine learning was to use Q-Learning and state tables to train the agents. For each fight, we set up an arena and spawn an agent and a single enemy. Using the world observations provided by Malmo, we calculate the enemy pitch and yaw in order to ensure that our agent is always facing the mob. Forcing the bot to aim at the enemy is the only real guidance given to the bot. The rest of its actions are chosen using Q-Tables. We trained our bots against 12 enemy types: blaze, creeper, cave spider, endermite, ghast, silverfish, skeleton, spider, wolf, witch, zombie, and zombie pigman. In addition, each bot was trained for 10 rounds, where a round is an individual fight against each mob type (10 rounds = 120 fights total, 10 per enemy).
