@@ -22,29 +22,54 @@ As far as qualitative observations go, a distinct difference can be seen in the 
 For quantitative evaluation, we used two metrics. At the end of each fight, we checked the health of our agent (‘Agent Post-Fight Health’) and recorded the time it took for the agent to kill the mob (‘Time to Kill’). Each round was 25 seconds long, so the longest possible time was 25 seconds. In the following graphs, we show the statistics for each enemy type in side-by-side graphs. Displayed below is the scatter plot representing the data collected at the end of each fight. The horizontal lines represent the mean of the overall data for rounds with a specific mob type.
 
 
-![Blaze](https://raw.githubusercontent.com/StStevens/TeamBabylon/master/docs/res/blz.png)
+__Blaze:__
+<br/><br/>
+![alt text](https://raw.githubusercontent.com/StStevens/TeamBabylon/master/docs/res/blz.png)
+
 __Creeper:__
+<br/><br/>
 ![alt text](https://raw.githubusercontent.com/StStevens/TeamBabylon/master/docs/res/crpr.png)
+
 __Cave Spider:__
+<br/><br/>
 ![alt text](https://raw.githubusercontent.com/StStevens/TeamBabylon/master/docs/res/cs.png)
+
 __Endermite:__
+<br/><br/>
 ![alt text](https://raw.githubusercontent.com/StStevens/TeamBabylon/master/docs/res/edrt.png)
+
 __Ghast:__
+<br/><br/>
 ![alt text](https://raw.githubusercontent.com/StStevens/TeamBabylon/master/docs/res/gst.png)
+
 __Silverfish:__
+<br/><br/>
 ![alt text](https://raw.githubusercontent.com/StStevens/TeamBabylon/master/docs/res/sf.png)
+
 __Skeleton:__
+<br/><br/>
 ![alt text](https://raw.githubusercontent.com/StStevens/TeamBabylon/master/docs/res/sktn.png)
+
 __Spider:__
+<br/><br/>
 ![alt text](https://raw.githubusercontent.com/StStevens/TeamBabylon/master/docs/res/sp.png)
+
 __Wolf:__
+<br/><br/>
 ![alt text](https://raw.githubusercontent.com/StStevens/TeamBabylon/master/docs/res/wlf.png)
+
 __Witch:__
+<br/><br/>
 ![alt text](https://raw.githubusercontent.com/StStevens/TeamBabylon/master/docs/res/wtc.png)
+
 __Zombie:__
+<br/><br/>
 ![alt text](https://raw.githubusercontent.com/StStevens/TeamBabylon/master/docs/res/zmb.png)
+
 __Zombie Pigman:__
+<br/><br/>
 ![alt text](https://raw.githubusercontent.com/StStevens/TeamBabylon/master/docs/res/zpm.png)
+
 
 Based on the metrics observed in these graphs, our group noticed a considerable improvement from our baseline bot when using a trained model. The graphs on the left, representing the agent’s health, do not demonstrate a decisive improvement with a learned model. While the health of the General Bot and the Specialist are frequently higher than the Dumb Bot, the difference is not always significant. However, noticeable improvement can be seen against the witch, which had been one of the hardest enemies for us to beat originally. The ‘Time to Kill’, representing how long it took the agent to kill the mob, shows a demonstrable improvement in the performance of the trained bots. Just by looking at the average kill times on the graph, it is clear that the Specialist and General Bot usually defeat the mob about 5-10 seconds more quickly than an untrained agent. In fact, the only time the untrained agent beat either of the trained bots in average kill time was against the silverfish. Based on these statistics, training the models had a clear effect on the bot’s ability to kill the different mob types.
 
