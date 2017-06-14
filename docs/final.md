@@ -16,14 +16,20 @@ Our approach towards machine learning was to use Q-Learning and state tables to 
 
 ### Q-Learning:
 #### Q-Learning Pseudocode:
-[image]
+![pseudocode](https://github.com/StStevens/TeamBabylon/blob/master/docs/res/Q-Learning.PNG)
 
-#### Q-Table Update Function:
-[image]
+#### Q-Table Update Equation:
+![equation](https://github.com/StStevens/TeamBabylon/blob/master/docs/res/Q-learn-eq.PNG)
 
 #### Q-Learning Paramters:
-stuuff here
-
+ε = .2: The probability of the agent taking a random action (during learning only)
+α = .3: The learning rate of the agent
+n = 10: The lookback number, previous steps to update given current reward
+    -we set this number somewhat high in order to encourage full bow draws
+γ = .9: The decay rate
+    -Some research (which was later reinforced by our own observations) showed
+     this to be an effective number for increaseing the likelihood of converging
+     on an optimal strategy
 
 ### State Space:
 As mentioned above, we trained two different bots: our General Bot and our Specialist. The General Bot’s world state is made by taking three different observations: the current distance from the mob, the current health of the agent, and the current state of the weapon. As the measurement of distance is continuous (and therefore nearly infinite) and health can be broken down into 21 different states, a state space using these two alone would be prohibitively large for an agent to learn. To make the state space usable by Q-Learning, we discretize the two variables into the following categories:
@@ -34,16 +40,16 @@ Finally, as we added bow functionality to this most recent version of our projec
 
 During the main loop, our bot chooses a new action every 200 ms. As the time taken to draw the bow to full extension is 1 second, this gives us the 5 ‘draw’ states. This brings the state space to a total of (3 x 4 x 7) = 84 different possible states. However, this is only for the General Bot. The Specialist, which is an extension of the General Bot, has an extra state associated with each of the possible general states, specifically the type of enemy. This increases the Specialist state space by a factor of 12, bringing it to 1008.
 
-#### Dual Q-Tables:
+### Dual Q-Tables:
 An important aspect for our recent efforts on our project was the added use of the bow. Rather than simply making ‘fire’ a single discrete action, we wanted to give the bot the ability to learn how far to extend the bow on its own. This led to a large increase in the attack action space of the bot, and because moving and attacking were part of the same possible actions list, it was forced to decide between one or the other. As we wanted a bot that could both move and attack at the same time, we decided to train two separate Q-Tables, one associated with movement actions, the other with attack actions. While the state space is the same for both (described above), the possible action list is very different. From any given state in the movement Q-Table, the possible actions are the same:
     [movement action list]
 
 This gave the bot the ability to move in any possible direction, from any given state, or choose to stand still.
 The attack action space is state dependent. While holding the sword, it can choose to attack or switch to the bow. If it is holding the bow, each state’s given actions are to move to the next draw state, or to fire the bow early. Finally, when the draw reaches ‘draw 5’ the only possible action is ‘fire’.
 
-#### Rewards:
+### Rewards:
 Our reward function is very straightforward. Each time we take an action, we check the world observations for the enemy health and the agent health. If there is a change in agent health we are given our change in health times 10. If we have dealt damage to the enemy, we are rewarded the difference in health times 15. If there is no change, to either, we are rewarded -1.
-    [eq image]
+![rew equation](https://github.com/StStevens/TeamBabylon/blob/master/docs/res/reward.PNG)
 By putting a greater weight on enemy health, we attempted to make the bot prioritize doing damage as opposed to maintaining health.
 
 
