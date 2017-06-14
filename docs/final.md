@@ -16,10 +16,10 @@ Our approach towards machine learning was to use Q-Learning and state tables to 
 
 ### Q-Learning:
 #### Q-Learning Pseudocode:
-![pseudocode](https://raw.githubusercontent.com/StStevens/TeamBabylon/blob/master/docs/res/Q-Learning.PNG)
+![alt text](https://raw.githubusercontent.com/StStevens/TeamBabylon/blob/master/docs/res/Q-Learning.PNG)
 
 #### Q-Table Update Equation:
-![equation](https://raw.githubusercontent.com/StStevens/TeamBabylon/blob/master/docs/res/Q-learn-eq.PNG)
+![alt text](https://raw.githubusercontent.com/StStevens/TeamBabylon/blob/master/docs/res/Q-learn-eq.PNG)
 
 #### Q-Learning Paramters:
 ε = .2: The probability of the agent taking a random action (during learning only)
@@ -50,7 +50,7 @@ The attack action space is state dependent. While holding the sword, it can choo
 
 ### Rewards:
 Our reward function is very straightforward. Each time we take an action, we check the world observations for the enemy health and the agent health. If there is a change in agent health we are given our change in health times 10. If we have dealt damage to the enemy, we are rewarded the difference in health times 15. If there is no change, to either, we are rewarded -1.
-![rew equation](https://raw.githubusercontent.com/StStevens/TeamBabylon/blob/master/docs/res/reward.PNG)
+![alt text](https://raw.githubusercontent.com/StStevens/TeamBabylon/blob/master/docs/res/reward.PNG)
 By putting a greater weight on enemy health, we attempted to make the bot prioritize doing damage as opposed to maintaining health.
 
 
