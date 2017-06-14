@@ -22,52 +22,40 @@ As far as qualitative observations go, a distinct difference can be seen in the 
 For quantitative evaluation, we used two metrics. At the end of each fight, we checked the health of our agent (‘Agent Post-Fight Health’) and recorded the time it took for the agent to kill the mob (‘Time to Kill’). Each round was 25 seconds long, so the longest possible time was 25 seconds. In the following graphs, we show the statistics for each enemy type in side-by-side graphs. Displayed below is the scatter plot representing the data collected at the end of each fight. The horizontal lines represent the mean of the overall data for rounds with a specific mob type.
 
 
-__Blaze:__
-<br/><br/>
+#### Blaze:
 ![alt text](https://raw.githubusercontent.com/StStevens/TeamBabylon/master/docs/res/blz.png)
 
-__Creeper:__
-<br/><br/>
+#### Creeper:
 ![alt text](https://raw.githubusercontent.com/StStevens/TeamBabylon/master/docs/res/crpr.png)
 
-__Cave Spider:__
-<br/><br/>
+#### Cave Spider:
 ![alt text](https://raw.githubusercontent.com/StStevens/TeamBabylon/master/docs/res/cs.png)
 
-__Endermite:__
-<br/><br/>
+#### Endermite:
 ![alt text](https://raw.githubusercontent.com/StStevens/TeamBabylon/master/docs/res/edrt.png)
 
-__Ghast:__
-<br/><br/>
+#### Ghast:
 ![alt text](https://raw.githubusercontent.com/StStevens/TeamBabylon/master/docs/res/gst.png)
 
-__Silverfish:__
-<br/><br/>
+#### Silverfish:
 ![alt text](https://raw.githubusercontent.com/StStevens/TeamBabylon/master/docs/res/sf.png)
 
-__Skeleton:__
-<br/><br/>
+#### Skeleton:
 ![alt text](https://raw.githubusercontent.com/StStevens/TeamBabylon/master/docs/res/sktn.png)
 
-__Spider:__
-<br/><br/>
+#### Spider:
 ![alt text](https://raw.githubusercontent.com/StStevens/TeamBabylon/master/docs/res/sp.png)
 
-__Wolf:__
-<br/><br/>
+#### Wolf:
 ![alt text](https://raw.githubusercontent.com/StStevens/TeamBabylon/master/docs/res/wlf.png)
 
-__Witch:__
-<br/><br/>
+#### Witch:
 ![alt text](https://raw.githubusercontent.com/StStevens/TeamBabylon/master/docs/res/wtc.png)
 
-__Zombie:__
-<br/><br/>
+#### Zombie:
 ![alt text](https://raw.githubusercontent.com/StStevens/TeamBabylon/master/docs/res/zmb.png)
 
-__Zombie Pigman:__
-<br/><br/>
+#### Zombie Pigman:
 ![alt text](https://raw.githubusercontent.com/StStevens/TeamBabylon/master/docs/res/zpm.png)
 
 
