@@ -10,6 +10,40 @@ For the most recent update to our project, our group focused on expanding the st
 
 
 ## Approaches:
+Our approach towards machine learning was to use Q-Learning and state tables to train the agents. For each fight, we set up an arena and spawn an agent and a single enemy. Using the world observations provided by Malmo, we calculate the enemy pitch and yaw in order to ensure that our agent is always facing the mob. Forcing the bot to aim at the enemy is the only real guidance given to the bot. The rest of its actions are chosen using Q-Tables. We trained our bots against 12 enemy types: blaze, creeper, cave spider, endermite, ghast, silverfish, skeleton, spider, wolf, witch, zombie, and zombie pigman. In addition, each bot was trained for 10 rounds, where a round is an individual fight against each mob type (10 rounds = 120 fights total, 10 per enemy).
+
+### Q-Learning:
+#### Q-Learning Pseudocode:
+[image]
+
+#### Q-Table Update Function:
+[image]
+
+#### Q-Learning Paramters:
+stuuff here
+
+
+### State Space:
+As mentioned above, we trained two different bots: our General Bot and our Specialist. The General Bot’s world state is made by taking three different observations: the current distance from the mob, the current health of the agent, and the current state of the weapon. As the measurement of distance is continuous (and therefore nearly infinite) and health can be broken down into 21 different states, a state space using these two alone would be prohibitively large for an agent to learn. To make the state space usable by Q-Learning, we discretize the two variables into the following categories:
+        [discrete categories]
+
+Finally, as we added bow functionality to this most recent version of our project, we needed a state to track the weapon we are using, and when we are using the bow to track how close it is to full extension. We therefore have several weapon states:
+        [Weap States]
+
+During the main loop, our bot chooses a new action every 200 ms. As the time taken to draw the bow to full extension is 1 second, this gives us the 5 ‘draw’ states. This brings the state space to a total of (3 x 4 x 7) = 84 different possible states. However, this is only for the General Bot. The Specialist, which is an extension of the General Bot, has an extra state associated with each of the possible general states, specifically the type of enemy. This increases the Specialist state space by a factor of 12, bringing it to 1008.
+
+#### Dual Q-Tables:
+An important aspect for our recent efforts on our project was the added use of the bow. Rather than simply making ‘fire’ a single discrete action, we wanted to give the bot the ability to learn how far to extend the bow on its own. This led to a large increase in the attack action space of the bot, and because moving and attacking were part of the same possible actions list, it was forced to decide between one or the other. As we wanted a bot that could both move and attack at the same time, we decided to train two separate Q-Tables, one associated with movement actions, the other with attack actions. While the state space is the same for both (described above), the possible action list is very different. From any given state in the movement Q-Table, the possible actions are the same:
+    [movement action list]
+
+This gave the bot the ability to move in any possible direction, from any given state, or choose to stand still.
+The attack action space is state dependent. While holding the sword, it can choose to attack or switch to the bow. If it is holding the bow, each state’s given actions are to move to the next draw state, or to fire the bow early. Finally, when the draw reaches ‘draw 5’ the only possible action is ‘fire’.
+
+#### Rewards:
+Our reward function is very straightforward. Each time we take an action, we check the world observations for the enemy health and the agent health. If there is a change in agent health we are given our change in health times 10. If we have dealt damage to the enemy, we are rewarded the difference in health times 15. If there is no change, to either, we are rewarded -1.
+    [eq image]
+By putting a greater weight on enemy health, we attempted to make the bot prioritize doing damage as opposed to maintaining health.
+
 
 
 ## Evalutaion:
