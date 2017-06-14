@@ -47,7 +47,7 @@ During the main loop, our bot chooses a new action every 200 ms. As the time tak
 ### Dual Q-Tables:
 An important aspect for our recent efforts on our project was the added use of the bow. Rather than simply making ‘fire’ a single discrete action, we wanted to give the bot the ability to learn how far to extend the bow on its own. This led to a large increase in the attack action space of the bot, and because moving and attacking were part of the same possible actions list, it was forced to decide between one or the other. As we wanted a bot that could both move and attack at the same time, we decided to train two separate Q-Tables, one associated with movement actions, the other with attack actions. While the state space is the same for both (described above), the possible action list is very different. From any given state in the movement Q-Table, the possible actions are the same:
 
-    Movement Actions: [ "move 1", "move 0", "move -1", "strafe 1", "strafe -1" ]
+        Movement Actions: [ "move 1", "move 0", "move -1", "strafe 1", "strafe -1" ]
 
 This gave the bot the ability to move in any possible direction, from any given state, or choose to stand still.
 The attack action space is state dependent. While holding the sword, it can choose to attack or switch to the bow. If it is holding the bow, each state’s given actions are to move to the next draw state, or to fire the bow early. Finally, when the draw reaches ‘draw 5’ the only possible action is ‘fire’.
@@ -71,6 +71,7 @@ As far as qualitative observations go, a distinct difference can be seen in the 
 For quantitative evaluation, we used two metrics. At the end of each fight, we checked the health of our agent (‘Agent Post-Fight Health’) and recorded the time it took for the agent to kill the mob (‘Time to Kill’). Each round was 25 seconds long, so the longest possible time was 25 seconds. In the following graphs, we show the statistics for each enemy type in side-by-side graphs. Displayed below is the scatter plot representing the data collected at the end of each fight. The horizontal lines represent the mean of the overall data for rounds with a specific mob type.
 
 
+##
 #### Blaze:
 ![alt text](https://raw.githubusercontent.com/StStevens/TeamBabylon/master/docs/res/blz.png)
 
