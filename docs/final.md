@@ -40,7 +40,9 @@ As mentioned above, we trained two different bots: our General Bot and our Speci
 
 
 Finally, as we added bow functionality to this most recent version of our project, we needed a state to track the weapon we are using, and when we are using the bow to track how close it is to full extension. We therefore have several weapon states:
+
         Weap:   [ 'sword', 'draw 1', 'draw 2', 'draw 3', 'draw 4', 'draw 5', 'fire' ]
+
 
 During the main loop, our bot chooses a new action every 200 ms. As the time taken to draw the bow to full extension is 1 second, this gives us the 5 ‘draw’ states. This brings the state space to a total of (3 x 4 x 7) = 84 different possible states. However, this is only for the General Bot. The Specialist, which is an extension of the General Bot, has an extra state associated with each of the possible general states, specifically the type of enemy. This increases the Specialist state space by a factor of 12, bringing it to 1008.
 
