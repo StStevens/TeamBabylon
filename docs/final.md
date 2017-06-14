@@ -22,8 +22,7 @@ As far as qualitative observations go, a distinct difference can be seen in the 
 For quantitative evaluation, we used two metrics. At the end of each fight, we checked the health of our agent (‘Agent Post-Fight Health’) and recorded the time it took for the agent to kill the mob (‘Time to Kill’). Each round was 25 seconds long, so the longest possible time was 25 seconds. In the following graphs, we show the statistics for each enemy type in side-by-side graphs. Displayed below is the scatter plot representing the data collected at the end of each fight. The horizontal lines represent the mean of the overall data for rounds with a specific mob type.
 
 
-__Blaze:__
-![alt text](https://raw.githubusercontent.com/StStevens/TeamBabylon/master/docs/res/blz.png)
+![Blaze](https://raw.githubusercontent.com/StStevens/TeamBabylon/master/docs/res/blz.png)
 __Creeper:__
 ![alt text](https://raw.githubusercontent.com/StStevens/TeamBabylon/master/docs/res/crpr.png)
 __Cave Spider:__
