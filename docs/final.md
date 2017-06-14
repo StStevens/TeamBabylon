@@ -16,10 +16,10 @@ Our approach towards machine learning was to use Q-Learning and state tables to 
 
 ### Q-Learning:
 #### Q-Learning Pseudocode:
-![alt text](https://raw.githubusercontent.com/StStevens/TeamBabylon/blob/master/docs/res/Q-Learning.PNG)
+![alt text](https://raw.githubusercontent.com/StStevens/TeamBabylon/master/docs/res/Q-Learning.PNG)
 
 #### Q-Table Update Equation:
-![alt text](https://raw.githubusercontent.com/StStevens/TeamBabylon/blob/master/docs/res/Q-learn-eq.PNG)
+![alt text](https://raw.githubusercontent.com/StStevens/TeamBabylon/master/docs/res/Q-learn-eq.PNG)
 
 #### Q-Learning Paramters:
 ε = .2: The probability of the agent taking a random action (during learning only)
@@ -33,8 +33,11 @@ n = 10: The lookback number, previous steps to update given current reward
 
 ### State Space:
 As mentioned above, we trained two different bots: our General Bot and our Specialist. The General Bot’s world state is made by taking three different observations: the current distance from the mob, the current health of the agent, and the current state of the weapon. As the measurement of distance is continuous (and therefore nearly infinite) and health can be broken down into 21 different states, a state space using these two alone would be prohibitively large for an agent to learn. To make the state space usable by Q-Learning, we discretize the two variables into the following categories:
+
         Health: { h <= 2: 'Low', 2 < h <= 12: 'Med', h > 12: 'Hi' }
+
         Dist:   { d <= 2: 'Close', 2 < d <= 4: 'Melee', 4 < d <= 20: 'Bow', d > 20: 'Far' }
+
 
 Finally, as we added bow functionality to this most recent version of our project, we needed a state to track the weapon we are using, and when we are using the bow to track how close it is to full extension. We therefore have several weapon states:
         Weap:   [ 'sword', 'draw 1', 'draw 2', 'draw 3', 'draw 4', 'draw 5', 'fire' ]
@@ -43,6 +46,7 @@ During the main loop, our bot chooses a new action every 200 ms. As the time tak
 
 ### Dual Q-Tables:
 An important aspect for our recent efforts on our project was the added use of the bow. Rather than simply making ‘fire’ a single discrete action, we wanted to give the bot the ability to learn how far to extend the bow on its own. This led to a large increase in the attack action space of the bot, and because moving and attacking were part of the same possible actions list, it was forced to decide between one or the other. As we wanted a bot that could both move and attack at the same time, we decided to train two separate Q-Tables, one associated with movement actions, the other with attack actions. While the state space is the same for both (described above), the possible action list is very different. From any given state in the movement Q-Table, the possible actions are the same:
+
     Movement Actions: [ "move 1", "move 0", "move -1", "strafe 1", "strafe -1" ]
 
 This gave the bot the ability to move in any possible direction, from any given state, or choose to stand still.
@@ -50,7 +54,9 @@ The attack action space is state dependent. While holding the sword, it can choo
 
 ### Rewards:
 Our reward function is very straightforward. Each time we take an action, we check the world observations for the enemy health and the agent health. If there is a change in agent health we are given our change in health times 10. If we have dealt damage to the enemy, we are rewarded the difference in health times 15. If there is no change, to either, we are rewarded -1.
-![alt text](https://raw.githubusercontent.com/StStevens/TeamBabylon/blob/master/docs/res/reward.PNG)
+
+![alt text](https://raw.githubusercontent.com/StStevens/TeamBabylon/master/docs/res/reward.PNG)
+
 By putting a greater weight on enemy health, we attempted to make the bot prioritize doing damage as opposed to maintaining health.
 
 
