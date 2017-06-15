@@ -125,7 +125,7 @@ As for the comparison between the General Bot and the Specialist, the results we
 
 
 ## References:
-As a guide for giving our bot the ability to aim at the enemy, we used the cart_test.py file in the Python_Examples/ directory of Malmo.
+As a guide for giving our bot the ability to aim at the enemy, we used the [cart_test.py](https://github.com/Microsoft/malmo/blob/master/Malmo/samples/Python_examples/cart_test.py) file in the Python_Examples/ directory of Malmo.
 
 Our main reference for understanding Q-Learning was the class notes and assignment2.py.
 
